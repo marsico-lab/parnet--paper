@@ -4,9 +4,9 @@ One folder per figure of the paper, built with [plotplate](https://github.com/la
 
 ## Index
 
-| Folder | Paper figure | Content | Data |
-| ------ | ------------ | ------- | ---- |
-|        |              |         |      |
+| Folder               | Paper figure     | Content                                                                             | Data            |
+| -------------------- | ---------------- | ----------------------------------------------------------------------------------- | --------------- |
+| `mutations_roc_prc/` | not assigned yet | Curated ROC/PRC, MutSpliceDB and SpliceBench (standalone script, not plotplate yet) | `data/roc_prc/` |
 
 Add a row when a figure branch is merged into `dev`.
 

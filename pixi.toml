@@ -30,6 +30,7 @@ plotplate = { git = "https://github.com/lambosaur/plotplate.git", tag = "v0.1.0"
 # Build every figure, or one: `pixi run figures figures/figure_1/preview.pdf`.
 figures = "snakemake --cores 4"
 figures-dry = "snakemake --cores 4 --dry-run"
+roc-prc-figure = "python figures/mutations_roc_prc/make_curated_roc_prc.py"
 install-kernel = "python -m ipykernel install --user --name parnet-paper --display-name 'parnet--paper'"
 # Copy plotplate's agent skills next to the repo's own; re-run after bumping the plotplate tag.
 install-skills = "plotplate skills --dest .claude/skills"

@@ -15,11 +15,16 @@ FIGURES = sorted(
     for p in Path("figures").glob("*/layout.yaml")
     if not p.parent.name.startswith("_")
 )
+ROC_PRC_DATASETS = ["mutsplicedb", "splicebench"]
 
 
 rule all:
     input:
         expand("figures/{figure}/preview.pdf", figure=FIGURES),
+        expand(
+            "figures/mutations_roc_prc/{dataset}.curated_roc_prc.png",
+            dataset=ROC_PRC_DATASETS,
+        ),
 
 
 # The panel notebooks read their tables from figures/<figure>/data/ and data/; only the
@@ -37,3 +42,16 @@ rule plotplate_build:
         "figures/{figure}/preview.pdf",
     shell:
         "plotplate build figures/{wildcards.figure}"
+
+
+rule roc_prc_curated:
+    input:
+        script="figures/mutations_roc_prc/make_curated_roc_prc.py",
+        curves=expand("data/roc_prc/{dataset}.json", dataset=ROC_PRC_DATASETS),
+    output:
+        expand(
+            "figures/mutations_roc_prc/{dataset}.curated_roc_prc.png",
+            dataset=ROC_PRC_DATASETS,
+        ),
+    shell:
+        "python {input.script}"
