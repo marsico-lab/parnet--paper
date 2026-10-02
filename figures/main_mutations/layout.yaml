@@ -1,0 +1,30 @@
+# Main figure, mutations (Figure 7 in the manuscript, 2026-10-02).
+# Arrangement taken from the Overleaf version (reference/overleaf_figure7.png,
+# read by `plotplate detect` into layout.detected.yaml), redrawn without the caption gaps.
+schema: 1
+name: main_mutations
+journal: nature
+style_files: [../style.yaml]
+page: {paper: a4, margins: {left: 13.5, right: 13.5, top: 25, bottom: 25}}
+area:
+  width: double  # 183 mm
+  height: 170  # Nature maximum
+mosaic:
+  rows: [AA, BB, CD]
+  heights: [52, 56, 54]
+  gap: [4, 4]
+panels:
+  A:  # MutSpliceDB ROC + PRC, legend on the right
+    source: notebooks/panel_A_roc_prc.py
+    axes:
+      roc: {left: 12, top: 4, right: 50, bottom: 42}
+      prc: {left: 64, top: 4, right: 102, bottom: 42}
+      legend: {left: 112, top: 6, right: 183, bottom: 50}
+  B:  # RBP impact heatmap (tracks x mutations), legends on the left
+    source: notebooks/panel_B_heatmap.py
+    axes:
+      cbar: {left: 3, top: 61, right: 33, bottom: 62.5}
+      legend: {left: 0, top: 68, right: 50, bottom: 112}
+      heatmap: {left: 58, top: 67, right: 165, bottom: 105}
+  C: {}  # ISM profiles, donor example
+  D: {}  # ISM profiles, acceptor example

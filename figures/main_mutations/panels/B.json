@@ -1,0 +1,83 @@
+{
+  "panel": "B",
+  "layout": "main_mutations",
+  "box_mm": [
+    0.0,
+    56.0,
+    183.0,
+    56.0
+  ],
+  "size_mm": [
+    183.0,
+    56.0
+  ],
+  "files": [
+    "B.pdf",
+    "B.svg",
+    "B.png"
+  ],
+  "source": "panel_B_heatmap.py",
+  "saved": "2026-10-02T15:18:48+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "cbar": {
+        "box_edges": {
+          "left": 3.0,
+          "right": 33.0,
+          "top": 61.0,
+          "bottom": 62.5
+        },
+        "spines": [
+          "outline"
+        ]
+      },
+      "col_colors": {
+        "box_edges": {
+          "left": 58.0,
+          "right": 165.0,
+          "top": 62.9,
+          "bottom": 66.5
+        },
+        "spines": []
+      },
+      "legend": {
+        "box_edges": {
+          "left": 0.0,
+          "right": 50.0,
+          "top": 68.0,
+          "bottom": 112.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "row_colors": {
+        "box_edges": {
+          "left": 53.9,
+          "right": 57.5,
+          "top": 67.0,
+          "bottom": 105.0
+        },
+        "spines": []
+      },
+      "heatmap": {
+        "box_edges": {
+          "left": 58.0,
+          "right": 165.0,
+          "top": 67.0,
+          "bottom": 105.0
+        },
+        "spines": [
+          "left",
+          "right",
+          "bottom",
+          "top"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {}
+  }
+}
