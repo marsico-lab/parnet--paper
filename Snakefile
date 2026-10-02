@@ -56,8 +56,11 @@ rule plotplate_build:
         prepared=lambda wc: FIGURE_INPUTS.get(wc.figure, []),
     output:
         "figures/{figure}/preview.pdf",
+        "figures/{figure}/preview-page.png",
     shell:
+        # preview-page.*: the figure on an A4 sheet, with the panel boxes outlined.
         "plotplate build figures/{wildcards.figure}"
+        " && plotplate preview figures/{wildcards.figure} --page a4 --outlines"
 
 
 rule roc_prc_curated:
