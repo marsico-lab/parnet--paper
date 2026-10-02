@@ -1,0 +1,14 @@
+% _example: this file is yours. Edit the caption, the label, the
+% placement ([t], [h!], ...), or wrap it in a starred figure* for a wide one.
+% plotplate never overwrites it; it rewrites the panels in the file included below.
+\begin{figure}[tbp]
+  \centering
+  \input{panels/_example.tex}%
+  \caption{...}
+  \label{fig:_example}
+  % To reference one panel (\ref{fig:_examplea} prints 7a), load subcaption in the
+  % preamble and uncomment the lines below. They print nothing and take no space.
+  % \begin{subfigure}[t]{0pt}\phantomsubcaption\label{fig:_examplea}\end{subfigure}%  panel A
+  % \begin{subfigure}[t]{0pt}\phantomsubcaption\label{fig:_exampleb}\end{subfigure}%  panel B
+  % \begin{subfigure}[t]{0pt}\phantomsubcaption\label{fig:_examplec}\end{subfigure}%  panel C
+\end{figure}
