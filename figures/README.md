@@ -1,113 +1,199 @@
 # Figures
 
-One folder per figure of the paper, built with [plotplate](https://github.com/lambosaur/plotplate): one notebook per panel, each panel drawn at its printed size, assembled by `plotplate build`.
+Each figure of the paper has one folder here.
+Main figures and supplementary figures each have their own folder, even when they show the same data.
+This page tells you what goes in a folder, and how to build a figure.
+To share your work with the co-authors, read [CONTRIBUTING.md](../CONTRIBUTING.md).
 
 ## Index
 
-| Folder | Paper figure | Content | Data |
-| ------ | ------------ | ------- | ---- |
-|        |              |         |      |
+| Folder                   | Paper figure | Content                                   | Issue |
+| ------------------------ | ------------ | ----------------------------------------- | ----- |
+| [`_example/`](_example/) | none         | Example: a plot, a schematic and an image |       |
 
-Add a row when a figure branch is merged into `dev`.
+Add a row when your figure is merged into `dev`.
+Update the **Paper figure** column when the figure order changes.
 
-## Naming
+## Names
 
-| Kind                 | Folder                   | Branch                 |
-| -------------------- | ------------------------ | ---------------------- |
-| Main figure          | `figures/figure_1/`      | `figure/figure-1`      |
-| Supplementary figure | `figures/supp_figure_1/` | `figure/supp-figure-1` |
-| Supplementary table  | `tables/supp_table_1/`   | `figure/supp-table-1`  |
+| Kind                 | Folder                  | Branch                |
+| -------------------- | ----------------------- | --------------------- |
+| Main figure          | `figures/main_<topic>/` | `figure/main-<topic>` |
+| Supplementary figure | `figures/supp_<topic>/` | `figure/supp-<topic>` |
 
-While a figure has no number yet, name it after its topic (`figures/mutations_roc_prc/`), and rename it with `git mv` once the order is decided.
-Folders starting with `_` are scratch: `pixi run figures` skips them, and they are not merged.
+Examples: `main_mutations`, `supp_mutations_windows`.
+Use the topic, not the figure number.
+The figure numbers change while the paper is written.
+The index above gives the current number.
 
-## Anatomy of a figure folder
+## Content of a figure folder
 
 ```text
-figures/figure_1/
-  layout.yaml                  # geometry: page, figure size, panel boxes, named axes, guides
-  panel_A_<name>.py            # one Jupytext percent notebook per panel, A = panel letter
-  panel_B_<name>.py
-  data/                        # tables used only by this figure
-    README.md                  # where each table comes from
-  panels/A.{pdf,svg,png,json}  # written by panel.save(); committed
-  preview.{pdf,png,svg}        # written by plotplate build; committed
-  figure_1.tex                 # written by plotplate build; committed
+figures/main_mutations/
+  README.md            what the figure shows, one line per panel
+  layout.yaml          size of the figure, position of each panel and its axes
+  notebooks/           one notebook per panel: panel_A_<name>.py, panel_B_<name>.py, ...
+  scripts/             optional: scripts that prepare the data of this figure
+  rules.smk            optional: runs the scripts of scripts/ before the build
+  data/                tables used by this figure only, with a README.md about their origin
+  assets/              panels made outside Python (PDF schematics, PNG images), with a README.md
+  reference/           sketches, screenshots, old versions: help for the design, not used by the build
+  panels/              made by the build: one PDF, SVG and PNG per panel
+  preview.pdf/png/svg  made by the build: the full figure
+  main_mutations.tex   made by the build: the figure for LaTeX
 ```
 
-`layout.yaml` and the `panel_*.py` notebooks are the source; everything else is regenerated.
-`figures/style.yaml` holds colors shared by every figure; each `layout.yaml` points to it.
+You edit `layout.yaml`, `notebooks/`, `scripts/`, `data/` and `assets/`.
+The build makes `panels/`, `preview.*` and the `.tex` file.
+Do not edit these files by hand.
 
-## Setting up a new figure
+Some things are shared by all figures:
 
-Commands run from the repository root.
+| Path                 | Content                                                                   |
+| -------------------- | ------------------------------------------------------------------------- |
+| `figures/style.yaml` | Colors of the methods, the same in every figure.                          |
+| `data/`              | Tables used by more than one figure, with a README.md about their origin. |
+| `parnet_paper/`      | Python code used by more than one figure.                                 |
 
-1. Start a branch from `dev`:
-
-   ```sh
-   git switch -c figure/figure-1 dev
-   ```
-
-1. Create the layout.
-   Pick the starting point you have ([plotplate layout sources](https://github.com/lambosaur/plotplate/blob/v0.1.0/docs/layout-sources.md)); from scratch:
-
-   ```sh
-   pixi run plotplate new figures/figure_1/layout.yaml --journal nature --width double --height 150 --mosaic "AB/CC"
-   ```
-
-   or from an existing assembled figure (PDF):
-
-   ```sh
-   pixi run plotplate from-pdf old_figure.pdf -o figures/figure_1/layout.yaml --journal nature --width double --axes --guides
-   ```
-
-1. Edit `layout.yaml`: add `style_files: [../style.yaml]`, and give each panel its named axes ([layout spec](https://github.com/lambosaur/plotplate/blob/v0.1.0/docs/layout-spec.md)):
-
-   ```yaml
-   panels:
-     A:
-       axes:
-         main: {left: 12, top: 5, right: 80, bottom: 50}  # millimetres from the figure's top-left corner
-   ```
-
-   Check the boxes with `pixi run plotplate view figures/figure_1` (add `--edit` to move them).
-
-1. Copy the data the figure shows into `figures/figure_1/data/` (or `data/` if several figures use it), and record its origin in the matching `README.md`: source repository, rule or notebook, commit or date.
-   Data is exported by the analysis repositories; it is never recomputed here.
-
-1. Write one notebook per panel from the template:
-
-   ```sh
-   cp figures/_template_panel.py figures/figure_1/panel_A_<name>.py
-   ```
-
-   Set the panel letter in `layout.panel("A")`, then fill the Data and Plot sections.
-   Open the `.py` as a notebook in VS Code (Jupytext extension) to run cells interactively; run it from the figure folder, which is what `plotplate build` does.
-
-1. Build and check:
-
-   ```sh
-   pixi run figures figures/figure_1/preview.pdf   # or: pixi run plotplate build figures/figure_1
-   pixi run plotplate view figures/figure_1
-   ```
-
-   The build ends with `OK`, or lists what is wrong (font sizes, clipped text, moved axes, overlaps).
-
-1. Add a row to the index above, commit, and merge into `dev` (see [CONTRIBUTING.md](../CONTRIBUTING.md#branches)).
-
-## Panel rules
-
-- Draw into the axes plotplate places: `ax = panel.axes(fig, "main")`.
-- Never `tight_layout`, `bbox_inches="tight"`, or `set_aspect(..., adjustable="box")`: they move the axes, and the build reports `axes-moved`.
-  A square plot is a square box in `layout.yaml`.
-- Colors come from `panel.colors["<name>"]` (defined in `figures/style.yaml`), not from hex codes in the notebook.
-- A panel runs top to bottom as a plain script, with no manual step and no absolute path.
-
-## Delivering
+## Start a new figure
 
 ```sh
-pixi run plotplate bundle figures/figure_1 build/overleaf/figure_1   # .tex + panel PDFs for Overleaf
-pixi run plotplate export figures/figure_1 -o build/Figure1.pdf      # one production file
+pixi run new-figure main_mutations
+pixi run figure main_mutations
 ```
 
-`build/` is not tracked.
+The first command copies [`_example/`](_example/) to `figures/main_mutations/`.
+The second command builds it.
+The build must end with `OK`.
+You now have a working figure with three example panels.
+Replace them one by one with your own panels.
+
+## Make the layout
+
+The layout gives the size of the figure and the position of each panel, in millimetres.
+The panels are drawn at their final size, so the text in the paper has the size that you choose.
+
+Look at the layout in the browser:
+
+```sh
+pixi run view main_mutations
+```
+
+To change the panels, edit `layout.yaml`, or move them in the browser with `pixi run plotplate view figures/main_mutations --edit`.
+
+You can also start from a figure that already exists:
+
+1. Put the PDF of the old figure in `reference/`.
+
+1. Read the layout from it:
+
+   ```sh
+   pixi run plotplate from-pdf figures/main_mutations/reference/old.pdf -o figures/main_mutations/layout.detected.yaml --journal nature --width double --axes --guides
+   ```
+
+1. Compare `layout.detected.yaml` with `layout.yaml` in `pixi run view main_mutations`.
+
+1. Copy the parts that you want into `layout.yaml`.
+
+Each panel in `layout.yaml` names its notebook:
+
+```yaml
+panels:
+  A:
+    source: notebooks/panel_A_roc_prc.py
+    axes:
+      main: {left: 12, top: 4, right: 80, bottom: 40}   # millimetres from the top-left corner of the figure
+```
+
+The plotplate documentation gives all options: [layout.yaml](https://github.com/lambosaur/plotplate/blob/v0.1.0/docs/layout-spec.md), [layout sources](https://github.com/lambosaur/plotplate/blob/v0.1.0/docs/layout-sources.md), [panel recipes](https://github.com/lambosaur/plotplate/blob/v0.1.0/docs/panel-recipes.md).
+
+## Make a panel
+
+Each panel has one notebook in `notebooks/`.
+The notebook is a Python file (`.py`) with cells.
+Open it in VS Code: right-click the file, then **Open as a Jupyter Notebook** (Jupytext extension).
+Select the kernel `parnet--paper`.
+The `.ipynb` file that VS Code creates stays on your computer; git ignores it.
+
+Notebooks run from their own folder `notebooks/`.
+Use `../layout.yaml`, `../data/` and `../assets/` for the figure files.
+Use `../../../data/` for the shared tables.
+
+There are three kinds of panels.
+The example has one of each.
+
+| Kind               | Example                | What the notebook does                                                     |
+| ------------------ | ---------------------- | -------------------------------------------------------------------------- |
+| Plot               | `panel_A_scores.py`    | Draws with matplotlib into the axes from `layout.yaml`.                    |
+| Schematic (vector) | `panel_B_schematic.py` | Places `assets/<file>.pdf`. The PDF must have the exact size of the panel. |
+| Image (raster)     | `panel_C_image.py`     | Places `assets/<file>.png`, scaled to fit the panel.                       |
+
+### Plot
+
+Start from `panel_A_scores.py`.
+Follow these rules, or the build reports an error:
+
+- Draw into the axes from the layout: `ax = panel.axes(fig, "main")`.
+- Do not use `tight_layout`, `bbox_inches="tight"` or `set_aspect`.
+  They move the axes.
+  For a square plot, make a square box in `layout.yaml`.
+- Take the colors from `panel.colors["<method>"]`.
+  Add new colors to `figures/style.yaml`.
+
+To reuse plotting code that you already have, copy it into the notebook.
+Then replace `plt.subplots()` with `panel.figure()` and `panel.axes(fig, "main")`.
+If more than one figure uses the code, move it to `parnet_paper/`.
+
+### Schematic
+
+1. Run the panel notebook once with your PDF.
+   If the size is wrong, the error message gives the correct size in millimetres.
+1. Draw the schematic at this size (Inkscape, Illustrator, BioRender).
+1. Export it as PDF, with text kept as text.
+1. Save it in `assets/` and add a line to `assets/README.md`.
+
+### Image
+
+Save the PNG, JPEG or TIFF file in `assets/` and add a line to `assets/README.md`.
+Use a resolution of 300 dpi or more at the final size.
+The image keeps a 4 mm margin at the top and on the left, for the panel letter.
+
+## Data
+
+This repository does not compute results.
+The analysis repositories compute them.
+
+1. Export the table from the analysis repository.
+   Keep only the columns that the figure shows.
+1. Copy it to `data/` of the figure, or to the shared `data/` if more than one figure uses it.
+1. Add a line to the `README.md` of that folder: the repository, the rule or notebook, and the date or commit.
+
+Keep each file below 5 MB.
+
+If the table needs a small change before the plot (filter, reshape, merge), write a script in `scripts/`.
+Declare it in `rules.smk`, so the build runs it first.
+The example shows how: `scripts/make_scores.py` and `rules.smk`.
+If your figure does not need a script, delete `scripts/` and `rules.smk`.
+
+## Build
+
+```sh
+pixi run figure main_mutations     # one figure
+pixi run figures                   # all figures
+pixi run view main_mutations       # look at the result in the browser
+```
+
+The build runs the data scripts, runs each panel notebook, then assembles the figure.
+At the end, it checks the font sizes, the positions of the axes, and the text that is cut.
+It ends with `OK`, or with a list of errors.
+
+After a change in the shared `data/`, rebuild all figures with `pixi run figures --forcerun plotplate_build`.
+
+## Deliver
+
+```sh
+pixi run plotplate bundle figures/main_mutations build/overleaf/main_mutations   # files for Overleaf
+pixi run plotplate export figures/main_mutations -o build/main_mutations.pdf     # one PDF for the journal
+```
+
+Git ignores the folder `build/`.

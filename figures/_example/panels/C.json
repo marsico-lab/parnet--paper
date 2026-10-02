@@ -1,0 +1,40 @@
+{
+  "panel": "C",
+  "layout": "_example",
+  "box_mm": [
+    93.5,
+    52.0,
+    89.5,
+    48.0
+  ],
+  "size_mm": [
+    89.5,
+    48.0
+  ],
+  "files": [
+    "C.pdf",
+    "C.svg",
+    "C.png"
+  ],
+  "source": "image.png",
+  "saved": "2026-10-02T11:25:02+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "ax1": {
+        "box_edges": {
+          "left": 97.5,
+          "right": 176.7,
+          "top": 56.0,
+          "bottom": 100.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {}
+  }
+}

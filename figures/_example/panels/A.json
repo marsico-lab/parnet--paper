@@ -1,0 +1,49 @@
+{
+  "panel": "A",
+  "layout": "_example",
+  "box_mm": [
+    0.0,
+    0.0,
+    183.0,
+    48.0
+  ],
+  "size_mm": [
+    183.0,
+    48.0
+  ],
+  "files": [
+    "A.pdf",
+    "A.svg",
+    "A.png"
+  ],
+  "source": "panel_A_scores.py",
+  "saved": "2026-10-02T11:25:00+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "main": {
+        "box_edges": {
+          "left": 12.0,
+          "right": 140.0,
+          "top": 4.0,
+          "bottom": 40.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {
+      "main.legend": {
+        "box_edges": {
+          "left": 115.955,
+          "right": 139.577,
+          "top": 29.62,
+          "bottom": 39.577
+        }
+      }
+    }
+  }
+}
