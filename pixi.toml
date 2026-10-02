@@ -24,7 +24,7 @@ jupytext = "*"
 [pypi-dependencies]
 parnet-paper = { path = ".", editable = true }
 # Pin the same tag in any user-wide `plotplate` install (`plotplate doctor` reports drift).
-plotplate = { git = "https://github.com/lambosaur/plotplate.git", tag = "v0.1.0" }
+plotplate = { git = "https://github.com/lambosaur/plotplate.git", tag = "v0.2.0" }
 
 [tasks]
 # `pixi run figures` builds every figure; extra arguments go to snakemake.
