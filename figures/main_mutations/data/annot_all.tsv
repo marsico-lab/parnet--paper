@@ -1,0 +1,429 @@
+seq_id	interval_id	Gene Symbol	ss_type	ss_distance	Splicing effect	rescue_status	splice_effect_class	ss_region	feature_type	strand
+chr1:11802880:-:chr1:11802880:C>T	chr1:11802880:-	MTHFR	donor	0	Intron inclusion between exons 2 & 3	rescued	donor_loss__intron_retention	intronic	intron	-
+chr1:26731605:+:chr1:26731605:G>C	chr1:26731605:+	ARID1A	donor	0	Intron inclusion between exons 3 & 4	original	donor_loss__intron_retention	intronic	intron	+
+chr1:26767787:+:chr1:26767787:C>G	chr1:26767787:+	ARID1A	acceptor	2	Intron inclusion between exons 10 & 11	original	acceptor_loss__intron_retention	intronic	intron	+
+chr1:26772633:+:chr1:26772633:G>A	chr1:26772633:+	ARID1A	donor	0	Intron inclusion between exons 13 & 14	original	donor_loss__intron_retention	intronic	intron	+
+chr1:26773899:+:chr1:26773899:G>A	chr1:26773899:+	ARID1A	donor	0	Intron inclusion between exons 17 & 18	original	donor_loss__intron_retention	intronic	intron	+
+chr1:26773899:+:chr1:26773899:G>C	chr1:26773899:+	ARID1A	donor	0	Intron inclusion between exons 17 & 18	original	donor_loss__intron_retention	intronic	intron	+
+chr1:26773899:+:chr1:26773899:G>T	chr1:26773899:+	ARID1A	donor	0	Intron inclusion between exons 17 & 18	original	donor_loss__intron_retention	intronic	intron	+
+chr1:26775575:+:chr1:26775575:A>T	chr1:26775575:+	ARID1A	acceptor	1	Intron inclusion between exons 18 & 19	original	acceptor_loss__intron_retention	intronic	intron	+
+chr1:46196730:-:chr1:46196730:C>T	chr1:46196730:-	POMGNT1	donor	0	Intron inclusion between exons 4 & 5	rescued	donor_loss__intron_retention	intronic	intron	-
+chr1:50970498:+:chr1:50970498:G>T	chr1:50970498:+	CDKN2C	donor	0	Intron inclusion between exons 2 & 3	original	donor_loss__intron_retention	intronic	intron	+
+chr1:75732642:+:chr1:75732642:A>G	chr1:75732642:+	ACADM	acceptor	1	Intron inclusion between exons 2 & 3	original	acceptor_loss__intron_retention	intronic	intron	+
+chr1:75734789:+:chr1:75734789:A>G	chr1:75734789:+	ACADM	acceptor	1	Intron inclusion between exons 5 & 6	original	acceptor_loss__intron_retention	intronic	intron	+
+chr1:75750450:+:chr1:75750450:G>A	chr1:75750450:+	ACADM	acceptor	0	Potential intron inclusion between exons 9 & 10	original	acceptor_loss__intron_retention	intronic	intron	+
+chr1:77964252:-:chr1:77964252:A>C	chr1:77964252:-	FUBP1	donor	1	Intron inclusion between exons 11 & 12	rescued	donor_loss__intron_retention	intronic	intron	-
+chr1:92833539:+:chr1:92833539:T>G	chr1:92833539:+	RPL5	acceptor	5	Intron inclusion between exons 2 & 3	original	acceptor_loss__intron_retention	intronic	intron	+
+chr1:92834778:+:chr1:92834778:G>A	chr1:92834778:+	RPL5	acceptor	0	Intron inclusion between exons 3 & 4	original	acceptor_loss__intron_retention	intronic	intron	+
+chr1:108924216:+:chr1:108924216:T>C	chr1:108924216:+	GPSM2	donor	1	Intron inclusion between exons 14 & 15	original	donor_loss__intron_retention	intronic	intron	+
+chr1:154990526:+:chr1:154990526:C>T	chr1:154990526:+	FLAD1	donor	3	Intron inclusion between exons 5 & 6	original	donor_loss__intron_retention	exonic	CDS	+
+chr1:154992790:+:chr1:154992790:A>G	chr1:154992790:+	FLAD1	donor	3	Probable decrease in frequency of NM_025207.5 isoform	original	isoform_modulation	intronic	intron	+
+chr1:161203435:+:chr1:161203435:A>G	chr1:161203435:+	NDUFS2	acceptor	1	Intron inclusion between exons 2 & 3	original	acceptor_loss__intron_retention	intronic	intron	+
+chr1:161212480:+:chr1:161212480:G>A	chr1:161212480:+	NDUFS2	donor	1	Intron inclusion between exons 11 & 12	original	donor_loss__intron_retention	exonic	CDS	+
+chr1:161213926:+:chr1:161213926:G>A	chr1:161213926:+	NDUFS2	donor	4	Probable decrease in frequency of NM_004550.4 isoform	original	isoform_modulation	intronic	intron	+
+chr1:182385558:-:chr1:182385558:T>C	chr1:182385558:-	GLUL	acceptor	1	Intron inclusion between exons 5 & 6, or skipping beginning of exon 6	rescued	acceptor_loss__intron_retention_or_partial_exon_skip	intronic	intron	-
+chr1:182386404:-:chr1:182386404:T>C	chr1:182386404:-	GLUL	acceptor	1	Intron inclusion between exons 3 & 4	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr1:193233155:+:chr1:193233155:G>A	chr1:193233155:+	CDC73	donor	0	Intron inclusion between exons 14 & 15	original	donor_loss__intron_retention	intronic	intron	+
+chr1:235175183:-:chr1:235175183:C>A	chr1:235175183:-	ARID4B	donor	0	Intron inclusion between exons 22 & 23	rescued	donor_loss__intron_retention	intronic	intron	-
+chr10:3780231:-:chr10:3780231:T>C	chr10:3780231:-	KLF6	acceptor	1	Intron inclusion between exons 2 & 3	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr10:3782215:-:chr10:3782215:C>G	chr10:3782215:-	KLF6	acceptor	0	Intron inclusion between exons 1 & 2	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr10:12089256:+:chr10:12089256:G>T	chr10:12089256:+	DHTKD1	donor	0	Intron inclusion between exons 5 & 6	original	donor_loss__intron_retention	intronic	intron	+
+chr10:87931044:+:chr10:87931044:A>G	chr10:87931044:+	PTEN	acceptor	1	Intron inclusion between exons 3 & 4	original	acceptor_loss__intron_retention	intronic	intron	+
+chr10:87933252:+:chr10:87933252:G>A	chr10:87933252:+	PTEN	donor	0	Intron inclusion between exons 5 & 6	original	donor_loss__intron_retention	intronic	intron	+
+chr10:87952116:+:chr10:87952116:A>G	chr10:87952116:+	PTEN	acceptor	1	Intron inclusion between exons 5 & 6	original	acceptor_loss__intron_retention	intronic	intron	+
+chr10:87957850:+:chr10:87957850:C>G	chr10:87957850:+	PTEN	acceptor	2	Intron inclusion between exons 6 & 7	original	acceptor_loss__intron_retention	intronic	intron	+
+chr10:87957850:+:chr10:87957850:C>A	chr10:87957850:+	PTEN	acceptor	2	Intron inclusion between exons 6 & 7	original	acceptor_loss__intron_retention	intronic	intron	+
+chr10:87957851:+:chr10:87957851:A>C	chr10:87957851:+	PTEN	acceptor	1	Intron inclusion between exons 6 & 7	original	acceptor_loss__intron_retention	intronic	intron	+
+chr10:87957852:+:chr10:87957852:G>C	chr10:87957852:+	PTEN	acceptor	0	Intron inclusion between exons 6 & 7	original	acceptor_loss__intron_retention	intronic	intron	+
+chr10:87958020:+:chr10:87958020:G>T	chr10:87958020:+	PTEN	donor	0	Intron inclusion between exons 7 & 8	original	donor_loss__intron_retention	intronic	intron	+
+chr10:87961118:+:chr10:87961118:G>A	chr10:87961118:+	PTEN	donor	1	Intron inclusion between exons 8 & 9, and loss of exon 9 expression	original	donor_loss__intron_retention	exonic	CDS	+
+chr10:87961119:+:chr10:87961119:G>A	chr10:87961119:+	PTEN	donor	0	Intron inclusion between exons 8 & 9, and loss of exon 9 expression	original	donor_loss__intron_retention	intronic	intron	+
+chr10:87961119:+:chr10:87961119:G>C	chr10:87961119:+	PTEN	donor	0	Intron inclusion between exons 8 & 9, and loss of exon 9 expression	original	donor_loss__intron_retention	intronic	intron	+
+chr10:87961119:+:chr10:87961119:G>T	chr10:87961119:+	PTEN	donor	0	Intron inclusion between exons 8 & 9, and loss of exon 9 expression	original	donor_loss__intron_retention	intronic	intron	+
+chr10:87961120:+:chr10:87961120:T>G	chr10:87961120:+	PTEN	donor	1	Intron inclusion between exons 8 & 9, and loss of exon 9 expression	original	donor_loss__intron_retention	intronic	intron	+
+chr10:87965285:+:chr10:87965285:A>T	chr10:87965285:+	PTEN	acceptor	1	Intron inclusion between exons 8 & 9	original	acceptor_loss__intron_retention	intronic	intron	+
+chr10:89010538:+:chr10:89010538:G>C	chr10:89010538:+	FAS	acceptor	0	Intron inclusion between exons 4 & 5	original	acceptor_loss__intron_retention	intronic	intron	+
+chr10:102630065:+:chr10:102630065:G>A	chr10:102630065:+	SUFU	acceptor	0	Intron inclusion between exons 11 & 12	original	acceptor_loss__intron_retention	intronic	intron	+
+chr10:110601132:+:chr10:110601132:T>C	chr10:110601132:+	SMC3	donor	1	Intron inclusion between exons 23 & 24	original	donor_loss__intron_retention	intronic	intron	+
+chr10:133366994:-:chr10:133366994:C>A	chr10:133366994:-	ECHS1	acceptor	0	Intron inclusion between exons 4 & 5	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr10:133370033:-:chr10:133370033:T>C	chr10:133370033:-	ECHS1	acceptor	1	Intron inclusion between exons 2 & 3	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr11:721563:+:chr11:721563:A>T	chr11:721563:+	EPS8L2	acceptor	1	Intron inclusion between exons 9 & 10	original	acceptor_loss__intron_retention	intronic	intron	+
+chr11:10029765:-:chr11:10029765:C>T	chr11:10029765:-	SBF2	donor	1	Intron inclusion between exons 5 & 6	rescued	donor_loss__intron_retention	exonic	CDS	-
+chr11:17523417:-:chr11:17523417:A>C	chr11:17523417:-	USH1C	donor	1	Intron inclusion between exons 10 & 11	rescued	donor_loss__intron_retention	intronic	intron	-
+chr11:32427954:-:chr11:32427954:A>G	chr11:32427954:-	WT1	donor	1	Intron inclusion between exons 3 & 4	rescued	donor_loss__intron_retention	intronic	intron	-
+chr11:47238799:+:chr11:47238799:G>A	chr11:47238799:+	DDB2	acceptor	0	Intron inclusion between exons 9 & 10	original	acceptor_loss__intron_retention	intronic	intron	+
+chr11:64807220:-:chr11:64807220:C>A	chr11:64807220:-	MEN1	acceptor	0	Intron inclusion between exons 4 & 5	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr11:68757731:-:chr11:68757731:C>A	chr11:68757731:-	CPT1A	acceptor	0	Intron inclusion between exons 18 & 19	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr11:72228848:+:chr11:72228848:G>A	chr11:72228848:+	INPPL1	donor	0	Intron inclusion between exons 4 & 5	original	donor_loss__intron_retention	intronic	intron	+
+chr11:72237123:+:chr11:72237123:G>T	chr11:72237123:+	INPPL1	acceptor	0	Intron inclusion between exons 25 & 26	original	acceptor_loss__intron_retention	intronic	intron	+
+chr11:108271249:+:chr11:108271249:A>T	chr11:108271249:+	ATM	acceptor	1	Intron inclusion between exons 19 & 20	original	acceptor_loss__intron_retention	intronic	intron	+
+chr11:118482093:+:chr11:118482093:G>A	chr11:118482093:+	KMT2A	donor	0	Intron inclusion between exons 7 & 8	original	donor_loss__intron_retention	intronic	intron	+
+chr11:119278165:+:chr11:119278165:G>C	chr11:119278165:+	CBL	acceptor	0	Intron inclusion between exons 7 & 8	original	acceptor_loss__intron_retention	intronic	intron	+
+chr12:12718315:+:chr12:12718315:G>A	chr12:12718315:+	CDKN1B	donor	0	Intron inclusion between exons 1 & 2	original	donor_loss__intron_retention	intronic	intron	+
+chr12:12718824:+:chr12:12718824:G>C	chr12:12718824:+	CDKN1B	acceptor	0	Intron inclusion between exons 1 & 2	original	acceptor_loss__intron_retention	intronic	intron	+
+chr12:32576447:+:chr12:32576447:C>T	chr12:32576447:+	FGD4	donor	3	Intron inclusion between exons 3 & 4	original	donor_loss__intron_retention	exonic	CDS	+
+chr12:45849775:+:chr12:45849775:A>T	chr12:45849775:+	ARID2	donor	2	Intron inclusion between exons 14 & 15	original	donor_loss__intron_retention	exonic	CDS	+
+chr12:45904933:+:chr12:45904933:G>C	chr12:45904933:+	ARID2	acceptor	0	Intron inclusion between exons 20 & 21	original	acceptor_loss__intron_retention	intronic	intron	+
+chr12:49022042:-:chr12:49022042:C>A	chr12:49022042:-	KMT2D	donor	0	Intron inclusion between exons 53 & 54	rescued	donor_loss__intron_retention	intronic	intron	-
+chr12:49027323:-:chr12:49027323:C>T	chr12:49027323:-	KMT2D	acceptor	0	Intron inclusion between exons 47 & 48	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr12:49028142:-:chr12:49028142:C>T	chr12:49028142:-	KMT2D	acceptor	0	Intron inclusion between exons 45 & 46	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr12:49042646:-:chr12:49042646:C>G	chr12:49042646:-	KMT2D	acceptor	0	Intron inclusion between exons 26 & 27	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr12:49042879:-:chr12:49042879:C>T	chr12:49042879:-	KMT2D	acceptor	0	Intron inclusion between exons 25 & 26	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr12:50094436:+:chr12:50094436:G>A	chr12:50094436:+	SMARCD1	acceptor	0	Intron inclusion between exons 9 & 10	original	acceptor_loss__intron_retention	intronic	intron	+
+chr12:57524719:+:chr12:57524719:G>A	chr12:57524719:+	MBD6	acceptor	0	Intron inclusion between exons 3 & 4	original	acceptor_loss__intron_retention	intronic	intron	+
+chr12:109568768:-:chr12:109568768:A>G	chr12:109568768:-	MMAB	donor	1	Intron inclusion between exons 3 & 4	rescued	donor_loss__intron_retention	intronic	intron	-
+chr12:114679503:-:chr12:114679503:A>G	chr12:114679503:-	TBX3	donor	1	Intron inclusion between exons 4 & 5	rescued	donor_loss__intron_retention	intronic	intron	-
+chr12:120999267:+:chr12:120999267:G>A	chr12:120999267:+	HNF1A	acceptor	0	Intron inclusion between exons 7 & 8	original	acceptor_loss__intron_retention	intronic	intron	+
+chr12:132657430:-:chr12:132657430:C>A	chr12:132657430:-	POLE	acceptor	0	Intron inclusion between exons 27 & 28	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr12:132680048:-:chr12:132680048:T>C	chr12:132680048:-	POLE	acceptor	1	Intron inclusion between exons 4 & 5	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr13:48373493:+:chr13:48373493:G>T	chr13:48373493:+	RB1	donor	0	Intron inclusion between exons 12 & 13	original	donor_loss__intron_retention	intronic	intron	+
+chr13:48379655:+:chr13:48379655:G>C	chr13:48379655:+	RB1	donor	4	Exon 14 skipping	original	donor_loss__exon_skipping	intronic	intron	+
+chr13:48453113:+:chr13:48453113:T>A	chr13:48453113:+	RB1	donor	1	Intron inclusion between exons 18 & 19	original	donor_loss__intron_retention	intronic	intron	+
+chr13:48463840:+:chr13:48463840:G>T	chr13:48463840:+	RB1	donor	4	Exon 21 skipping	original	donor_loss__exon_skipping	intronic	intron	+
+chr13:48465112:+:chr13:48465112:G>A	chr13:48465112:+	RB1	donor	0	Intron inclusion between exons 22 & 23	original	donor_loss__intron_retention	intronic	intron	+
+chr13:48465369:+:chr13:48465369:G>C	chr13:48465369:+	RB1	donor	0	Intron inclusion between exons 23 & 24	original	donor_loss__intron_retention	intronic	intron	+
+chr13:51368938:-:chr13:51368938:C>T	chr13:51368938:-	INTS6	donor	0	Intron inclusion between exons 16 & 17	rescued	donor_loss__intron_retention	intronic	intron	-
+chr13:72772277:-:chr13:72772277:T>C	chr13:72772277:-	DIS3	acceptor	1	Intron inclusion between exons 9 & 10	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr13:72775209:-:chr13:72775209:A>G	chr13:72775209:-	DIS3	donor	1	Intron inclusion between exons 6 & 7	rescued	donor_loss__intron_retention	intronic	intron	-
+chr13:95043680:-:chr13:95043680:A>G	chr13:95043680:-	ABCC4	donor	1	Intron inclusion between exons 29 & 30	rescued	donor_loss__intron_retention	intronic	intron	-
+chr13:95166157:-:chr13:95166157:C>A	chr13:95166157:-	ABCC4	donor	0	Intron inclusion between exons 15 & 16	rescued	donor_loss__intron_retention	intronic	intron	-
+chr14:22978446:-:chr14:22978446:C>T	chr14:22978446:-	AJUBA	acceptor	0	Intron inclusion between exons 1 & 2	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr14:67865141:+:chr14:67865141:T>C	chr14:67865141:+	RAD51B	donor	1	Intron inclusion between exons 5 & 6	original	donor_loss__intron_retention	intronic	intron	+
+chr14:68411527:+:chr14:68411527:G>A	chr14:68411527:+	RAD51B	donor	1	Potential intron inclusion between exons 9 & 10	original	donor_loss__intron_retention	exonic	UTR3	+
+chr15:41740204:+:chr15:41740204:G>T	chr15:41740204:+	MGA	donor	0	Intron inclusion between exons 14 & 15	original	donor_loss__intron_retention	intronic	intron	+
+chr15:41748928:+:chr15:41748928:G>T	chr15:41748928:+	MGA	donor	0	Intron inclusion between exons 16 & 17	original	donor_loss__intron_retention	intronic	intron	+
+chr15:43409743:-:chr15:43409743:T>C	chr15:43409743:-	TP53BP1	acceptor	1	Intron inclusion between exons 24 & 25	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr15:43421854:-:chr15:43421854:C>T	chr15:43421854:-	TP53BP1	donor	0	Intron inclusion between exons 19 & 20	rescued	donor_loss__intron_retention	intronic	intron	-
+chr15:44711614:+:chr15:44711614:G>A	chr15:44711614:+	B2M	donor	0	Intron inclusion between exons 1 & 2	original	donor_loss__intron_retention	intronic	intron	+
+chr15:44715421:+:chr15:44715421:A>G	chr15:44715421:+	B2M	acceptor	1	Intron inclusion between exons 1 & 2	original	acceptor_loss__intron_retention	intronic	intron	+
+chr15:44715422:+:chr15:44715422:G>T	chr15:44715422:+	B2M	acceptor	0	Intron inclusion between exons 1 & 2	original	acceptor_loss__intron_retention	intronic	intron	+
+chr15:44715702:+:chr15:44715702:G>C	chr15:44715702:+	B2M	donor	0	Intron inclusion between exons 2 & 3	original	donor_loss__intron_retention	intronic	intron	+
+chr15:67190410:+:chr15:67190410:C>G	chr15:67190410:+	SMAD3	acceptor	2	Intron inclusion between exons 8 & 9	original	acceptor_loss__intron_retention	intronic	intron	+
+chr15:72346230:-:chr15:72346230:C>A	chr15:72346230:-	HEXA	donor	4	Intron inclusion between exons 12 & 13	rescued	donor_loss__intron_retention	intronic	intron	-
+chr15:72348045:-:chr15:72348045:C>G	chr15:72348045:-	HEXA	donor	2	Intron inclusion between exons 9 & 10	rescued	donor_loss__intron_retention	intronic	intron	-
+chr15:72348047:-:chr15:72348047:C>T	chr15:72348047:-	HEXA	donor	0	Intron inclusion between exons 9 & 10	rescued	donor_loss__intron_retention	intronic	intron	-
+chr15:72355558:-:chr15:72355558:C>A	chr15:72355558:-	HEXA	donor	0	Intron inclusion between exons 3 & 4	rescued	donor_loss__intron_retention	intronic	intron	-
+chr15:80162341:+:chr15:80162341:G>A	chr15:80162341:+	FAH	donor	4	Intron inclusion between exons 5 & 6	original	donor_loss__intron_retention	intronic	intron	+
+chr15:90999794:-:chr15:90999794:C>A	chr15:90999794:-	VPS33B	acceptor	0	Intron inclusion between exons 21 & 22	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr15:92978232:+:chr15:92978232:A>G	chr15:92978232:+	CHD2	acceptor	1	Intron inclusion between exons 20 & 21	original	acceptor_loss__intron_retention	intronic	intron	+
+chr15:93014694:+:chr15:93014694:A>T	chr15:93014694:+	CHD2	acceptor	1	Intron inclusion between exons 36 & 37	original	acceptor_loss__intron_retention	intronic	intron	+
+chr15:93020259:+:chr15:93020259:G>A	chr15:93020259:+	CHD2	donor	0	Intron inclusion between exons 38 & 39	original	donor_loss__intron_retention	intronic	intron	+
+chr15:101646723:-:chr15:101646723:A>G	chr15:101646723:-	TM2D3	donor	1	Intron inclusion between exons 4 & 5	rescued	donor_loss__intron_retention	intronic	intron	-
+chr16:2060815:+:chr16:2060815:T>C	chr16:2060815:+	TSC2	donor	1	Intron inclusion between exons 11 & 12	original	donor_loss__intron_retention	intronic	intron	+
+chr16:2065636:+:chr16:2065636:G>T	chr16:2065636:+	TSC2	donor	0	Intron inclusion between exons 16 & 17	original	donor_loss__intron_retention	intronic	intron	+
+chr16:2071618:+:chr16:2071618:T>C	chr16:2071618:+	TSC2	donor	1	Intron inclusion between exons 18 & 19	original	donor_loss__intron_retention	intronic	intron	+
+chr16:2079275:+:chr16:2079275:G>C	chr16:2079275:+	TSC2	acceptor	0	Intron inclusion between exons 27 & 28	original	acceptor_loss__intron_retention	intronic	intron	+
+chr16:2079554:+:chr16:2079554:C>G	chr16:2079554:+	TSC2	acceptor	2	Intron inclusion between exons 28 & 29	original	acceptor_loss__intron_retention	intronic	intron	+
+chr16:2080378:+:chr16:2080378:G>C	chr16:2080378:+	TSC2	donor	0	Intron inclusion between exons 30 & 31	original	donor_loss__intron_retention	intronic	intron	+
+chr16:3736817:-:chr16:3736817:T>A	chr16:3736817:-	CREBBP	acceptor	1	Intron inclusion between exons 26 & 27	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr16:3739725:-:chr16:3739725:C>T	chr16:3739725:-	CREBBP	acceptor	0	Intron inclusion between exons 24 & 25	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr16:13935745:+:chr16:13935745:C>A	chr16:13935745:+	ERCC4	donor	1	Potential intron inclusion between exons 8 & 9	original	donor_loss__intron_retention	intronic	intron	+
+chr16:23629638:-:chr16:23629638:A>G	chr16:23629638:-	PALB2	donor	1	Intron inclusion between exons 5 & 6	rescued	donor_loss__intron_retention	intronic	intron	-
+chr16:30888857:-:chr16:30888857:C>G	chr16:30888857:-	BCL7C	donor	2	Intron inclusion between exons 5 & 6	rescued	donor_loss__intron_retention	intronic	intron	-
+chr16:31110204:+:chr16:31110204:G>T	chr16:31110204:+	BCKDK	acceptor	0	Intron inclusion between exons 5 & 6	original	acceptor_loss__intron_retention	intronic	intron	+
+chr16:46924386:+:chr16:46924386:C>G	chr16:46924386:+	GPT2	acceptor	2	Intron inclusion between exons 9 & 10	original	acceptor_loss__intron_retention	intronic	intron	+
+chr16:50794429:+:chr16:50794429:G>A	chr16:50794429:+	CYLD	donor	0	Intron inclusion between exons 19 & 20	original	donor_loss__intron_retention	intronic	intron	+
+chr16:67611615:+:chr16:67611615:T>G	chr16:67611615:+	CTCF	donor	1	Intron inclusion between exons 3 & 4	original	donor_loss__intron_retention	intronic	intron	+
+chr16:67636852:+:chr16:67636852:G>T	chr16:67636852:+	CTCF	donor	0	Intron inclusion between exons 11 & 12	original	donor_loss__intron_retention	intronic	intron	+
+chr16:68808849:+:chr16:68808849:G>T	chr16:68808849:+	CDH1	donor	0	Intron inclusion between exons 5 & 6	original	donor_loss__intron_retention	intronic	intron	+
+chr16:68810195:+:chr16:68810195:A>G	chr16:68810195:+	CDH1	acceptor	1	Intron inclusion between exons 5 & 6	original	acceptor_loss__intron_retention	intronic	intron	+
+chr16:68815760:+:chr16:68815760:G>A	chr16:68815760:+	CDH1	donor	0	Intron inclusion between exons 10 & 11	original	donor_loss__intron_retention	intronic	intron	+
+chr16:68822226:+:chr16:68822226:G>T	chr16:68822226:+	CDH1	donor	0	Intron inclusion between exons 12 & 13	original	donor_loss__intron_retention	intronic	intron	+
+chr16:68822226:+:chr16:68822226:G>A	chr16:68822226:+	CDH1	donor	0	Intron inclusion between exons 12 & 13	original	donor_loss__intron_retention	intronic	intron	+
+chr16:89740802:-:chr16:89740802:A>T	chr16:89740802:-	FANCA	donor	1	Intron inclusion between exons 38 & 39	rescued	donor_loss__intron_retention	intronic	intron	-
+chr16:89805278:-:chr16:89805278:A>G	chr16:89805278:-	FANCA	donor	1	Intron inclusion between exons 7 & 8	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7220678:+:chr17:7220678:T>C	chr17:7220678:+	ACADVL	donor	1	Intron inclusion between exons 4 & 5	original	donor_loss__intron_retention	intronic	intron	+
+chr17:7220923:+:chr17:7220923:G>A	chr17:7220923:+	ACADVL	acceptor	0	Intron inclusion between exons 5 & 6	original	acceptor_loss__intron_retention	intronic	intron	+
+chr17:7223812:+:chr17:7223812:G>A	chr17:7223812:+	ACADVL	acceptor	0	Intron inclusion between exons 12 & 13	original	acceptor_loss__intron_retention	intronic	intron	+
+chr17:7314078:-:chr17:7314078:A>C	chr17:7314078:-	GPS2	donor	1	Intron inclusion between exons 5 & 6	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7669692:-:chr17:7669692:T>C	chr17:7669692:-	TP53	acceptor	1	Intron inclusion between exons 10 & 11	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7669692:-:chr17:7669692:T>A	chr17:7669692:-	TP53	acceptor	1	Intron inclusion between exons 10 & 11	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7669692:-:chr17:7669692:T>G	chr17:7669692:-	TP53	acceptor	1	Intron inclusion between exons 10 & 11	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7670716:-:chr17:7670716:C>A	chr17:7670716:-	TP53	acceptor	0	Intron inclusion between exons 9 & 10	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7670716:-:chr17:7670716:C>T	chr17:7670716:-	TP53	acceptor	0	Intron inclusion between exons 9 & 10	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7670716:-:chr17:7670716:C>G	chr17:7670716:-	TP53	acceptor	0	Intron inclusion between exons 9 & 10	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7670717:-:chr17:7670717:T>G	chr17:7670717:-	TP53	acceptor	1	Intron inclusion between exons 9 & 10	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7670717:-:chr17:7670717:T>A	chr17:7670717:-	TP53	acceptor	1	Intron inclusion between exons 9 & 10	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7670717:-:chr17:7670717:T>C	chr17:7670717:-	TP53	acceptor	1	Intron inclusion between exons 9 & 10	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7673533:-:chr17:7673533:A>G	chr17:7673533:-	TP53	donor	1	Intron inclusion between exons 9 & 10	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7673533:-:chr17:7673533:A>C	chr17:7673533:-	TP53	donor	1	Intron inclusion between exons 9 & 10	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7673534:-:chr17:7673534:C>G	chr17:7673534:-	TP53	donor	0	Intron inclusion between exons 9 & 10	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7673534:-:chr17:7673534:C>A	chr17:7673534:-	TP53	donor	0	Intron inclusion between exons 9 & 10	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7673534:-:chr17:7673534:C>T	chr17:7673534:-	TP53	donor	0	Intron inclusion between exons 9 & 10	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7673535:-:chr17:7673535:C>T	chr17:7673535:-	TP53	donor	1	Intron inclusion between exons 9 & 10	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7673609:-:chr17:7673609:C>A	chr17:7673609:-	TP53	acceptor	0	Intron inclusion between exons 8 & 9	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7673609:-:chr17:7673609:C>T	chr17:7673609:-	TP53	acceptor	0	Intron inclusion between exons 8 & 9	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7673610:-:chr17:7673610:T>C	chr17:7673610:-	TP53	acceptor	1	Intron inclusion between exons 8 & 9	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7673699:-:chr17:7673699:A>C	chr17:7673699:-	TP53	donor	1	Intron inclusion between exons 8 & 9	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7673700:-:chr17:7673700:C>T	chr17:7673700:-	TP53	donor	0	Intron inclusion between exons 8 & 9	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7673700:-:chr17:7673700:C>A	chr17:7673700:-	TP53	donor	0	Intron inclusion between exons 8 & 9	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7673700:-:chr17:7673700:C>G	chr17:7673700:-	TP53	donor	0	Intron inclusion between exons 8 & 9	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7673838:-:chr17:7673838:C>T	chr17:7673838:-	TP53	acceptor	0	Intron inclusion between exons 7 & 8	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7673838:-:chr17:7673838:C>A	chr17:7673838:-	TP53	acceptor	0	Intron inclusion between exons 7 & 8	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7673839:-:chr17:7673839:T>A	chr17:7673839:-	TP53	acceptor	1	Intron inclusion between exons 7 & 8	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7673839:-:chr17:7673839:T>G	chr17:7673839:-	TP53	acceptor	1	Intron inclusion between exons 7 & 8	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7674179:-:chr17:7674179:A>C	chr17:7674179:-	TP53	donor	1	Intron inclusion between exons 7 & 8	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7674180:-:chr17:7674180:C>T	chr17:7674180:-	TP53	donor	0	Intron inclusion between exons 7 & 8	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7674180:-:chr17:7674180:C>A	chr17:7674180:-	TP53	donor	0	Intron inclusion between exons 7 & 8	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7674181:-:chr17:7674181:C>G	chr17:7674181:-	TP53	donor	1	Intron inclusion between exons 7 & 8	rescued	donor_loss__intron_retention	exonic	CDS	-
+chr17:7674291:-:chr17:7674291:C>G	chr17:7674291:-	TP53	acceptor	0	Intron inclusion between exons 6 & 7	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7674291:-:chr17:7674291:C>A	chr17:7674291:-	TP53	acceptor	0	Intron inclusion between exons 6 & 7	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7674291:-:chr17:7674291:C>T	chr17:7674291:-	TP53	acceptor	0	Intron inclusion between exons 6 & 7	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7674292:-:chr17:7674292:T>C	chr17:7674292:-	TP53	acceptor	1	Intron inclusion between exons 6 & 7	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7674292:-:chr17:7674292:T>G	chr17:7674292:-	TP53	acceptor	1	Intron inclusion between exons 6 & 7	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7674292:-:chr17:7674292:T>A	chr17:7674292:-	TP53	acceptor	1	Intron inclusion between exons 6 & 7	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7674857:-:chr17:7674857:A>G	chr17:7674857:-	TP53	donor	1	Intron inclusion between exons 6 & 7	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7674857:-:chr17:7674857:A>T	chr17:7674857:-	TP53	donor	1	Intron inclusion between exons 6 & 7	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7674857:-:chr17:7674857:A>C	chr17:7674857:-	TP53	donor	1	Intron inclusion between exons 6 & 7	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7674858:-:chr17:7674858:C>T	chr17:7674858:-	TP53	donor	0	Intron inclusion between exons 6 & 7	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7674858:-:chr17:7674858:C>A	chr17:7674858:-	TP53	donor	0	Intron inclusion between exons 6 & 7	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7674859:-:chr17:7674859:C>T	chr17:7674859:-	TP53	donor	1	Intron inclusion between exons 6 & 7	rescued	donor_loss__intron_retention	exonic	CDS	-
+chr17:7674859:-:chr17:7674859:C>A	chr17:7674859:-	TP53	donor	1	Intron inclusion between exons 6 & 7	rescued	donor_loss__intron_retention	exonic	CDS	-
+chr17:7674972:-:chr17:7674972:C>G	chr17:7674972:-	TP53	acceptor	0	Potential intron inclusion between exons 5 & 6	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7674972:-:chr17:7674972:C>T	chr17:7674972:-	TP53	acceptor	0	Intron inclusion between exons 5 & 6	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7674973:-:chr17:7674973:T>G	chr17:7674973:-	TP53	acceptor	1	Intron inclusion between exons 5 & 6	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7675051:-:chr17:7675051:A>T	chr17:7675051:-	TP53	donor	1	Intron inclusion between exons 5 & 6	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7675052:-:chr17:7675052:C>A	chr17:7675052:-	TP53	donor	0	Intron inclusion between exons 5 & 6, or skipping end of exon 5	rescued	donor_loss__intron_retention_or_partial_exon_skip	intronic	intron	-
+chr17:7675052:-:chr17:7675052:C>T	chr17:7675052:-	TP53	donor	0	Intron inclusion between exons 5 & 6, or skipping end of exon 5	rescued	donor_loss__intron_retention_or_partial_exon_skip	intronic	intron	-
+chr17:7675053:-:chr17:7675053:C>G	chr17:7675053:-	TP53	donor	1	Intron inclusion between exons 5 & 6, or skipping end of exon 5	rescued	donor_loss__intron_retention_or_partial_exon_skip	exonic	CDS	-
+chr17:7675237:-:chr17:7675237:C>A	chr17:7675237:-	TP53	acceptor	0	Intron inclusion between exons 4 & 5, or skipping beginning of exon 5	rescued	acceptor_loss__intron_retention_or_partial_exon_skip	intronic	intron	-
+chr17:7675237:-:chr17:7675237:C>G	chr17:7675237:-	TP53	acceptor	0	Potential intron inclusion between exons 4 & 5	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7675237:-:chr17:7675237:C>T	chr17:7675237:-	TP53	acceptor	0	Intron inclusion between exons 4 & 5, or skipping beginning of exon 5	rescued	acceptor_loss__intron_retention_or_partial_exon_skip	intronic	intron	-
+chr17:7675238:-:chr17:7675238:T>G	chr17:7675238:-	TP53	acceptor	1	Intron inclusion between exons 4 & 5, or skipping beginning of exon 5	rescued	acceptor_loss__intron_retention_or_partial_exon_skip	intronic	intron	-
+chr17:7675238:-:chr17:7675238:T>C	chr17:7675238:-	TP53	acceptor	1	Intron inclusion between exons 4 & 5, or skipping beginning of exon 5	rescued	acceptor_loss__intron_retention_or_partial_exon_skip	intronic	intron	-
+chr17:7675238:-:chr17:7675238:T>A	chr17:7675238:-	TP53	acceptor	1	Intron inclusion between exons 4 & 5, or skipping beginning of exon 5	rescued	acceptor_loss__intron_retention_or_partial_exon_skip	intronic	intron	-
+chr17:7675989:-:chr17:7675989:C>T	chr17:7675989:-	TP53	donor	4	Intron inclusion between exons 4 & 5	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7675992:-:chr17:7675992:A>C	chr17:7675992:-	TP53	donor	1	Intron inclusion between exons 4 & 5	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7675992:-:chr17:7675992:A>G	chr17:7675992:-	TP53	donor	1	Intron inclusion between exons 4 & 5	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7675993:-:chr17:7675993:C>T	chr17:7675993:-	TP53	donor	0	Intron inclusion between exons 4 & 5	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7675993:-:chr17:7675993:C>A	chr17:7675993:-	TP53	donor	0	Intron inclusion between exons 4 & 5	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7675994:-:chr17:7675994:C>G	chr17:7675994:-	TP53	donor	1	Intron inclusion between exons 4 & 5	rescued	donor_loss__intron_retention	exonic	CDS	-
+chr17:7675994:-:chr17:7675994:C>T	chr17:7675994:-	TP53	donor	1	Intron inclusion between exons 4 & 5	rescued	donor_loss__intron_retention	exonic	CDS	-
+chr17:7675994:-:chr17:7675994:C>A	chr17:7675994:-	TP53	donor	1	Intron inclusion between exons 4 & 5	rescued	donor_loss__intron_retention	exonic	CDS	-
+chr17:7675995:-:chr17:7675995:G>A	chr17:7675995:-	TP53	donor	2	Does not affect splicing	rescued	no_effect	exonic	CDS	-
+chr17:7676273:-:chr17:7676273:C>T	chr17:7676273:-	TP53	acceptor	0	Intron inclusion between exons 3 & 4, or skipping beginning of exon 4	rescued	acceptor_loss__intron_retention_or_partial_exon_skip	intronic	intron	-
+chr17:7676381:-:chr17:7676381:C>T	chr17:7676381:-	TP53	donor	0	Intron inclusion between exons 3 & 4	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7676381:-:chr17:7676381:C>A	chr17:7676381:-	TP53	donor	0	Potential intron inclusion between exons 3 & 4	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:7676404:-:chr17:7676404:C>A	chr17:7676404:-	TP53	acceptor	0	Intron inclusion between exons 2 & 3	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:7676405:-:chr17:7676405:T>C	chr17:7676405:-	TP53	acceptor	1	Intron inclusion between exons 2 & 3	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:12141146:+:chr17:12141146:G>C	chr17:12141146:+	MAP2K4	acceptor	0	Intron inclusion between exons 10 & 11	original	acceptor_loss__intron_retention	intronic	intron	+
+chr17:16091861:-:chr17:16091861:A>G	chr17:16091861:-	NCOR1	donor	1	Intron inclusion between exons 22 & 23	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:31206372:+:chr17:31206372:G>T	chr17:31206372:+	NF1	donor	0	Intron inclusion between exons 12 & 13	original	donor_loss__intron_retention	intronic	intron	+
+chr17:31219119:+:chr17:31219119:G>A	chr17:31219119:+	NF1	donor	0	Intron inclusion between exons 14 & 15	original	donor_loss__intron_retention	intronic	intron	+
+chr17:31258504:+:chr17:31258504:T>C	chr17:31258504:+	NF1	donor	1	Intron inclusion between exons 31 & 32	original	donor_loss__intron_retention	intronic	intron	+
+chr17:31343007:+:chr17:31343007:A>G	chr17:31343007:+	NF1	acceptor	1	Intron inclusion between exons 47 & 48	original	acceptor_loss__intron_retention	intronic	intron	+
+chr17:31343008:+:chr17:31343008:G>A	chr17:31343008:+	NF1	acceptor	0	Intron inclusion between exons 47 & 48	original	acceptor_loss__intron_retention	intronic	intron	+
+chr17:31352415:+:chr17:31352415:G>A	chr17:31352415:+	NF1	donor	0	Intron inclusion between exons 51 & 52	original	donor_loss__intron_retention	intronic	intron	+
+chr17:39463119:+:chr17:39463119:T>C	chr17:39463119:+	CDK12	donor	1	Potential intron inclusion between exons 1 & 2	original	donor_loss__intron_retention	intronic	intron	+
+chr17:40631694:-:chr17:40631694:C>T	chr17:40631694:-	SMARCE1	acceptor	0	Intron inclusion between exons 8 & 9	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:43047705:-:chr17:43047705:T>C	chr17:43047705:-	BRCA1	acceptor	1	Intron inclusion between exons 20 & 21	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:43057051:-:chr17:43057051:C>T	chr17:43057051:-	BRCA1	donor	0	Intron inclusion between exons 18 & 19	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:43067609:-:chr17:43067609:T>G	chr17:43067609:-	BRCA1	donor	2	Intron inclusion between exons 16 & 17	rescued	donor_loss__intron_retention	exonic	CDS	-
+chr17:49622068:-:chr17:49622068:C>A	chr17:49622068:-	SPOP	acceptor	0	Intron inclusion between exons 2 & 3	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:49622068:-:chr17:49622068:C>G	chr17:49622068:-	SPOP	acceptor	0	Intron inclusion between exons 2 & 3	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr17:58370909:-:chr17:58370909:A>G	chr17:58370909:-	RNF43	donor	1	Intron inclusion between exons 3 & 4	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:61857056:-:chr17:61857056:A>C	chr17:61857056:-	BRIP1	donor	1	Intron inclusion between exons 4 & 5	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:75949215:-:chr17:75949215:A>C	chr17:75949215:-	ACOX1	donor	1	Intron inclusion between exons 12 & 13	rescued	donor_loss__intron_retention	intronic	intron	-
+chr17:80112102:+:chr17:80112102:T>G	chr17:80112102:+	GAA	donor	1	Intron inclusion between exons 12 & 13	original	donor_loss__intron_retention	intronic	intron	+
+chr17:82889670:+:chr17:82889670:C>T	chr17:82889670:+	TBCD	acceptor	3	Does not affect splicing	original	no_effect	exonic	CDS	+
+chr18:51076777:+:chr18:51076777:G>C	chr18:51076777:+	SMAD4	donor	0	Intron inclusion between exons 11 & 12	original	donor_loss__intron_retention	intronic	intron	+
+chr18:51076778:+:chr18:51076778:T>C	chr18:51076778:+	SMAD4	donor	1	Intron inclusion between exons 11 & 12	original	donor_loss__intron_retention	intronic	intron	+
+chr19:1218416:+:chr19:1218416:G>T	chr19:1218416:+	STK11	acceptor	0	Intron inclusion between exons 1 & 2	original	acceptor_loss__intron_retention	intronic	intron	+
+chr19:1221212:+:chr19:1221212:G>T	chr19:1221212:+	STK11	acceptor	0	Intron inclusion between exons 5 & 6	original	acceptor_loss__intron_retention	intronic	intron	+
+chr19:1221947:+:chr19:1221947:A>T	chr19:1221947:+	STK11	acceptor	1	Intron inclusion between exons 6 & 7	original	acceptor_loss__intron_retention	intronic	intron	+
+chr19:6366256:+:chr19:6366256:A>T	chr19:6366256:+	CLPP	acceptor	1	Intron inclusion between exons 4 & 5	original	acceptor_loss__intron_retention	intronic	intron	+
+chr19:10486819:-:chr19:10486819:C>A	chr19:10486819:-	KEAP1	acceptor	0	Intron inclusion between exons 5 & 6	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr19:10486820:-:chr19:10486820:T>G	chr19:10486820:-	KEAP1	acceptor	1	Intron inclusion between exons 5 & 6	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr19:10489190:-:chr19:10489190:A>T	chr19:10489190:-	KEAP1	donor	1	Intron inclusion between exons 5 & 6	rescued	donor_loss__intron_retention	intronic	intron	-
+chr19:10489191:-:chr19:10489191:C>A	chr19:10489191:-	KEAP1	donor	0	Intron inclusion between exons 5 & 6	rescued	donor_loss__intron_retention	intronic	intron	-
+chr19:11013113:+:chr19:11013113:G>T	chr19:11013113:+	SMARCA4	donor	0	Intron inclusion between exons 16 & 17	original	donor_loss__intron_retention	intronic	intron	+
+chr19:11021724:+:chr19:11021724:G>A	chr19:11021724:+	SMARCA4	acceptor	0	Intron inclusion between exons 19 & 20	original	acceptor_loss__intron_retention	intronic	intron	+
+chr19:11033288:+:chr19:11033288:A>G	chr19:11033288:+	SMARCA4	acceptor	1	Intron inclusion between exons 25 & 26	original	acceptor_loss__intron_retention	intronic	intron	+
+chr19:11034913:+:chr19:11034913:G>C	chr19:11034913:+	SMARCA4	acceptor	0	Intron inclusion between exons 29 & 30	original	acceptor_loss__intron_retention	intronic	intron	+
+chr19:11041305:+:chr19:11041305:A>G	chr19:11041305:+	SMARCA4	acceptor	1	Intron inclusion between exons 29 & 30	original	acceptor_loss__intron_retention	intronic	intron	+
+chr19:13926820:+:chr19:13926820:G>T	chr19:13926820:+	CC2D1A	acceptor	0	Intron inclusion between exons 19 & 20	original	acceptor_loss__intron_retention	intronic	intron	+
+chr19:13926873:+:chr19:13926873:G>T	chr19:13926873:+	CC2D1A	donor	0	Intron inclusion between exons 20 & 21	original	donor_loss__intron_retention	intronic	intron	+
+chr19:35725088:+:chr19:35725088:G>A	chr19:35725088:+	KMT2B	donor	0	Intron inclusion between exons 10 & 11	original	donor_loss__intron_retention	intronic	intron	+
+chr19:35730341:+:chr19:35730341:G>A	chr19:35730341:+	KMT2B	acceptor	0	Intron inclusion between exons 23 & 24	original	acceptor_loss__intron_retention	intronic	intron	+
+chr19:35737633:+:chr19:35737633:C>G	chr19:35737633:+	KMT2B	acceptor	2	Potential intron inclusion between exons 33 & 34	original	acceptor_loss__intron_retention	intronic	intron	+
+chr19:35738192:+:chr19:35738192:G>T	chr19:35738192:+	KMT2B	donor	0	Intron inclusion between exons 36 & 37	original	donor_loss__intron_retention	intronic	intron	+
+chr19:36090521:+:chr19:36090521:G>A	chr19:36090521:+	WDR62	donor	0	Intron inclusion between exons 16 & 17	original	donor_loss__intron_retention	intronic	intron	+
+chr19:39482916:+:chr19:39482916:G>A	chr19:39482916:+	TIMM50	donor	1	Intron inclusion between exons 3 & 4	original	donor_loss__intron_retention	exonic	CDS	+
+chr19:45353241:-:chr19:45353241:C>T	chr19:45353241:-	ERCC2	donor	0	Intron inclusion between exons 18 & 19	rescued	donor_loss__intron_retention	intronic	intron	-
+chr19:48799980:-:chr19:48799980:C>T	chr19:48799980:-	BCAT2	donor	0	Intron inclusion between exons 5 & 6	rescued	donor_loss__intron_retention	intronic	intron	-
+chr19:49864072:-:chr19:49864072:C>A	chr19:49864072:-	PNKP	acceptor	0	Intron inclusion between exons 6 & 7	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr19:49866453:-:chr19:49866453:T>C	chr19:49866453:-	PNKP	acceptor	7	Potential intron inclusion between exons 2 & 3	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr19:50406179:+:chr19:50406179:C>G	chr19:50406179:+	POLD1	acceptor	2	Potential intron inclusion between exons 10 & 11	original	acceptor_loss__intron_retention	intronic	intron	+
+chr19:50413741:+:chr19:50413741:G>T	chr19:50413741:+	POLD1	acceptor	0	Intron inclusion between exons 18 & 19	original	acceptor_loss__intron_retention	intronic	intron	+
+chr19:50414813:+:chr19:50414813:A>T	chr19:50414813:+	POLD1	acceptor	1	Intron inclusion between exons 19 & 20	original	acceptor_loss__intron_retention	intronic	intron	+
+chr19:52190176:+:chr19:52190176:T>C	chr19:52190176:+	PPP2R1A	donor	1	Intron inclusion between exons 1 & 2	original	donor_loss__intron_retention	intronic	intron	+
+chr19:55138075:-:chr19:55138075:C>T	chr19:55138075:-	TNNT1	acceptor	0	Intron inclusion between exons 9 & 10	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr2:11791913:+:chr2:11791913:G>T	chr2:11791913:+	LPIN1	acceptor	0	Intron inclusion between exons 12 & 13	original	acceptor_loss__intron_retention	intronic	intron	+
+chr2:25236934:-:chr2:25236934:A>C	chr2:25236934:-	DNMT3A	donor	1	Intron inclusion between exons 21 & 22	rescued	donor_loss__intron_retention	intronic	intron	-
+chr2:25243899:-:chr2:25243899:T>A	chr2:25243899:-	DNMT3A	donor	2	Intron inclusion between exons 16 & 17	rescued	donor_loss__intron_retention	exonic	CDS	-
+chr2:25244153:-:chr2:25244153:A>G	chr2:25244153:-	DNMT3A	donor	1	Intron inclusion between exons 15 & 16	rescued	donor_loss__intron_retention	intronic	intron	-
+chr2:25244339:-:chr2:25244339:C>T	chr2:25244339:-	DNMT3A	acceptor	0	Intron inclusion between exons 14 & 15	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr2:26215176:-:chr2:26215176:C>T	chr2:26215176:-	HADHA	acceptor	0	Intron inclusion between exons 7 & 8	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr2:43934879:-:chr2:43934879:C>A	chr2:43934879:-	LRPPRC	acceptor	0	Intron inclusion between exons 23 & 24	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr2:46974971:+:chr2:46974971:A>T	chr2:46974971:+	TTC7A	acceptor	1	Intron inclusion between exons 3 & 4	original	acceptor_loss__intron_retention	intronic	intron	+
+chr2:47375300:+:chr2:47375300:G>A	chr2:47375300:+	EPCAM	donor	0	Intron inclusion between exons 4 & 5	original	donor_loss__intron_retention	intronic	intron	+
+chr2:47429942:+:chr2:47429942:G>A	chr2:47429942:+	MSH2	donor	0	Intron inclusion between exons 7 & 8	original	donor_loss__intron_retention	intronic	intron	+
+chr2:47429943:+:chr2:47429943:T>C	chr2:47429943:+	MSH2	donor	1	Intron inclusion between exons 7 & 8	original	donor_loss__intron_retention	intronic	intron	+
+chr2:47478271:+:chr2:47478271:G>A	chr2:47478271:+	MSH2	acceptor	0	Intron inclusion between exons 13 & 14	original	acceptor_loss__intron_retention	intronic	intron	+
+chr2:65016675:+:chr2:65016675:T>C	chr2:65016675:+	SLC1A4	donor	1	Intron inclusion between exons 5 & 6	original	donor_loss__intron_retention	intronic	intron	+
+chr2:74093667:+:chr2:74093667:G>A	chr2:74093667:+	TET3	donor	0	Intron inclusion between exons 10 & 11	original	donor_loss__intron_retention	intronic	intron	+
+chr2:74463389:-:chr2:74463389:G>A	chr2:74463389:-	MOGS	acceptor	2	Intron inclusion between exons 2 & 3	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr2:96797646:+:chr2:96797646:A>G	chr2:96797646:+	CNNM4	donor	2	Intron inclusion between exons 3 & 4	original	donor_loss__intron_retention	exonic	CDS	+
+chr2:127289683:-:chr2:127289683:A>G	chr2:127289683:-	ERCC3	donor	5	Intron inclusion between exons 5 & 6	rescued	donor_loss__intron_retention	intronic	intron	-
+chr2:142954808:+:chr2:142954808:A>G	chr2:142954808:+	KYNU	acceptor	1	Intron inclusion between exons 4 & 5	original	acceptor_loss__intron_retention	intronic	intron	+
+chr2:165880677:-:chr2:165880677:A>T	chr2:165880677:-	TTC21B	donor	1	Intron inclusion between exons 27 & 28	rescued	donor_loss__intron_retention	intronic	intron	-
+chr2:165931757:-:chr2:165931757:C>T	chr2:165931757:-	TTC21B	donor	0	Intron inclusion between exons 8 & 9	rescued	donor_loss__intron_retention	intronic	intron	-
+chr2:201272778:+:chr2:201272778:T>C	chr2:201272778:+	CASP8	donor	1	Intron inclusion between exons 4 & 5	original	donor_loss__intron_retention	intronic	intron	+
+chr2:224502963:-:chr2:224502963:A>G	chr2:224502963:-	CUL3	donor	1	Intron inclusion between exons 10 & 11	rescued	donor_loss__intron_retention	intronic	intron	-
+chr2:224502964:-:chr2:224502964:C>A	chr2:224502964:-	CUL3	donor	0	Intron inclusion between exons 10 & 11	rescued	donor_loss__intron_retention	intronic	intron	-
+chr2:224503073:-:chr2:224503073:C>T	chr2:224503073:-	CUL3	acceptor	0	Intron inclusion between exons 9 & 10	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr20:25302216:-:chr20:25302216:C>G	chr20:25302216:-	ABHD12	donor	2	Intron inclusion between exons 12 & 13	rescued	donor_loss__intron_retention	intronic	intron	-
+chr20:32433917:+:chr20:32433917:G>A	chr20:32433917:+	ASXL1	donor	1	Intron inclusion between exons 12 & 13	original	donor_loss__intron_retention	exonic	CDS	+
+chr20:32434431:+:chr20:32434431:G>T	chr20:32434431:+	ASXL1	acceptor	0	Intron inclusion between exons 12 & 13	original	acceptor_loss__intron_retention	intronic	intron	+
+chr20:34928952:-:chr20:34928952:C>T	chr20:34928952:-	GSS	acceptor	0	Intron inclusion between exons 12 & 13	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr20:44622931:-:chr20:44622931:C>T	chr20:44622931:-	ADA	acceptor	0	Intron inclusion between exons 7 & 8	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr21:34880556:-:chr21:34880556:C>G	chr21:34880556:-	RUNX1	donor	0	Intron inclusion between exons 5 & 6	rescued	donor_loss__intron_retention	intronic	intron	-
+chr22:20990384:+:chr22:20990384:A>C	chr22:20990384:+	LZTR1	acceptor	1	Intron inclusion between exons 7 & 8	original	acceptor_loss__intron_retention	intronic	intron	+
+chr22:23793689:+:chr22:23793689:G>C	chr22:23793689:+	SMARCB1	donor	0	Intron inclusion between exons 3 & 4	original	donor_loss__intron_retention	intronic	intron	+
+chr22:23801082:+:chr22:23801082:G>A	chr22:23801082:+	SMARCB1	donor	0	Intron inclusion between exons 4 & 5	original	donor_loss__intron_retention	intronic	intron	+
+chr22:26470814:-:chr22:26470814:C>T	chr22:26470814:-	HPS4	acceptor	0	Intron inclusion between exons 6 & 7	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr22:29042493:+:chr22:29042493:A>G	chr22:29042493:+	ZNRF3	acceptor	1	Intron inclusion between exons 2 & 3	original	acceptor_loss__intron_retention	intronic	intron	+
+chr22:29639213:+:chr22:29639213:G>A	chr22:29639213:+	NF2	donor	0	Intron inclusion between exons 3 & 4	original	donor_loss__intron_retention	intronic	intron	+
+chr22:29681438:+:chr22:29681438:G>A	chr22:29681438:+	NF2	acceptor	0	Intron inclusion between exons 14 & 15	original	acceptor_loss__intron_retention	intronic	intron	+
+chr22:41131635:+:chr22:41131635:T>C	chr22:41131635:+	EP300	donor	1	Intron inclusion between exons 6 & 7	original	donor_loss__intron_retention	intronic	intron	+
+chr22:41147946:+:chr22:41147946:G>A	chr22:41147946:+	EP300	donor	1	Intron inclusion between exons 12 & 13	original	donor_loss__intron_retention	exonic	CDS	+
+chr22:41172497:+:chr22:41172497:A>G	chr22:41172497:+	EP300	acceptor	1	Intron inclusion between exons 27 & 28	original	acceptor_loss__intron_retention	intronic	intron	+
+chr22:41172664:+:chr22:41172664:G>A	chr22:41172664:+	EP300	donor	0	Intron inclusion between exons 28 & 29	original	donor_loss__intron_retention	intronic	intron	+
+chr22:46355587:+:chr22:46355587:A>G	chr22:46355587:+	TRMU	donor	2	Potential intron inclusion between exons 9 & 10	original	donor_loss__intron_retention	exonic	UTR3	+
+chr22:50447319:-:chr22:50447319:C>G	chr22:50447319:-	SBF1	donor	2	Intron inclusion between exons 40 & 41	rescued	donor_loss__intron_retention	intronic	intron	-
+chr3:10142188:+:chr3:10142188:G>C	chr3:10142188:+	VHL	donor	0	Potential intron inclusion between exons 1 & 2	original	donor_loss__intron_retention	intronic	intron	+
+chr3:10142189:+:chr3:10142189:T>C	chr3:10142189:+	VHL	donor	1	Intron inclusion between exons 1 & 2	original	donor_loss__intron_retention	intronic	intron	+
+chr3:10146638:+:chr3:10146638:T>C	chr3:10146638:+	VHL	donor	1	Intron inclusion between exons 2 & 3	original	donor_loss__intron_retention	intronic	intron	+
+chr3:10149785:+:chr3:10149785:A>G	chr3:10149785:+	VHL	acceptor	1	Intron inclusion between exons 2 & 3	original	acceptor_loss__intron_retention	intronic	intron	+
+chr3:10149786:+:chr3:10149786:G>C	chr3:10149786:+	VHL	acceptor	0	Intron inclusion between exons 2 & 3	original	acceptor_loss__intron_retention	intronic	intron	+
+chr3:10149786:+:chr3:10149786:G>T	chr3:10149786:+	VHL	acceptor	0	Potential intron inclusion between exons 2 & 3	original	acceptor_loss__intron_retention	intronic	intron	+
+chr3:14158009:-:chr3:14158009:A>G	chr3:14158009:-	XPC	donor	1	Intron inclusion between exons 9 & 10	rescued	donor_loss__intron_retention	intronic	intron	-
+chr3:25739800:-:chr3:25739800:C>T	chr3:25739800:-	NGLY1	acceptor	0	Intron inclusion between exons 4 & 5	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr3:30672439:+:chr3:30672439:T>G	chr3:30672439:+	TGFBR2	donor	1	Intron inclusion between exons 4 & 5	original	donor_loss__intron_retention	intronic	intron	+
+chr3:30674247:+:chr3:30674247:G>A	chr3:30674247:+	TGFBR2	donor	0	Intron inclusion between exons 5 & 6	original	donor_loss__intron_retention	intronic	intron	+
+chr3:45513133:+:chr3:45513133:A>C	chr3:45513133:+	LARS2	acceptor	1	Intron inclusion between exons 15 & 16	original	acceptor_loss__intron_retention	intronic	intron	+
+chr3:47001278:+:chr3:47001278:G>T	chr3:47001278:+	NBEAL2	acceptor	0	Intron inclusion between exons 28 & 29	original	acceptor_loss__intron_retention	intronic	intron	+
+chr3:47113875:-:chr3:47113875:C>G	chr3:47113875:-	SETD2	donor	0	Intron inclusion between exons 5 & 6	rescued	donor_loss__intron_retention	intronic	intron	-
+chr3:47113875:-:chr3:47113875:C>T	chr3:47113875:-	SETD2	donor	0	Intron inclusion between exons 5 & 6	rescued	donor_loss__intron_retention	intronic	intron	-
+chr3:47638723:-:chr3:47638723:A>G	chr3:47638723:-	SMARCC1	donor	1	Intron inclusion between exons 22 & 23	rescued	donor_loss__intron_retention	intronic	intron	-
+chr3:52403895:-:chr3:52403895:C>G	chr3:52403895:-	BAP1	acceptor	0	Intron inclusion between exons 12 & 13	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr3:52405295:-:chr3:52405295:C>A	chr3:52405295:-	BAP1	acceptor	0	Potential intron inclusion between exons 10 & 11, or exon 11 skipping	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr3:52406378:-:chr3:52406378:T>C	chr3:52406378:-	BAP1	acceptor	1	Intron inclusion between exons 8 & 9	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr3:53732963:+:chr3:53732963:G>A	chr3:53732963:+	CACNA1D	donor	0	Intron inclusion between exons 19 & 20	original	donor_loss__intron_retention	intronic	intron	+
+chr3:180988022:-:chr3:180988022:C>T	chr3:180988022:-	DNAJC19	donor	0	Intron inclusion between exons 3 & 4	rescued	donor_loss__intron_retention	intronic	intron	-
+chr4:38689884:+:chr4:38689884:G>A	chr4:38689884:+	KLF3	donor	4	Intron inclusion between exons 4 & 5	original	donor_loss__intron_retention	intronic	intron	+
+chr4:38694908:+:chr4:38694908:T>C	chr4:38694908:+	KLF3	donor	1	Intron inclusion between exons 5 & 6	original	donor_loss__intron_retention	intronic	intron	+
+chr4:86750888:+:chr4:86750888:G>T	chr4:86750888:+	PTPN13	donor	0	Intron inclusion between exons 18 & 19	original	donor_loss__intron_retention	intronic	intron	+
+chr4:127921524:-:chr4:127921524:C>T	chr4:127921524:-	MFSD8	donor	1	Intron inclusion between exons 11 & 12	rescued	donor_loss__intron_retention	exonic	CDS	-
+chr4:158690426:+:chr4:158690426:G>T	chr4:158690426:+	ETFDH	donor	0	Intron inclusion between exons 6 & 7	original	donor_loss__intron_retention	intronic	intron	+
+chr4:184418533:-:chr4:184418533:T>C	chr4:184418533:-	IRF2	donor	2	Intron inclusion between exons 4 & 5	rescued	donor_loss__intron_retention	exonic	CDS	-
+chr4:186595688:-:chr4:186595688:C>A	chr4:186595688:-	FAT1	donor	0	Intron inclusion between exons 26 & 27	rescued	donor_loss__intron_retention	intronic	intron	-
+chr4:186600361:-:chr4:186600361:C>A	chr4:186600361:-	FAT1	acceptor	0	Intron inclusion between exons 21 & 22	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr4:186617706:-:chr4:186617706:A>G	chr4:186617706:-	FAT1	donor	1	Intron inclusion between exons 10 & 11	rescued	donor_loss__intron_retention	intronic	intron	-
+chr4:186617707:-:chr4:186617707:C>A	chr4:186617707:-	FAT1	donor	0	Intron inclusion between exons 10 & 11	rescued	donor_loss__intron_retention	intronic	intron	-
+chr4:186628152:-:chr4:186628152:A>G	chr4:186628152:-	FAT1	donor	1	Intron inclusion between exons 9 & 10	rescued	donor_loss__intron_retention	intronic	intron	-
+chr5:233646:+:chr5:233646:G>A	chr5:233646:+	SDHA	donor	0	Intron inclusion between exons 8 & 9	original	donor_loss__intron_retention	intronic	intron	+
+chr5:13791993:-:chr5:13791993:C>T	chr5:13791993:-	DNAH5	donor	0	Intron inclusion between exons 50 & 51	rescued	donor_loss__intron_retention	intronic	intron	-
+chr5:13824197:-:chr5:13824197:A>G	chr5:13824197:-	DNAH5	donor	1	Intron inclusion between exons 39 & 40	rescued	donor_loss__intron_retention	intronic	intron	-
+chr5:41762198:-:chr5:41762198:C>T	chr5:41762198:-	OXCT1	acceptor	3	Does not affect splicing	rescued	no_effect	exonic	CDS	-
+chr5:53646406:+:chr5:53646406:G>A	chr5:53646406:+	NDUFS4	donor	0	Intron inclusion between exons 3 & 4	original	donor_loss__intron_retention	intronic	intron	+
+chr5:56856750:+:chr5:56856750:G>A	chr5:56856750:+	MAP3K1	donor	1	Intron inclusion between exons 2 & 3	original	donor_loss__intron_retention	exonic	CDS	+
+chr5:56872032:+:chr5:56872032:G>T	chr5:56872032:+	MAP3K1	donor	0	Intron inclusion between exons 7 & 8	original	donor_loss__intron_retention	intronic	intron	+
+chr5:56884827:+:chr5:56884827:G>A	chr5:56884827:+	MAP3K1	donor	0	Intron inclusion between exons 16 & 17	original	donor_loss__intron_retention	intronic	intron	+
+chr5:56893529:+:chr5:56893529:A>C	chr5:56893529:+	MAP3K1	acceptor	1	Intron inclusion between exons 19  20	rescued	acceptor_loss__intron_retention	intronic	intron	+
+chr5:68293485:+:chr5:68293485:T>C	chr5:68293485:+	PIK3R1	donor	1	Intron inclusion between exons 10 & 11	original	donor_loss__intron_retention	intronic	intron	+
+chr5:68293707:+:chr5:68293707:A>G	chr5:68293707:+	PIK3R1	acceptor	1	Intron inclusion between exons 10 & 11	original	acceptor_loss__intron_retention	intronic	intron	+
+chr5:68293835:+:chr5:68293835:G>A	chr5:68293835:+	PIK3R1	donor	0	Intron inclusion between exons 11 & 12	original	donor_loss__intron_retention	intronic	intron	+
+chr5:68295419:+:chr5:68295419:G>C	chr5:68295419:+	PIK3R1	acceptor	0	Intron inclusion between exons 13 & 14	original	acceptor_loss__intron_retention	intronic	intron	+
+chr5:71634942:+:chr5:71634942:G>C	chr5:71634942:+	MCCC2	acceptor	0	Intron inclusion between exons 8 & 9	original	acceptor_loss__intron_retention	intronic	intron	+
+chr5:87268995:+:chr5:87268995:G>T	chr5:87268995:+	RASA1	donor	4	Intron inclusion between exons 1 & 2	original	donor_loss__intron_retention	intronic	intron	+
+chr5:112766412:+:chr5:112766412:T>C	chr5:112766412:+	APC	donor	1	Intron inclusion between exons 2  3	rescued	donor_loss__intron_retention	intronic	intron	+
+chr5:131644764:-:chr5:131644764:C>A	chr5:131644764:-	FNIP1	acceptor	0	Intron inclusion between exons 17 & 18	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr5:132484499:-:chr5:132484499:T>C	chr5:132484499:-	IRF1	acceptor	1	Intron inclusion between exons 8 & 9	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr5:132486846:-:chr5:132486846:T>C	chr5:132486846:-	IRF1	acceptor	1	Intron inclusion between exons 4 & 5	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr5:138929245:+:chr5:138929245:G>T	chr5:138929245:+	CTNNA1	acceptor	0	Intron inclusion between exons 13 & 14	original	acceptor_loss__intron_retention	intronic	intron	+
+chr6:2948700:-:chr6:2948700:C>A	chr6:2948700:-	SERPINB6	acceptor	0	Intron inclusion between exons 6 & 7	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr6:29944121:+:chr6:29944121:G>A	chr6:29944121:+	HLA-A	acceptor	0	Intron inclusion between exons 3 & 4	original	acceptor_loss__intron_retention	intronic	intron	+
+chr6:29944398:+:chr6:29944398:G>T	chr6:29944398:+	HLA-A	donor	0	Intron inclusion between exons 4 & 5	original	donor_loss__intron_retention	intronic	intron	+
+chr6:29944399:+:chr6:29944399:T>C	chr6:29944399:+	HLA-A	donor	1	Intron inclusion between exons 4 & 5	original	donor_loss__intron_retention	intronic	intron	+
+chr6:29944498:+:chr6:29944498:A>T	chr6:29944498:+	HLA-A	acceptor	1	Intron inclusion between exons 4 & 5	original	acceptor_loss__intron_retention	intronic	intron	+
+chr6:29944499:+:chr6:29944499:G>C	chr6:29944499:+	HLA-A	acceptor	0	Intron inclusion between exons 4 & 5	original	acceptor_loss__intron_retention	intronic	intron	+
+chr6:29945058:+:chr6:29945058:G>C	chr6:29945058:+	HLA-A	acceptor	0	Intron inclusion between exons 5 & 6	original	acceptor_loss__intron_retention	intronic	intron	+
+chr6:31269491:-:chr6:31269491:A>C	chr6:31269491:-	HLA-C	donor	1	Intron inclusion between exons 6 & 7	rescued	donor_loss__intron_retention	intronic	intron	-
+chr6:31269577:-:chr6:31269577:G>T	chr6:31269577:-	HLA-C	acceptor	33	Intron inclusion between exons 5 & 6	original	acceptor_loss__intron_retention	intronic	intron	-
+chr6:31355105:-:chr6:31355105:A>G	chr6:31355105:-	HLA-B	donor	1	Intron inclusion between exons 5 & 6	rescued	donor_loss__intron_retention	intronic	intron	-
+chr6:31355106:-:chr6:31355106:C>T	chr6:31355106:-	HLA-B	donor	0	Intron inclusion between exons 5 & 6	rescued	donor_loss__intron_retention	intronic	intron	-
+chr6:31355224:-:chr6:31355224:C>G	chr6:31355224:-	HLA-B	acceptor	0	Intron inclusion between exons 4 & 5	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr6:31355224:-:chr6:31355224:C>T	chr6:31355224:-	HLA-B	acceptor	0	Intron inclusion between exons 4 & 5	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr6:31355595:-:chr6:31355595:G>C	chr6:31355595:-	HLA-B	acceptor	2	Intron inclusion between exons 3 & 4	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr6:31356164:-:chr6:31356164:T>A	chr6:31356164:-	HLA-B	donor	2	Intron inclusion between exons 3 & 4	rescued	donor_loss__intron_retention	intronic	intron	-
+chr6:31356687:-:chr6:31356687:C>T	chr6:31356687:-	HLA-B	donor	0	Intron inclusion between exons 2 & 3	rescued	donor_loss__intron_retention	intronic	intron	-
+chr6:31357085:-:chr6:31357085:C>G	chr6:31357085:-	HLA-B	donor	0	Intron inclusion between exons 1 & 2	rescued	donor_loss__intron_retention	intronic	intron	-
+chr6:33202260:+:chr6:33202260:C>A	chr6:33202260:+	SLC39A7	acceptor	2	Intron inclusion between exons 3 & 4	original	acceptor_loss__intron_retention	intronic	intron	+
+chr6:36685748:+:chr6:36685748:C>G	chr6:36685748:+	CDKN1A	acceptor	2	Intron inclusion between exons 2 & 3	original	acceptor_loss__intron_retention	intronic	intron	+
+chr6:42964930:-:chr6:42964930:C>A	chr6:42964930:-	PEX6	acceptor	0	Intron inclusion between exons 15 & 16	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr6:43610724:+:chr6:43610724:G>T	chr6:43610724:+	POLH	donor	0	Intron inclusion between exons 10 & 11	original	donor_loss__intron_retention	intronic	intron	+
+chr6:131591528:-:chr6:131591528:C>A	chr6:131591528:-	MED23	acceptor	0	Intron inclusion between exons 25 & 26	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr6:131596164:-:chr6:131596164:C>G	chr6:131596164:-	MED23	acceptor	0	Intron inclusion between exons 21 & 22	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr6:131598468:-:chr6:131598468:C>T	chr6:131598468:-	MED23	acceptor	0	Intron inclusion between exons 19 & 20	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr6:135448476:-:chr6:135448476:C>G	chr6:135448476:-	AHI1	acceptor	0	Intron inclusion between exons 11 & 12	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr6:137203686:-:chr6:137203686:C>G	chr6:137203686:-	IFNGR1	acceptor	0	Intron inclusion between exons 4 & 5	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr6:157167185:+:chr6:157167185:G>T	chr6:157167185:+	ARID1B	donor	1	Intron inclusion between exons 10 & 11, or exon 10 skipping	original	donor_loss__intron_retention	exonic	CDS	+
+chr6:157201489:+:chr6:157201489:G>T	chr6:157201489:+	ARID1B	donor	0	Intron inclusion between exons 18 & 19	original	donor_loss__intron_retention	intronic	intron	+
+chr6:160737006:+:chr6:160737006:A>C	chr6:160737006:+	PLG	donor	2	Intron inclusion between exons 14 & 15	original	donor_loss__intron_retention	exonic	CDS	+
+chr6:163562071:+:chr6:163562071:T>C	chr6:163562071:+	QKI	donor	1	Intron inclusion between exons 5 & 6	original	donor_loss__intron_retention	intronic	intron	+
+chr7:5528187:-:chr7:5528187:T>A	chr7:5528187:-	ACTB	acceptor	1	Intron inclusion between exons 4 & 5	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr7:5982823:-:chr7:5982823:C>T	chr7:5982823:-	PMS2	donor	0	Intron inclusion between exons 12 & 13	rescued	donor_loss__intron_retention	intronic	intron	-
+chr7:99391175:+:chr7:99391175:C>T	chr7:99391175:+	ARPC1B	acceptor	2	Intron inclusion between exons 6 & 7	original	acceptor_loss__intron_retention	intronic	intron	+
+chr7:101137402:+:chr7:101137402:C>G	chr7:101137402:+	SERPINE1	acceptor	2	Intron inclusion between exons 8 & 9	original	acceptor_loss__intron_retention	intronic	intron	+
+chr7:107917463:+:chr7:107917463:G>A	chr7:107917463:+	DLD	donor	0	Intron inclusion between exons 11 & 12	original	donor_loss__intron_retention	intronic	intron	+
+chr7:107929207:-:chr7:107929207:T>G	chr7:107929207:-	LAMB1	acceptor	1	Intron inclusion between exons 30 & 31	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr7:116771990:+:chr7:116771990:G>T	chr7:116771990:+	MET	donor	0	Exon 14 skipping	original	donor_loss__exon_skipping	intronic	intron	+
+chr7:116771990:+:chr7:116771990:G>A	chr7:116771990:+	MET	donor	0	Exon 14 skipping	original	donor_loss__exon_skipping	intronic	intron	+
+chr7:116771990:+:chr7:116771990:G>C	chr7:116771990:+	MET	donor	0	Exon 14 skipping	original	donor_loss__exon_skipping	intronic	intron	+
+chr7:148809070:-:chr7:148809070:C>T	chr7:148809070:-	EZH2	donor	0	Intron inclusion between exons 19 & 20	rescued	donor_loss__intron_retention	intronic	intron	-
+chr7:152156204:-:chr7:152156204:C>T	chr7:152156204:-	KMT2C	donor	0	Intron inclusion between exons 45 & 46	rescued	donor_loss__intron_retention	intronic	intron	-
+chr7:152167145:-:chr7:152167145:C>T	chr7:152167145:-	KMT2C	donor	0	Intron inclusion between exons 42 & 43	rescued	donor_loss__intron_retention	intronic	intron	-
+chr7:152207301:-:chr7:152207301:T>C	chr7:152207301:-	KMT2C	donor	2	Intron inclusion between exons 24 & 25	rescued	donor_loss__intron_retention	exonic	CDS	-
+chr8:47778459:-:chr8:47778459:C>T	chr8:47778459:-	PRKDC	donor	1	Intron inclusion between exons 83 & 84	rescued	donor_loss__intron_retention	exonic	CDS	-
+chr8:47798235:-:chr8:47798235:A>G	chr8:47798235:-	PRKDC	donor	1	Intron inclusion between exons 73 & 74	rescued	donor_loss__intron_retention	intronic	intron	-
+chr8:47828168:-:chr8:47828168:C>T	chr8:47828168:-	PRKDC	donor	1	Intron inclusion between exons 62 & 63	rescued	donor_loss__intron_retention	exonic	CDS	-
+chr8:67131949:+:chr8:67131949:A>G	chr8:67131949:+	CSPP1	acceptor	1	Intron inclusion between exons 13 & 14	original	acceptor_loss__intron_retention	intronic	intron	+
+chr8:67195380:+:chr8:67195380:A>G	chr8:67195380:+	CSPP1	acceptor	1	Intron inclusion between exons 28 & 29	original	acceptor_loss__intron_retention	intronic	intron	+
+chr8:89953243:-:chr8:89953243:C>T	chr8:89953243:-	NBN	donor	0	Intron inclusion between exons 11 & 12	rescued	donor_loss__intron_retention	intronic	intron	-
+chr8:99136753:+:chr8:99136753:G>A	chr8:99136753:+	VPS13B	donor	0	Intron inclusion between exons 12 & 13	original	donor_loss__intron_retention	intronic	intron	+
+chr8:99766972:+:chr8:99766972:T>C	chr8:99766972:+	VPS13B	donor	1	Intron inclusion between exons 40 & 41	original	donor_loss__intron_retention	intronic	intron	+
+chr8:144513482:-:chr8:144513482:T>A	chr8:144513482:-	RECQL4	acceptor	1	Intron inclusion between exons 13 & 14	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr8:144515761:-:chr8:144515761:C>G	chr8:144515761:-	RECQL4	donor	2	Intron inclusion between exons 6 & 7	rescued	donor_loss__intron_retention	intronic	intron	-
+chr8:144516765:-:chr8:144516765:C>G	chr8:144516765:-	RECQL4	acceptor	0	Potential intron inclusion between exons 4 & 5	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr9:21968243:-:chr9:21968243:C>T	chr9:21968243:-	CDKN2A	acceptor	0	Intron inclusion between exons 2 & 3	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr9:21970900:-:chr9:21970900:A>G	chr9:21970900:-	CDKN2A	donor	1	Intron inclusion between exons 2 & 3, or skipping end of exon 2	rescued	donor_loss__intron_retention_or_partial_exon_skip	intronic	intron	-
+chr9:21970901:-:chr9:21970901:C>A	chr9:21970901:-	CDKN2A	donor	0	Intron inclusion between exons 2 & 3, or skipping end of exon 2	rescued	donor_loss__intron_retention_or_partial_exon_skip	intronic	intron	-
+chr9:21970901:-:chr9:21970901:C>T	chr9:21970901:-	CDKN2A	donor	0	Intron inclusion between exons 2 & 3, or skipping end of exon 2	rescued	donor_loss__intron_retention_or_partial_exon_skip	intronic	intron	-
+chr9:21971209:-:chr9:21971209:C>A	chr9:21971209:-	CDKN2A	acceptor	0	Intron inclusion between exons 1 & 2	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr9:21971209:-:chr9:21971209:C>T	chr9:21971209:-	CDKN2A	acceptor	0	Intron inclusion between exons 1 & 2	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr9:21971210:-:chr9:21971210:T>A	chr9:21971210:-	CDKN2A	acceptor	1	Intron inclusion between exons 1 & 2	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr9:21971210:-:chr9:21971210:T>C	chr9:21971210:-	CDKN2A	acceptor	1	Intron inclusion between exons 1 & 2	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr9:21971210:-:chr9:21971210:T>G	chr9:21971210:-	CDKN2A	acceptor	1	Intron inclusion between exons 1 & 2	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr9:21974677:-:chr9:21974677:C>A	chr9:21974677:-	CDKN2A	donor	0	Intron inclusion between exons 1 & 2	rescued	donor_loss__intron_retention	intronic	intron	-
+chr9:95461855:-:chr9:95461855:C>G	chr9:95461855:-	PTCH1	donor	0	Intron inclusion between exons 16 & 17	rescued	donor_loss__intron_retention	intronic	intron	-
+chr9:95461999:-:chr9:95461999:C>T	chr9:95461999:-	PTCH1	acceptor	0	Intron inclusion between exons 15 & 16	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr9:105596658:+:chr9:105596658:G>A	chr9:105596658:+	FKTN	donor	0	Intron inclusion between exons 4 & 5	original	donor_loss__intron_retention	intronic	intron	+
+chr9:125171085:-:chr9:125171085:C>T	chr9:125171085:-	PPP6C	donor	1	Intron inclusion between exons 2 & 3	rescued	donor_loss__intron_retention	exonic	CDS	-
+chr9:130458400:+:chr9:130458400:G>T	chr9:130458400:+	ASS1	acceptor	0	Intron inclusion between exons 3 & 4	original	acceptor_loss__intron_retention	intronic	intron	+
+chr9:131512138:+:chr9:131512138:T>C	chr9:131512138:+	POMT1	donor	1	Intron inclusion between exons 11 & 12	original	donor_loss__intron_retention	intronic	intron	+
+chr9:132907371:-:chr9:132907371:C>T	chr9:132907371:-	TSC1	acceptor	0	Intron inclusion between exons 12 & 13	rescued	acceptor_loss__intron_retention	intronic	intron	-
+chr9:132910567:-:chr9:132910567:G>A	chr9:132910567:-	TSC1	donor	3	Intron inclusion between exons 12 & 13	rescued	donor_loss__intron_retention	intronic	intron	-
+chr9:132923347:-:chr9:132923347:C>A	chr9:132923347:-	TSC1	donor	0	Intron inclusion between exons 6 & 7	rescued	donor_loss__intron_retention	intronic	intron	-
+chr9:133456066:+:chr9:133456066:C>A	chr9:133456066:+	ADAMTS13	acceptor	2	Intron inclusion between exons 25 & 26	original	acceptor_loss__intron_retention	intronic	intron	+
+chr9:136431001:-:chr9:136431001:C>T	chr9:136431001:-	INPP5E	donor	0	Intron inclusion between exons 8 & 9	rescued	donor_loss__intron_retention	intronic	intron	-

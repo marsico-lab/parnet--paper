@@ -7,9 +7,10 @@ To share your work with the co-authors, read [CONTRIBUTING.md](../CONTRIBUTING.m
 
 ## Index
 
-| Folder                   | Paper figure | Content                                   | Issue |
-| ------------------------ | ------------ | ----------------------------------------- | ----- |
-| [`_example/`](_example/) | none         | Example: a plot, a schematic and an image |       |
+| Folder                   | Paper figure     | Content                                                                             | Issue |
+| ------------------------ | ---------------- | ----------------------------------------------------------------------------------- | ----- |
+| [`_example/`](_example/) | none             | Example: a plot, a schematic and an image                                           |       |
+| `mutations_roc_prc/`     | not assigned yet | Curated ROC/PRC, MutSpliceDB and SpliceBench (standalone script, not plotplate yet) |       |
 
 Add a row when your figure is merged into `dev`.
 Update the **Paper figure** column when the figure order changes.
@@ -30,7 +31,8 @@ The index above gives the current number.
 
 ```text
 figures/main_mutations/
-  README.md            what the figure shows, one line per panel
+  README.md            how to build the figure and run its notebooks
+  docs/                what the figure shows, choices made, how it was made
   layout.yaml          size of the figure, position of each panel and its axes
   notebooks/           one notebook per panel: panel_A_<name>.py, panel_B_<name>.py, ...
   scripts/             optional: scripts that prepare the data of this figure
@@ -40,12 +42,13 @@ figures/main_mutations/
   reference/           sketches, screenshots, old versions: help for the design, not used by the build
   panels/              made by the build: one PDF, SVG and PNG per panel
   preview.pdf/png/svg  made by the build: the full figure
+  preview-page.pdf/png made by the build: the figure on an A4 page, with the caption space
   main_mutations.tex   made by the build: the panels placed for LaTeX
   main_mutations-figure.tex  the LaTeX figure block: caption, label, panel references
 ```
 
 You edit `layout.yaml`, `notebooks/`, `scripts/`, `data/`, `assets/` and `main_mutations-figure.tex`.
-The build makes `panels/`, `preview.*` and `main_mutations.tex`.
+The build makes `panels/`, `preview.*`, `preview-page.*` and `main_mutations.tex`.
 Do not edit these files by hand.
 
 Some things are shared by all figures:
@@ -69,6 +72,54 @@ The build must end with `OK`.
 You now have a working figure with three example panels.
 Replace them one by one with your own panels.
 
+## From an existing figure
+
+Most figures already exist: in Overleaf, in a slide, or as panels in an analysis notebook.
+Do the steps in this order: first the picture, then the layout, then the code.
+
+1. **Save a picture of the existing figure** in `reference/`.
+   A screenshot (PNG) is enough.
+   A PDF of the figure page is better, because plotplate reads the exact positions from it.
+
+1. **Read the layout from the picture.**
+   From a screenshot:
+
+   ```sh
+   pixi run plotplate detect figures/main_mutations/reference/overleaf_figure7.png --width 183 -o figures/main_mutations/layout.detected.yaml --wireframe figures/main_mutations/reference/detected_wireframe.png
+   ```
+
+   From a PDF:
+
+   ```sh
+   pixi run plotplate from-pdf figures/main_mutations/reference/old.pdf -o figures/main_mutations/layout.detected.yaml --journal nature --width double --axes --guides
+   ```
+
+   `--width` is the width of the figure in millimetres (183 for a Nature double column).
+
+1. **Look at the result.**
+   Open `reference/detected_wireframe.png`.
+   Each blue box is one block that plotplate found.
+   Several blocks can belong to one panel (for example a heatmap and its legends).
+
+1. **Write `layout.yaml`.**
+   Give one letter to each panel, and keep the arrangement of the detected blocks.
+   Remove the white space of the old figure: the panel letters of plotplate take no space.
+   Name the axes of each panel (see below).
+   Keep `layout.detected.yaml` next to it: `pixi run view <name>` shows both, for comparison.
+
+1. **Find the code of each panel** in the analysis repository.
+   Note the notebook and the cells that make the plot, and the files that they read.
+
+1. **Copy the data files** into `data/`, and write their origin in `data/README.md`.
+
+1. **Write one notebook per panel** in `notebooks/`.
+   Copy the plotting code, then replace the figure creation with `panel.figure()` and `panel.axes(...)`.
+   Keep the intermediate results visible in the notebook (tables, counts), so that a reader can check each step.
+
+1. **Build** with `pixi run figure <name>`, and fix the errors that it reports.
+
+`figures/main_mutations/` was made with these steps; its `README.md` lists what was done.
+
 ## Make the layout
 
 The layout gives the size of the figure and the position of each panel, in millimetres.
@@ -81,20 +132,6 @@ pixi run view main_mutations
 ```
 
 To change the panels, edit `layout.yaml`, or move them in the browser with `pixi run plotplate view figures/main_mutations --edit`.
-
-You can also start from a figure that already exists:
-
-1. Put the PDF of the old figure in `reference/`.
-
-1. Read the layout from it:
-
-   ```sh
-   pixi run plotplate from-pdf figures/main_mutations/reference/old.pdf -o figures/main_mutations/layout.detected.yaml --journal nature --width double --axes --guides
-   ```
-
-1. Compare `layout.detected.yaml` with `layout.yaml` in `pixi run view main_mutations`.
-
-1. Copy the parts that you want into `layout.yaml`.
 
 Each panel in `layout.yaml` names its notebook:
 
@@ -185,6 +222,7 @@ pixi run view main_mutations       # look at the result in the browser
 ```
 
 The build runs the data scripts, runs each panel notebook, then assembles the figure.
+It also draws the figure on an A4 page (`preview-page.png`), with the panel boxes outlined, so that you see its size in the paper.
 At the end, it checks the font sizes, the positions of the axes, and the text that is cut.
 It ends with `OK`, or with a list of errors.
 

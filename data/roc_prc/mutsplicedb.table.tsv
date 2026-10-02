@@ -1,0 +1,64 @@
+name	family	window	variant	auroc	auprc	n_pos	n_neg	prc_baseline
+PARNET |deltaP| center1	parnet_profile	center1	|deltaP| (abs per-position) | max over all RBPs	0.747119	0.461287	428	2540	0.144205
+PARNET JSD center5	parnet_profile	center5	JSD | max over all RBPs	0.852336	0.583952	428	2540	0.144205
+PARNET |deltaP| center5	parnet_profile	center5	|deltaP| (abs per-position) | max over all RBPs	0.753308	0.467962	428	2540	0.144205
+PARNET JSD center11	parnet_profile	center11	JSD | max over all RBPs	0.893762	0.704520	428	2540	0.144205
+PARNET |deltaP| center11	parnet_profile	center11	|deltaP| (abs per-position) | max over all RBPs	0.768621	0.457990	428	2540	0.144205
+PARNET JSD center51	parnet_profile	center51	JSD | max over all RBPs	0.934930	0.777796	428	2540	0.144205
+PARNET deltaP center51 (abs)	parnet_profile	center51	|deltaP| (abs after window mean) | max over all RBPs	0.904696	0.727585	428	2540	0.144205
+PARNET JSD center101	parnet_profile	center101	JSD | max over all RBPs	0.940210	0.802883	428	2540	0.144205
+PARNET deltaP center101 (abs)	parnet_profile	center101	|deltaP| (abs after window mean) | max over all RBPs	0.928785	0.768180	428	2540	0.144205
+PARNET JSD full	parnet_profile	full	JSD | max over all RBPs	0.934065	0.796454	428	2540	0.144205
+PARNET deltaP full (abs)	parnet_profile	full	|deltaP| (abs after window mean) | max over all RBPs	0.505935	0.146595	428	2540	0.144205
+PARNET profile jsd_center11_mean_all	parnet_profile	center11	JSD | mean over all RBPs	0.884463	0.616703	428	2540	0.144205
+PARNET profile jsd_center11_mean_splicing	parnet_profile	center11	JSD | mean over splicing (81) RBPs	0.862967	0.543664	428	2540	0.144205
+PARNET profile jsd_center11_max_splicing	parnet_profile	center11	JSD | max over splicing (81) RBPs	0.878902	0.675781	428	2540	0.144205
+PARNET profile delta_p_center11_abs_max_all	parnet_profile	center11	deltaP | abs_max over all RBPs	0.800374	0.560134	428	2540	0.144205
+PARNET profile delta_p_center11_mean_splicing	parnet_profile	center11	deltaP | mean over splicing (81) RBPs | abs() of signed mean	0.668224	0.263129	428	2540	0.144205
+PARNET profile delta_p_center11_abs_max_splicing	parnet_profile	center11	deltaP | abs_max over splicing (81) RBPs	0.806841	0.572599	428	2540	0.144205
+PARNET profile jsd_center51_mean_all	parnet_profile	center51	JSD | mean over all RBPs	0.925701	0.760810	428	2540	0.144205
+PARNET profile jsd_center51_mean_splicing	parnet_profile	center51	JSD | mean over splicing (81) RBPs	0.917243	0.724321	428	2540	0.144205
+PARNET profile jsd_center51_max_splicing	parnet_profile	center51	JSD | max over splicing (81) RBPs	0.929907	0.762828	428	2540	0.144205
+PARNET profile delta_p_center51_mean_all	parnet_profile	center51	deltaP | mean over all RBPs | abs() of signed mean	0.751121	0.384215	428	2540	0.144205
+PARNET profile delta_p_center51_mean_splicing	parnet_profile	center51	deltaP | mean over splicing (81) RBPs | abs() of signed mean	0.775304	0.446507	428	2540	0.144205
+PARNET profile delta_p_center51_abs_max_splicing	parnet_profile	center51	deltaP | abs_max over splicing (81) RBPs	0.907126	0.736677	428	2540	0.144205
+PARNET profile jsd_center101_mean_all	parnet_profile	center101	JSD | mean over all RBPs	0.941893	0.821829	428	2540	0.144205
+PARNET profile jsd_center101_mean_splicing	parnet_profile	center101	JSD | mean over splicing (81) RBPs	0.938715	0.812223	428	2540	0.144205
+PARNET profile jsd_center101_max_splicing	parnet_profile	center101	JSD | max over splicing (81) RBPs	0.937804	0.790301	428	2540	0.144205
+PARNET profile delta_p_center101_mean_all	parnet_profile	center101	deltaP | mean over all RBPs | abs() of signed mean	0.805327	0.498223	428	2540	0.144205
+PARNET profile delta_p_center101_mean_splicing	parnet_profile	center101	deltaP | mean over splicing (81) RBPs | abs() of signed mean	0.829229	0.575938	428	2540	0.144205
+PARNET profile delta_p_center101_abs_max_splicing	parnet_profile	center101	deltaP | abs_max over splicing (81) RBPs	0.929439	0.784258	428	2540	0.144205
+PARNET profile jsd_full_mean_all	parnet_profile	full	JSD | mean over all RBPs	0.946238	0.827445	428	2540	0.144205
+PARNET profile jsd_full_mean_splicing	parnet_profile	full	JSD | mean over splicing (81) RBPs	0.946776	0.833769	428	2540	0.144205
+PARNET profile jsd_full_max_splicing	parnet_profile	full	JSD | max over splicing (81) RBPs	0.932056	0.785681	428	2540	0.144205
+PARNET profile delta_p_full_mean_all	parnet_profile	full	deltaP | mean over all RBPs | abs() of signed mean	0.500229	0.146918	428	2540	0.144205
+PARNET profile delta_p_full_mean_splicing	parnet_profile	full	deltaP | mean over splicing (81) RBPs | abs() of signed mean	0.501070	0.147176	428	2540	0.144205
+PARNET profile delta_p_full_abs_max_splicing	parnet_profile	full	deltaP | abs_max over splicing (81) RBPs	0.501401	0.146562	428	2540	0.144205
+PARNET cosine-dist center	parnet_embedding	center1	single position	0.959486	0.852125	428	2540	0.144205
+PARNET cosine-dist center5 per-pos	parnet_embedding	center5	per-position | mean	0.970000	0.886512	428	2540	0.144205
+PARNET cosine-dist center5 per-pos (max)	parnet_embedding	center5	per-position | max	0.960958	0.854602	428	2540	0.144205
+PARNET cosine-dist center11 per-pos	parnet_embedding	center11	per-position | mean	0.970187	0.886475	428	2540	0.144205
+PARNET cosine-dist center11 pooled	parnet_embedding	center11	pooled	0.962547	0.848896	428	2540	0.144205
+PARNET cosine-dist center51 per-pos	parnet_embedding	center51	per-position | mean	0.970093	0.894607	428	2540	0.144205
+PARNET cosine-dist center51 pooled	parnet_embedding	center51	pooled	0.954650	0.851109	428	2540	0.144205
+PARNET cosine-dist center101 per-pos	parnet_embedding	center101	per-position | mean	0.969276	0.893831	428	2540	0.144205
+PARNET cosine-dist center101 pooled	parnet_embedding	center101	pooled	0.952617	0.855840	428	2540	0.144205
+PARNET cosine-dist full per-pos	parnet_embedding	full	per-position | mean	0.963107	0.875967	428	2540	0.144205
+PARNET cosine-dist full (pooled)	parnet_embedding	full	pooled	0.940350	0.827025	428	2540	0.144205
+RiNALMo cosine-dist CLS	rinalmo	cls	CLS token	0.721386	0.294318	428	2540	0.144205
+RiNALMo cosine-dist center	rinalmo	center1	single position	0.618855	0.271962	428	2540	0.144205
+RiNALMo cosine-dist center5 per-pos	rinalmo	center5	per-position | mean	0.757243	0.437252	428	2540	0.144205
+RiNALMo cosine-dist center11 per-pos	rinalmo	center11	per-position | mean	0.792196	0.460689	428	2540	0.144205
+RiNALMo cosine-dist center11 pooled	rinalmo	center11	pooled	0.801986	0.450246	428	2540	0.144205
+RiNALMo cosine-dist center51 per-pos	rinalmo	center51	per-position | mean	0.817220	0.469028	428	2540	0.144205
+RiNALMo cosine-dist center51 pooled	rinalmo	center51	pooled	0.798294	0.429834	428	2540	0.144205
+RiNALMo cosine-dist center101 per-pos	rinalmo	center101	per-position | mean	0.819463	0.466936	428	2540	0.144205
+RiNALMo cosine-dist center101 pooled	rinalmo	center101	pooled	0.802220	0.444004	428	2540	0.144205
+RiNALMo cosine-dist full per-pos	rinalmo	full	per-position | mean	0.812897	0.445528	428	2540	0.144205
+RiNALMo cosine-dist full pooled	rinalmo	full	pooled	0.763037	0.397223	428	2540	0.144205
+phyloP 100way	phylop		phyloP100way	0.896011	0.519664	428	2540	0.144205
+OpenSpliceAI DS_max (d1)	openspliceai	d1	DS_max, 5-model ensemble	0.857565	0.803670	428	2540	0.144205
+OpenSpliceAI DS_max (d2)	openspliceai	d2	DS_max, 5-model ensemble	0.965522	0.944932	428	2540	0.144205
+OpenSpliceAI DS_max (d5)	openspliceai	d5	DS_max, 5-model ensemble	0.991034	0.973585	428	2540	0.144205
+OpenSpliceAI DS_max (d10)	openspliceai	d10	DS_max, 5-model ensemble	0.991842	0.972440	428	2540	0.144205
+OpenSpliceAI DS_max (d50)	openspliceai	d50	DS_max, 5-model ensemble	0.988002	0.963929	428	2540	0.144205

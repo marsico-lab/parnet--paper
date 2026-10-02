@@ -30,6 +30,7 @@ plotplate = { git = "https://github.com/lambosaur/plotplate.git", tag = "v0.2.0"
 # `pixi run figures` builds every figure; extra arguments go to snakemake.
 figures = "snakemake --cores 4"
 figures-dry = "snakemake --cores 4 --dry-run"
+roc-prc-figure = "python figures/mutations_roc_prc/make_curated_roc_prc.py"
 # `pixi run figure main_mutations` builds one figure (and its data step, if any).
 figure = { cmd = "snakemake --cores 4 figures/{{ name }}/preview.pdf", args = [
   "name",

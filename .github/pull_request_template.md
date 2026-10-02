@@ -4,7 +4,7 @@ Closes #<issue number>
 
 Folder: `figures/<name>/`
 
-![preview](../blob/%3Cbranch%3E/figures/%3Cname%3E/preview.png)
+To show the figure, drag `figures/<name>/preview.png` into this box.
 
 ## Changes
 

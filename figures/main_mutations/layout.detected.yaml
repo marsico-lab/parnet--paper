@@ -1,0 +1,48 @@
+schema: 1
+name: main_mutations
+area:
+  width: 183.0
+  height: 117.04
+panels:
+  S01:
+    box:
+    - 10.9
+    - 4.7
+    - 36.7
+    - 36.0
+    label: false
+  S02:
+    box:
+    - 51.4
+    - 4.7
+    - 36.7
+    - 36.0
+    label: false
+  S03:
+    box:
+    - 121.0
+    - 4.7
+    - 55.1
+    - 32.7
+    label: false
+  S04:
+    box:
+    - 100.5
+    - 7.7
+    - 17.2
+    - 32.9
+    label: false
+  S05:
+    box:
+    - 89.9
+    - 43.7
+    - 77.2
+    - 56.5
+    label: false
+  S06:
+    box:
+    - 10.8
+    - 59.0
+    - 77.3
+    - 41.2
+    label: false
