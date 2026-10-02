@@ -214,7 +214,7 @@ The maintainer makes the final decision.
 - One branch and one pull request for each figure.
 - Do not recompute an analysis in this repository.
   Copy the result tables from the analysis repository, and write their origin in a `README.md` next to them.
-- Commit the outputs (`panels/`, `preview.*`, `<name>.tex`) after each rebuild.
+- Commit the outputs (`panels/`, `preview.*`, `<name>.tex`) after each rebuild, and `<name>-figure.tex` when you change it.
   The reviewers see the figure through them.
 - Write Markdown with one sentence per line.
 

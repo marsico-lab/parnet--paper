@@ -40,11 +40,12 @@ figures/main_mutations/
   reference/           sketches, screenshots, old versions: help for the design, not used by the build
   panels/              made by the build: one PDF, SVG and PNG per panel
   preview.pdf/png/svg  made by the build: the full figure
-  main_mutations.tex   made by the build: the figure for LaTeX
+  main_mutations.tex   made by the build: the panels placed for LaTeX
+  main_mutations-figure.tex  the LaTeX figure block: caption, label, panel references
 ```
 
-You edit `layout.yaml`, `notebooks/`, `scripts/`, `data/` and `assets/`.
-The build makes `panels/`, `preview.*` and the `.tex` file.
+You edit `layout.yaml`, `notebooks/`, `scripts/`, `data/`, `assets/` and `main_mutations-figure.tex`.
+The build makes `panels/`, `preview.*` and `main_mutations.tex`.
 Do not edit these files by hand.
 
 Some things are shared by all figures:
@@ -105,7 +106,7 @@ panels:
       main: {left: 12, top: 4, right: 80, bottom: 40}   # millimetres from the top-left corner of the figure
 ```
 
-The plotplate documentation gives all options: [layout.yaml](https://github.com/lambosaur/plotplate/blob/v0.1.0/docs/layout-spec.md), [layout sources](https://github.com/lambosaur/plotplate/blob/v0.1.0/docs/layout-sources.md), [panel recipes](https://github.com/lambosaur/plotplate/blob/v0.1.0/docs/panel-recipes.md).
+The plotplate documentation gives all options: [layout.yaml](https://github.com/lambosaur/plotplate/blob/v0.2.0/docs/layout-spec.md), [layout sources](https://github.com/lambosaur/plotplate/blob/v0.2.0/docs/layout-sources.md), [panel recipes](https://github.com/lambosaur/plotplate/blob/v0.2.0/docs/panel-recipes.md).
 
 ## Make a panel
 
@@ -200,40 +201,43 @@ This writes `build/main_mutations/`:
 
 | File                 | Use                                                                              |
 | -------------------- | -------------------------------------------------------------------------------- |
+| `overleaf/`          | The files to upload to the figure folder in Overleaf.                            |
 | `main_mutations.pdf` | The full figure in one vector PDF.                                               |
 | `main_mutations.svg` | The same figure as one SVG file, with text kept as text. Send it to the journal. |
-| `overleaf/`          | The files to upload to the figure folder in Overleaf.                            |
 
-The SVG is converted from the PDF.
-The figure in the manuscript and the SVG for the journal are thus the same figure.
 Git ignores the folder `build/`.
 
 ### Use the figure in Overleaf
 
 1. Upload the content of `build/main_mutations/overleaf/` to the figure folder in Overleaf.
 
-1. Include the full figure in one block:
+1. In the manuscript, add one line where the figure goes:
 
    ```latex
-   \begin{figure}[h!]
-       \centering
-       \includegraphics{Figures/Figure_7_mutations/main_mutations.pdf}
-       \caption{Classification of splicing variants with the PARNET model.}
-       \label{fig:7}
-   \end{figure}
+   \input{Figures/Figure_7_mutations/main_mutations-figure.tex}
    ```
 
-Do not set `width=` on `\includegraphics`.
-The figure already has its final size, and scaling changes the font sizes.
+1. Write the caption and the label in `figures/main_mutations/main_mutations-figure.tex` in this repository, not in Overleaf.
+   The build never overwrites this file, and the next upload brings your changes to Overleaf.
 
-The figure contains the panel letters, so do not use `subfigure` or `\caption{}` for each panel.
-Refer to a panel as `Figure~\ref{fig:7}a` instead of `\ref{fig7:panel_a}`.
+`main_mutations-figure.tex` holds the `figure` block: placement, caption, label.
+It includes `main_mutations.tex`, which places the panels and writes the panel letters.
+
+To refer to one panel:
+
+1. Add `\usepackage{subcaption}` to the preamble of the manuscript.
+1. In `main_mutations-figure.tex`, remove the `%` at the start of the `\phantomsubcaption` lines.
+1. Write `\ref{fig:main_mutationsa}` in the text.
+   It prints `7a`.
+   Change the label names in the file if you prefer `fig:7a`.
+
+Do not use `subfigure` or `\caption{}` for each panel: the figure already has its panel letters.
+Do not set `width=` anywhere.
+The panels already have their final size, and scaling changes the font sizes.
 
 The figure width comes from `layout.yaml` (`area: width:`).
 It must not be wider than the text of the manuscript.
 In Overleaf, write `\the\textwidth` in the document to see the text width in points (1 mm = 2.845 pt).
 
-The folder also contains `main_mutations.tex`.
-It places the panel PDFs and writes the panel letters with LaTeX (`\input{...}` instead of `\includegraphics{...}`).
-Use it only if you want the letters in the font of the manuscript.
-The SVG then has a different letter font than the manuscript.
+In the manuscript, LaTeX writes the panel letters in the sans-serif font of the manuscript.
+In the SVG and in `main_mutations.pdf`, the letters are in Arial.
