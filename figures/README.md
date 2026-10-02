@@ -192,8 +192,48 @@ After a change in the shared `data/`, rebuild all figures with `pixi run figures
 ## Deliver
 
 ```sh
-pixi run plotplate bundle figures/main_mutations build/overleaf/main_mutations   # files for Overleaf
-pixi run plotplate export figures/main_mutations -o build/main_mutations.pdf     # one PDF for the journal
+pixi run export main_mutations                              # Overleaf folder figures/main_mutations/
+pixi run export main_mutations Figures/Figure_7_mutations   # or the folder used in your Overleaf project
 ```
 
+This writes `build/main_mutations/`:
+
+| File                 | Use                                                                              |
+| -------------------- | -------------------------------------------------------------------------------- |
+| `main_mutations.pdf` | The full figure in one vector PDF.                                               |
+| `main_mutations.svg` | The same figure as one SVG file, with text kept as text. Send it to the journal. |
+| `overleaf/`          | The files to upload to the figure folder in Overleaf.                            |
+
+The SVG is converted from the PDF.
+The figure in the manuscript and the SVG for the journal are thus the same figure.
 Git ignores the folder `build/`.
+
+### Use the figure in Overleaf
+
+1. Upload the content of `build/main_mutations/overleaf/` to the figure folder in Overleaf.
+
+1. Include the full figure in one block:
+
+   ```latex
+   \begin{figure}[h!]
+       \centering
+       \includegraphics{Figures/Figure_7_mutations/main_mutations.pdf}
+       \caption{Classification of splicing variants with the PARNET model.}
+       \label{fig:7}
+   \end{figure}
+   ```
+
+Do not set `width=` on `\includegraphics`.
+The figure already has its final size, and scaling changes the font sizes.
+
+The figure contains the panel letters, so do not use `subfigure` or `\caption{}` for each panel.
+Refer to a panel as `Figure~\ref{fig:7}a` instead of `\ref{fig7:panel_a}`.
+
+The figure width comes from `layout.yaml` (`area: width:`).
+It must not be wider than the text of the manuscript.
+In Overleaf, write `\the\textwidth` in the document to see the text width in points (1 mm = 2.845 pt).
+
+The folder also contains `main_mutations.tex`.
+It places the panel PDFs and writes the panel letters with LaTeX (`\input{...}` instead of `\includegraphics{...}`).
+Use it only if you want the letters in the font of the manuscript.
+The SVG then has a different letter font than the manuscript.

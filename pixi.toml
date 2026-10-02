@@ -38,6 +38,12 @@ figure = { cmd = "snakemake --cores 4 figures/{{ name }}/preview.pdf", args = [
 new-figure = { cmd = "python scripts/new_figure.py {{ name }}", args = [
   "name",
 ] }
+# `pixi run export main_mutations [Figures/Figure_7/]` writes build/<name>/: PDF, SVG and the
+# Overleaf bundle; the optional second argument is the folder of the figure inside Overleaf.
+export = { cmd = "python scripts/export_figure.py {{ name }} {{ overleaf_dir }}", args = [
+  "name",
+  { arg = "overleaf_dir", default = "" },
+] }
 # `pixi run view main_mutations` opens the figure in the browser viewer.
 view = { cmd = "plotplate view figures/{{ name }}", args = ["name"] }
 install-kernel = "python -m ipykernel install --user --name parnet-paper --display-name 'parnet--paper'"
