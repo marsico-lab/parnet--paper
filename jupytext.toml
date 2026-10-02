@@ -1,0 +1,3 @@
+# Panel notebooks: the percent-format .py file is the tracked source; the paired .ipynb is a
+# local, gitignored view for running cells (VS Code Jupytext extension or `jupytext --sync`).
+formats = "ipynb,py:percent"

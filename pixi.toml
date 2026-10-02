@@ -1,0 +1,61 @@
+# Environment for paper-figure code.
+# The heavy analysis environments live in the analysis repos (e.g. parnet--analyses--mutations);
+# this repo only consumes their exported tables (JSON, TSV, parquet) under data/ or figures/*/data/.
+[workspace]
+name = "parnet-paper"
+# bioconda: snakemake itself is published there.
+channels = ["conda-forge", "bioconda"]
+platforms = ["linux-64"]
+
+[dependencies]
+# plotplate needs >=3.12.
+python = ">=3.12,<3.14"
+numpy = "*"
+pandas = "*"
+pyarrow = "*"
+matplotlib = "*"
+seaborn = "*"
+pyyaml = "*"
+snakemake-minimal = ">=9"
+# Notebook editing: VS Code kernel + Jupytext pairing of panel_*.py <-> panel_*.ipynb.
+ipykernel = "*"
+jupytext = "*"
+
+[pypi-dependencies]
+parnet-paper = { path = ".", editable = true }
+# Pin the same tag in any user-wide `plotplate` install (`plotplate doctor` reports drift).
+plotplate = { git = "https://github.com/lambosaur/plotplate.git", tag = "v0.1.0" }
+
+[tasks]
+# Build every figure, or one: `pixi run figures figures/figure_1/preview.pdf`.
+figures = "snakemake --cores 4"
+figures-dry = "snakemake --cores 4 --dry-run"
+install-kernel = "python -m ipykernel install --user --name parnet-paper --display-name 'parnet--paper'"
+# Copy plotplate's agent skills next to the repo's own; re-run after bumping the plotplate tag.
+install-skills = "plotplate skills --dest .claude/skills"
+
+# --- dev: linters and formatters, same versions locally and in pre-commit ---
+
+[feature.dev.dependencies]
+ruff = "*"
+pre-commit = "*"
+mdformat = "*"
+mdformat-frontmatter = "*"
+mdformat-tables = "*"
+taplo = "*"
+yamllint = "*"
+snakefmt = "*"
+
+[feature.dev.tasks]
+lint = "ruff check ."
+format = "ruff format ."
+format-md = "mdformat . --exclude '.pixi/**'"
+format-toml = "taplo format"
+lint-toml = "taplo lint --no-schema"
+lint-yaml = "yamllint ."
+format-snakemake = "snakefmt Snakefile"
+check-all = "pre-commit run --all-files"
+install-hooks = "pre-commit install"
+
+[environments]
+default = { features = ["dev"], solve-group = "default" }

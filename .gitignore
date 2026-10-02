@@ -1,0 +1,20 @@
+# Environments and caches
+.pixi/
+__pycache__/
+*.pyc
+*.egg-info/
+.ruff_cache/
+.mypy_cache/
+.snakemake/
+.ipynb_checkpoints/
+
+# Panel notebooks are tracked as percent-format .py; the paired .ipynb stays local.
+*.ipynb
+
+# plotplate bundles for Overleaf / journal submission: regenerated with `plotplate bundle/export`.
+build/
+
+# Editors and agents
+.vscode/
+.claude/settings.local.json
+.DS_Store

@@ -1,0 +1,64 @@
+# Opt-in local hooks: `pixi run install-hooks` installs them, `pixi run check-all` runs them
+# once on every file without installing. Adapted from project-meta-seed (no CI, no Copier,
+# no snapper).
+
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: https://github.com/snakemake/snakefmt
+    rev: v0.10.2
+    hooks:
+      - id: snakefmt
+
+  - repo: https://github.com/DavidAnson/markdownlint-cli2
+    rev: v0.13.0
+    hooks:
+      - id: markdownlint-cli2
+
+  # Canonical markdown formatting; leaves line breaks alone (one sentence per line is kept).
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.19
+    hooks:
+      - id: mdformat
+        additional_dependencies: [mdformat-frontmatter, mdformat-tables]
+
+  - repo: https://github.com/crate-ci/typos
+    rev: v1.24.6
+    hooks:
+      - id: typos
+
+  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+    rev: 3.0.3
+    hooks:
+      - id: editorconfig-checker
+
+  - repo: https://github.com/ComPWA/taplo-pre-commit
+    rev: v0.9.3
+    hooks:
+      - id: taplo-format
+      - id: taplo-lint
+        # The hook's default args fetch an online schema catalog; fails offline.
+        args: [--no-schema]
+
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.35.1
+    hooks:
+      - id: yamllint
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+        args: [--maxkb=5000]
+      - id: check-case-conflict
+      - id: detect-private-key
+
+# Exported data and generated outputs are written by tools, not edited by hand.
+exclude: (^\.pixi/|\.ipynb$|^data/|^figures/[^/]+/(data|panels)/|^figures/[^/]+/preview\.|\.tex$|^pixi\.lock$)

@@ -1,0 +1,28 @@
+# Domain-word allowlist for typos (https://github.com/crate-ci/typos).
+# Add a word here instead of rewording a correct term.
+
+[default.extend-words]
+jupytext = "jupytext"
+mdformat = "mdformat"
+pixi = "pixi"
+plotplate = "plotplate"
+snakefmt = "snakefmt"
+snakemake = "snakemake"
+parnet = "parnet"
+rinalmo = "rinalmo"
+eclip = "eclip"
+iclip = "iclip"
+fpr = "fpr"
+tpr = "tpr"
+
+[files]
+# Exported data and generated figure outputs are not prose.
+extend-exclude = [
+  "*.ipynb",
+  "data/",
+  "figures/*/data/",
+  "figures/*/panels/",
+  "*.svg",
+  "*.tex",
+  "pixi.lock",
+]

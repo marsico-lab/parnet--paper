@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parnet-paper"
+version = "0.1.0"
+description = "Shared helpers for the PARNET paper figures"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+
+[tool.setuptools.packages.find]
+include = ["parnet_paper*"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 102
+extend-exclude = ["**/*.ipynb", ".pixi"]
+
+[tool.ruff.lint]
+extend-select = ["E", "W", "F", "I", "UP", "B", "SIM", "RUF"]
+# E501: the formatter owns line length; long strings and URLs are left alone.
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+# Panel notebooks end cells with a bare expression on purpose (notebook display),
+# and import inside cells after markdown.
+"figures/**" = ["B018", "E402"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true

@@ -1,0 +1,10 @@
+# Project-wide plotplate style shared by every figure.
+# Referenced from each figures/<figure>/layout.yaml via `style_files: [../style.yaml]`.
+# Keep method colors here so a model has the same color in every figure.
+colors:
+  PARNET profile: "#e8609f"
+  PARNET embedding: "#9c1c5c"
+  RiNALMo embedding: "#134f7d"
+  RiNALMo CLS: "#6cb2e5"
+  SpliceAI: "#f37d16"
+  phyloP: "#2b2b2b"
