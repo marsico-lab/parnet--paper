@@ -339,7 +339,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zlib-1.3.2-h25fd6f3_3.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zlib-ng-2.3.3-hce19668_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_7.conda
-      - pypi: git+https://github.com/lambosaur/plotplate.git?tag=v0.1.0#acf96a7bad3fc5675008adf7069c3e5a60027bad
+      - pypi: git+https://github.com/lambosaur/plotplate.git?tag=v0.2.0#b4b8b576015b8e76571e0d58bd0872294e42bdd5
       - pypi: https://files.pythonhosted.org/packages/c7/06/dace3e27af26690cb20bead80dbac42941b0841eb689b8aabbd67dde16f0/pymupdf-1.28.2-cp310-abi3-manylinux_2_28_x86_64.whl
       - pypi: ./
 packages:
@@ -3462,9 +3462,9 @@ packages:
   - pkg:pypi/platformdirs?source=compressed-mapping
   size: 33868
   timestamp: 1790738680369
-- pypi: git+https://github.com/lambosaur/plotplate.git?tag=v0.1.0#acf96a7bad3fc5675008adf7069c3e5a60027bad
+- pypi: git+https://github.com/lambosaur/plotplate.git?tag=v0.2.0#b4b8b576015b8e76571e0d58bd0872294e42bdd5
   name: plotplate
-  version: 0.1.0
+  version: 0.2.0
   requires_dist:
   - matplotlib>=3.8
   - numpy

@@ -1,11 +1,12 @@
 """Build every paper figure from its precomputed data.
 
 Every folder figures/<figure>/ holding a layout.yaml is one plotplate figure.
-Folders starting with "_" are scratch and are skipped by `all`, but can still be built
-explicitly.
+Folders starting with "_" (the example) are skipped by `all`, but can still be built.
+A figure that needs a data-preparation step declares it in figures/<figure>/rules.smk,
+which is included here.
 
-    pixi run figures                                  # everything
-    pixi run figures figures/figure_1/preview.pdf     # one figure
+    pixi run figures                   # every figure
+    pixi run figure main_mutations     # one figure
 """
 
 from pathlib import Path
@@ -17,6 +18,22 @@ FIGURES = sorted(
 )
 ROC_PRC_DATASETS = ["mutsplicedb", "splicebench"]
 
+# Files a figure's rules.smk produces, which its build must wait for:
+# FIGURE_INPUTS["<figure>"] = [...], set in figures/<figure>/rules.smk.
+FIGURE_INPUTS = {}
+
+
+def files(folder):
+    """Every file under a figure subfolder (empty list if the folder does not exist)."""
+    return sorted(
+        p for p in Path(folder).rglob("*") if p.is_file() and p.name != "README.md"
+    )
+
+
+for rules_file in sorted(Path("figures").glob("*/rules.smk")):
+
+    include: rules_file
+
 
 rule all:
     input:
@@ -27,17 +44,16 @@ rule all:
         ),
 
 
-# The panel notebooks read their tables from figures/<figure>/data/ and data/; only the
-# figure's own data/ folder is tracked as input. After refreshing a shared table under data/,
-# rebuild with --forcerun plotplate_build.
+# Inputs: the figure's own files. Shared tables under data/ are not tracked per figure:
+# after refreshing one, rebuild with `pixi run figures --forcerun plotplate_build`.
 rule plotplate_build:
     input:
         layout="figures/{figure}/layout.yaml",
         style="figures/style.yaml",
-        panels=lambda wc: sorted(Path(f"figures/{wc.figure}").glob("panel_*.py")),
-        data=lambda wc: sorted(
-            p for p in Path(f"figures/{wc.figure}/data").rglob("*") if p.is_file()
-        ),
+        notebooks=lambda wc: files(f"figures/{wc.figure}/notebooks"),
+        data=lambda wc: files(f"figures/{wc.figure}/data"),
+        assets=lambda wc: files(f"figures/{wc.figure}/assets"),
+        prepared=lambda wc: FIGURE_INPUTS.get(wc.figure, []),
     output:
         "figures/{figure}/preview.pdf",
     shell:

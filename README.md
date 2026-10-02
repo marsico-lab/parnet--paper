@@ -9,29 +9,21 @@ This repository is the public entry point for the Parnet paper: links to the mod
 
 The Parnet model will live at [marsico-lab/parnet](https://github.com/marsico-lab/parnet).
 
-## Figure code
+## Figures
 
-Every figure in the paper is rebuilt from precomputed tables with one command:
+All figures of the paper are built from precomputed tables:
 
 ```sh
 pixi install
-pixi run figures                                  # every figure
-pixi run figures figures/figure_1/preview.pdf     # one figure
+pixi run figures                    # all figures
+pixi run figure main_mutations      # one figure
 ```
 
-The figure code reads tables exported by the analysis repositories (JSON, TSV, parquet), never their environments.
-Panels are drawn and assembled with [plotplate](https://github.com/lambosaur/plotplate), one notebook per panel, at their printed size.
+The tables come from the analysis repositories.
+Each figure has one folder in [figures/](figures/README.md), with one notebook per panel.
+[plotplate](https://github.com/lambosaur/plotplate) draws each panel at its final size and assembles the figure.
 
-| Path                 | What                                                                                                     |
-| -------------------- | -------------------------------------------------------------------------------------------------------- |
-| `figures/<figure>/`  | One figure: `layout.yaml`, one `panel_<X>_*.py` notebook per panel, outputs in `panels/` and `preview.*` |
-| `figures/style.yaml` | Colors and style shared by every figure                                                                  |
-| `data/`              | Precomputed tables shared by several figures, with their origin in [data/README.md](data/README.md)      |
-| `parnet_paper/`      | Small helpers shared by several figures (installed in editable mode)                                     |
-| `Snakefile`          | Builds every figure; one target per figure                                                               |
-
-[figures/README.md](figures/README.md) lists the figures and where their data comes from.
-[CONTRIBUTING.md](CONTRIBUTING.md) explains how to add or edit a figure.
+To contribute, read [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Cite
 

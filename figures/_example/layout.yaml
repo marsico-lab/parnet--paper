@@ -1,0 +1,23 @@
+# Example figure: panel boxes and axes. Check them with `pixi run view <name>`.
+# Geometry is in millimetres from the figure's top-left corner.
+schema: 1
+name: _example
+journal: nature
+style_files: [../style.yaml]
+page: {paper: a4, margins: {left: 13.5, right: 13.5, top: 25, bottom: 25}}
+area:
+  width: double  # 183 mm (Nature double column)
+  height: 100
+mosaic:
+  rows: [AA, BC]
+  heights: [48, 48]
+  gap: [4, 4]
+panels:
+  A:  # line plot drawn with matplotlib
+    source: notebooks/panel_A_scores.py
+    axes:
+      main: {left: 12, top: 4, right: 140, bottom: 40}
+  B:  # vector schematic made outside Python (assets/schematic.pdf)
+    source: notebooks/panel_B_schematic.py
+  C:  # raster image (assets/image.png)
+    source: notebooks/panel_C_image.py
