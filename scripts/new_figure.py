@@ -12,7 +12,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 EXAMPLE = REPO / "figures" / "_example"
-GENERATED = ["panels", "preview.pdf", "preview.png", "preview.svg", "_example.tex"]
+GENERATED = ["final", "output"]
 TEXT_SUFFIXES = {".md", ".py", ".smk", ".tex", ".yaml"}
 
 
@@ -22,8 +22,12 @@ def main(name: str) -> None:
     target = REPO / "figures" / name
     if target.exists():
         sys.exit(f"{target.relative_to(REPO)} already exists.")
-    shutil.copytree(EXAMPLE, target, ignore=shutil.ignore_patterns(*GENERATED, "__pycache__"))
+    shutil.copytree(
+        EXAMPLE, target, symlinks=True, ignore=shutil.ignore_patterns(*GENERATED, "__pycache__")
+    )
     for path in sorted(target.rglob("*")):
+        if path.is_symlink():  # layout.yaml -> layout.manual.yaml: the target is handled itself
+            continue
         if "_example" in path.name:  # _example-figure.tex -> <name>-figure.tex
             path = path.rename(path.with_name(path.name.replace("_example", name)))
         if path.suffix in TEXT_SUFFIXES:

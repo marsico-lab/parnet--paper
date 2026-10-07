@@ -25,7 +25,9 @@ FIGURE_INPUTS = {}
 def files(folder):
     """Every file under a figure subfolder (empty list if the folder does not exist)."""
     return sorted(
-        p for p in Path(folder).rglob("*") if p.is_file() and p.name != "README.md"
+        p
+        for p in Path(folder).rglob("*")
+        if p.is_file() and p.name != "README.md" and "__pycache__" not in p.parts
     )
 
 
@@ -36,7 +38,7 @@ for rules_file in sorted(Path("figures").glob("*/rules.smk")):
 
 rule all:
     input:
-        expand("figures/{figure}/preview.pdf", figure=FIGURES),
+        expand("figures/{figure}/output/page.pdf", figure=FIGURES),
 
 
 # Inputs: the figure's own files. Shared tables under data/ are not tracked per figure:
@@ -46,10 +48,19 @@ rule plotplate_build:
         layout="figures/{figure}/layout.yaml",
         style="figures/style.yaml",
         notebooks=lambda wc: files(f"figures/{wc.figure}/notebooks"),
+        scripts=lambda wc: files(f"figures/{wc.figure}/scripts"),
         data=lambda wc: files(f"figures/{wc.figure}/data"),
         assets=lambda wc: files(f"figures/{wc.figure}/assets"),
         prepared=lambda wc: FIGURE_INPUTS.get(wc.figure, []),
     output:
-        "figures/{figure}/preview.pdf",
+        # output_dir: output in every layout; page.*: the figure on its A4 sheet.
+        "figures/{figure}/output/page.pdf",
+        "figures/{figure}/output/page.png",
+    params:
+        # layout.yaml is a symlink to the selected layout.<qualifier>.yaml: switching it
+        # changes this value, which makes Snakemake rebuild the figure.
+        layout=lambda wc: Path(f"figures/{wc.figure}/layout.yaml").resolve().name,
     shell:
+        # page.png again at 600 dpi: plotplate writes it at 200 dpi.
         "plotplate build figures/{wildcards.figure}"
+        " && python scripts/page_png.py figures/{wildcards.figure}/output/page.pdf"

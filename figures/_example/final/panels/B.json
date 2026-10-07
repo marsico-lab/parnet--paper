@@ -1,0 +1,26 @@
+{
+  "panel": "B",
+  "layout": "_example",
+  "box_mm": [
+    0.0,
+    52.0,
+    89.5,
+    48.0
+  ],
+  "size_mm": [
+    89.5,
+    48.0
+  ],
+  "files": [
+    "B.pdf",
+    "B.png"
+  ],
+  "source": "schematic.pdf",
+  "saved": "2026-10-07T07:38:51+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {},
+    "marks": {},
+    "anchors": {}
+  }
+}
