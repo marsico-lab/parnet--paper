@@ -17,7 +17,9 @@ def draw_placeholder(panel, text):
     """Grey box with a label, for a panel that arrives later as an image."""
     fig = panel.figure()
     ax = fig.add_axes([0, 0, 1, 1])
-    ax.add_patch(plt.Rectangle((0, 0), 1, 1, facecolor="#f2f2f2", edgecolor="#9e9e9e", linestyle="--"))
+    ax.add_patch(
+        plt.Rectangle((0, 0), 1, 1, facecolor="#f2f2f2", edgecolor="#9e9e9e", linestyle="--")
+    )
     ax.text(0.5, 0.5, text, ha="center", va="center", color="#616161")
     ax.set_axis_off()
     return fig
@@ -49,7 +51,13 @@ def model_scatter(ax, x, y, color_values, cmap, norm, labels, n_labels=5):
             va="center",
             fontsize=5,
             color="#424242",
-            arrowprops={"arrowstyle": "-", "color": "#bdbdbd", "linewidth": 0.3, "shrinkA": 0, "shrinkB": 1},
+            arrowprops={
+                "arrowstyle": "-",
+                "color": "#bdbdbd",
+                "linewidth": 0.3,
+                "shrinkA": 0,
+                "shrinkB": 1,
+            },
         )
     return sc
 
@@ -78,7 +86,7 @@ def spread_labels(x, y, min_dy, x_window, n_iter=200):
 def draw_logo(ax, scores, sequence, width=1.0):
     """Sequence logo with one letter per position, letter height = attribution (signed)."""
     font = FontProperties(family="DejaVu Sans", weight="bold")
-    for i, (base, h) in enumerate(zip(sequence, scores)):
+    for i, (base, h) in enumerate(zip(sequence, scores, strict=False)):
         if h == 0 or not np.isfinite(h):
             continue
         path = TextPath((0, 0), base, size=1, prop=font)
@@ -89,5 +97,7 @@ def draw_logo(ax, scores, sequence, width=1.0):
         if h < 0:
             trans = trans.scale(1, -1)
         trans = trans.translate(i - width * 0.475, 0)
-        ax.add_patch(PathPatch(trans.transform_path(path), facecolor=NUCLEOTIDE_COLORS[base], edgecolor="none"))
+        ax.add_patch(
+            PathPatch(trans.transform_path(path), facecolor=NUCLEOTIDE_COLORS[base], edgecolor="none")
+        )
     ax.set_xlim(-0.5, len(sequence) - 0.5)

@@ -27,7 +27,9 @@ layout = pp.Layout.load("../layout.yaml")
 panel = layout.panel("kmer_heatmap")
 
 # %%
-contrast = pd.read_csv("../data/kmer_contrast/parnet_21m_full21m_ft0_penalty_sweep.rnacompete.csv", index_col=0)
+contrast = pd.read_csv(
+    "../data/kmer_contrast/parnet_21m_full21m_ft0_penalty_sweep.rnacompete.csv", index_col=0
+)
 contrast.columns = contrast.columns.astype(float)
 change = contrast.drop(columns=0.0).sub(contrast[0.0], axis=0).mean(axis=1)
 matrix = contrast.loc[change.sort_values().index].T
@@ -39,14 +41,23 @@ fig = panel.figure()
 ax = panel.axes(fig, "heatmap")
 cax = panel.axes(fig, "cbar")
 sns.heatmap(
-    matrix, ax=ax, cbar_ax=cax, cmap="vlag", center=0, vmin=-VMAX, vmax=VMAX,
-    xticklabels=True, yticklabels=True, linewidths=0.2, linecolor="white",
+    matrix,
+    ax=ax,
+    cbar_ax=cax,
+    cmap="vlag",
+    center=0,
+    vmin=-VMAX,
+    vmax=VMAX,
+    xticklabels=True,
+    yticklabels=True,
+    linewidths=0.2,
+    linecolor="white",
 )
 ax.set_xlabel("")
 ax.set_ylabel("λ")
 ax.tick_params(axis="x", labelsize=5, rotation=90, length=0)
 ax.tick_params(axis="y", rotation=0, length=0)
-ax.set_title("Δ correlation of 5-mer scores with RNAcompete (target − total)", pad=2)
+ax.set_title("Δ correlation of 5-mer scores with RNAcompete (target \u2212 total)", pad=2)
 cax.set_ylabel("Δ correlation", labelpad=1)
 cax.tick_params(length=1)
 

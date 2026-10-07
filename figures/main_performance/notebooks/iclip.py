@@ -22,7 +22,6 @@
 # %%
 import sys
 
-import matplotlib.pyplot as plt
 import pandas as pd
 import plotplate as pp
 
@@ -45,18 +44,46 @@ ax.plot((0, 0.75), (0, 0.75), color="#9e9e9e", linewidth=0.5, linestyle=":", zor
 label_y = spread_labels(t.fine_tuned_15task, t.eclip_native, min_dy=0.034, x_window=0.25)
 for rbp, r in t.iterrows():
     ax.annotate(
-        "", xy=(r.fine_tuned_15task, r.eclip_native), xytext=(r.zero_shot, r.eclip_native),
-        arrowprops={"arrowstyle": "-|>", "color": "#bdbdbd", "linewidth": 0.5, "mutation_scale": 4,
-                    "shrinkA": 1.5, "shrinkB": 1.5},
+        "",
+        xy=(r.fine_tuned_15task, r.eclip_native),
+        xytext=(r.zero_shot, r.eclip_native),
+        arrowprops={
+            "arrowstyle": "-|>",
+            "color": "#bdbdbd",
+            "linewidth": 0.5,
+            "mutation_scale": 4,
+            "shrinkA": 1.5,
+            "shrinkB": 1.5,
+        },
     )
     ax.annotate(
-        rbp, xy=(r.fine_tuned_15task, r.eclip_native), xytext=(r.fine_tuned_15task + 0.04, label_y[rbp]),
-        va="center", fontsize=5, color="#424242",
-        arrowprops={"arrowstyle": "-", "color": "#bdbdbd", "linewidth": 0.3, "shrinkA": 0, "shrinkB": 1.5},
+        rbp,
+        xy=(r.fine_tuned_15task, r.eclip_native),
+        xytext=(r.fine_tuned_15task + 0.04, label_y[rbp]),
+        va="center",
+        fontsize=5,
+        color="#424242",
+        arrowprops={
+            "arrowstyle": "-",
+            "color": "#bdbdbd",
+            "linewidth": 0.3,
+            "shrinkA": 0,
+            "shrinkB": 1.5,
+        },
     )
-ax.scatter(t.zero_shot, t.eclip_native, s=6, facecolor="white", edgecolor=color, linewidth=0.5,
-           label="zero-shot", zorder=3)
-ax.scatter(t.fine_tuned_15task, t.eclip_native, s=6, color=color, linewidth=0, label="fine-tuned", zorder=3)
+ax.scatter(
+    t.zero_shot,
+    t.eclip_native,
+    s=6,
+    facecolor="white",
+    edgecolor=color,
+    linewidth=0.5,
+    label="zero-shot",
+    zorder=3,
+)
+ax.scatter(
+    t.fine_tuned_15task, t.eclip_native, s=6, color=color, linewidth=0, label="fine-tuned", zorder=3
+)
 ax.set_xlim(0, 0.75)
 ax.set_ylim(0.2, 0.78)
 ax.set_xlabel("iCLIP Pearson r")

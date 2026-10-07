@@ -54,9 +54,7 @@ def attribution(model, track):
 
 
 rows = list(TRACKS) + ["delta"]
-ylims = {
-    r: max(np.abs(attribution(m, r)).max() for m in MODELS) * 1.05 for r in rows
-}
+ylims = {r: max(np.abs(attribution(m, r)).max() for m in MODELS) * 1.05 for r in rows}
 pred_max = {t: max(table[f"pred__{m}__{t}"].max() for m in MODELS) for t in TRACKS}
 
 # %%
@@ -64,15 +62,33 @@ fig = panel.figure()
 title_ax = panel.axes(fig, "title")
 title_ax.set_axis_off()
 title_ax.text(
-    0.5, 0.5, "RBFOX2_HepG2, chr3:52,797,948-52,798,048 (+)", ha="center", va="center",
+    0.5,
+    0.5,
+    "RBFOX2_HepG2, chr3:52,797,948-52,798,048 (+)",
+    ha="center",
+    va="center",
     fontsize=plt.rcParams["axes.titlesize"],
 )
 axes = np.asarray(panel.axes(fig, "tracks")).reshape(5, 4)
 x = np.arange(len(seq))
 for col, (model, label) in enumerate(MODELS.items()):
     ax = axes[0, col]
-    ax.fill_between(x, np.log10(table["signal__total"] + 1), color="#1565c0", linewidth=0, step="mid", label="eCLIP")
-    ax.plot(x, np.log10(table["signal__control"] + 1), color="#9e9e9e", linewidth=0.5, drawstyle="steps-mid", label="SMI")
+    ax.fill_between(
+        x,
+        np.log10(table["signal__total"] + 1),
+        color="#1565c0",
+        linewidth=0,
+        step="mid",
+        label="eCLIP",
+    )
+    ax.plot(
+        x,
+        np.log10(table["signal__control"] + 1),
+        color="#9e9e9e",
+        linewidth=0.5,
+        drawstyle="steps-mid",
+        label="SMI",
+    )
     ax.set_title(label, pad=2)
     for r, track in enumerate(rows, start=1):
         ax = axes[r, col]
@@ -80,7 +96,13 @@ for col, (model, label) in enumerate(MODELS.items()):
         draw_logo(ax, a / ylims[track], seq)
         ax.set_ylim(-1 if a.min() < 0 or track == "delta" else 0, 1)
         if track in TRACKS:
-            ax.plot(x, table[f"pred__{model}__{track}"] / pred_max[track], color=TRACK_COLORS[track], linewidth=0.5, alpha=0.6)
+            ax.plot(
+                x,
+                table[f"pred__{model}__{track}"] / pred_max[track],
+                color=TRACK_COLORS[track],
+                linewidth=0.5,
+                alpha=0.6,
+            )
             ax.set_ylim(min(-0.05, (a / ylims[track]).min() * 1.05), 1)
         ax.axhline(0, color="#424242", linewidth=0.3)
 for r, name in enumerate(["log10(RS+1)"] + list(TRACKS.values()) + ["Target -\ncontrol"]):
@@ -92,10 +114,14 @@ for ax in axes.flat:
         ax.spines[s].set_visible(False)
 axes[0, 0].set_yticks([0, 2])
 handles, names = axes[0, 0].get_legend_handles_labels()
-title_ax.legend(handles, names, loc="center right", ncols=2, frameon=False, handlelength=1, borderaxespad=0)
+title_ax.legend(
+    handles, names, loc="center right", ncols=2, frameon=False, handlelength=1, borderaxespad=0
+)
 for col in range(4):
     axes[-1, col].set_xticks([0, 50, 99])
-    for tick, ha in zip(axes[-1, col].set_xticklabels(["1", "51", "100"]), ["left", "center", "right"]):
+    for tick, ha in zip(
+        axes[-1, col].set_xticklabels(["1", "51", "100"]), ["left", "center", "right"], strict=False
+    ):
         tick.set_horizontalalignment(ha)
 axes[0, 0].set_ylim(0, max(2.2, np.log10(table["signal__total"].max() + 1) * 1.05))
 for col in range(1, 4):
