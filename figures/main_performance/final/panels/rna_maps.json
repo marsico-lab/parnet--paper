@@ -1,0 +1,40 @@
+{
+  "panel": "rna_maps",
+  "layout": "main_performance",
+  "box_mm": [
+    0.0,
+    204.0,
+    183.0,
+    42.0
+  ],
+  "size_mm": [
+    183.0,
+    42.0
+  ],
+  "files": [
+    "rna_maps.pdf",
+    "rna_maps.svg",
+    "rna_maps.png"
+  ],
+  "source": "rna_maps.py",
+  "saved": "2026-10-07T08:25:02+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "ax1": {
+        "box_edges": {
+          "left": 0.0,
+          "right": 183.0,
+          "top": 204.0,
+          "bottom": 246.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {}
+  }
+}

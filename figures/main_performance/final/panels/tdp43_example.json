@@ -1,0 +1,40 @@
+{
+  "panel": "tdp43_example",
+  "layout": "main_performance",
+  "box_mm": [
+    0.0,
+    162.0,
+    105.0,
+    38.0
+  ],
+  "size_mm": [
+    105.0,
+    38.0
+  ],
+  "files": [
+    "tdp43_example.pdf",
+    "tdp43_example.svg",
+    "tdp43_example.png"
+  ],
+  "source": "tdp43_example.py",
+  "saved": "2026-10-07T08:25:00+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "ax1": {
+        "box_edges": {
+          "left": 0.0,
+          "right": 105.0,
+          "top": 162.0,
+          "bottom": 200.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {}
+  }
+}

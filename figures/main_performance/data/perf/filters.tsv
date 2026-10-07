@@ -1,0 +1,7 @@
+table	filter	definition
+correlations	rc10	>= 10 read starts in the window
+correlations	rc10_cluster5	>= 10 read starts and >= 5 covered positions with consecutive gaps <= 3 nt
+correlations	rc10_peak	>= 10 read starts and a narrowPeak of this RBP in the window
+correlations	orig_mask	mask_minimal_signal_and_peaks_presence (pipeline mask)
+auprc	has_positive	window contains >= 1 positive position of this RBP
+auprc	selected_peak_region	window built around a selected narrowPeak of this RBP (mask_region_vs_selected_peaks)

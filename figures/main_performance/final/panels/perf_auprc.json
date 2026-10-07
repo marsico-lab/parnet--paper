@@ -1,0 +1,102 @@
+{
+  "panel": "perf_auprc",
+  "layout": "main_performance",
+  "box_mm": [
+    62.5,
+    0.0,
+    58.0,
+    50.0
+  ],
+  "size_mm": [
+    58.0,
+    50.0
+  ],
+  "files": [
+    "perf_auprc.pdf",
+    "perf_auprc.svg",
+    "perf_auprc.png"
+  ],
+  "source": "perf_auprc.py",
+  "saved": "2026-10-07T08:24:54+00:00",
+  "issues": [
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'AQR_HepG2' overlaps 'TRA2A_K562'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'AQR_HepG2' overlaps 'RPS3_K562'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'AQR_HepG2' overlaps 'NOLC1_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'AQR_HepG2' overlaps 'NIP7_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'TRA2A_K562' overlaps 'RPS3_K562'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'TRA2A_K562' overlaps 'NOLC1_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'TRA2A_K562' overlaps 'NIP7_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'RPS3_K562' overlaps 'NOLC1_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'RPS3_K562' overlaps 'NIP7_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'NOLC1_HepG2' overlaps 'NIP7_HepG2'"
+    }
+  ],
+  "geometry": {
+    "axes": {
+      "main": {
+        "box_edges": {
+          "left": 76.5,
+          "right": 112.5,
+          "top": 6.0,
+          "bottom": 42.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "cbar": {
+        "box_edges": {
+          "left": 98.5,
+          "right": 111.5,
+          "top": 36.5,
+          "bottom": 37.5
+        },
+        "spines": [
+          "outline"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {}
+  }
+}

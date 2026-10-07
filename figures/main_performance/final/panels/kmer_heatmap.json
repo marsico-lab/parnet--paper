@@ -1,0 +1,48 @@
+{
+  "panel": "kmer_heatmap",
+  "layout": "main_performance",
+  "box_mm": [
+    0.0,
+    118.0,
+    133.0,
+    40.0
+  ],
+  "size_mm": [
+    133.0,
+    40.0
+  ],
+  "files": [
+    "kmer_heatmap.pdf",
+    "kmer_heatmap.svg",
+    "kmer_heatmap.png"
+  ],
+  "source": "kmer_heatmap.py",
+  "saved": "2026-10-07T08:24:59+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "heatmap": {
+        "box_edges": {
+          "left": 10.0,
+          "right": 120.0,
+          "top": 123.0,
+          "bottom": 141.0
+        },
+        "spines": []
+      },
+      "cbar": {
+        "box_edges": {
+          "left": 122.0,
+          "right": 123.2,
+          "top": 123.0,
+          "bottom": 141.0
+        },
+        "spines": [
+          "outline"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {}
+  }
+}

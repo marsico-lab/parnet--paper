@@ -1,0 +1,71 @@
+{
+  "panel": "iclip",
+  "layout": "main_performance",
+  "box_mm": [
+    109.0,
+    162.0,
+    74.0,
+    38.0
+  ],
+  "size_mm": [
+    74.0,
+    38.0
+  ],
+  "files": [
+    "iclip.pdf",
+    "iclip.svg",
+    "iclip.png"
+  ],
+  "source": "iclip.py",
+  "saved": "2026-10-07T08:25:01+00:00",
+  "issues": [
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'FUS' overlaps 'HNRNPU'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'HNRNPC' overlaps 'KHSRP'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'HNRNPC' overlaps 'PTBP1'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'HNRNPU' overlaps 'SRSF1'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'KHSRP' overlaps 'PTBP1'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'SRSF1' overlaps 'UPF1'"
+    }
+  ],
+  "geometry": {
+    "axes": {
+      "main": {
+        "box_edges": {
+          "left": 121.0,
+          "right": 171.0,
+          "top": 168.5,
+          "bottom": 193.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {}
+  }
+}
