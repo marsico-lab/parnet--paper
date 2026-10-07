@@ -24,25 +24,32 @@ jupytext = "*"
 [pypi-dependencies]
 parnet-paper = { path = ".", editable = true }
 # Pin the same tag in any user-wide `plotplate` install (`plotplate doctor` reports drift).
-plotplate = { git = "https://github.com/lambosaur/plotplate.git", tag = "v0.2.0" }
+plotplate = { git = "https://github.com/lambosaur/plotplate.git", tag = "v0.4.0" }
 
 [tasks]
 # `pixi run figures` builds every figure; extra arguments go to snakemake.
 figures = "snakemake --cores 4"
 figures-dry = "snakemake --cores 4 --dry-run"
 # `pixi run figure main_mutations` builds one figure (and its data step, if any).
-figure = { cmd = "snakemake --cores 4 figures/{{ name }}/preview.pdf", args = [
+figure = { cmd = "snakemake --cores 4 figures/{{ name }}/output/page.pdf", args = [
   "name",
 ] }
 # `pixi run new-figure main_mutations` creates a new figure folder from figures/_example.
 new-figure = { cmd = "python scripts/new_figure.py {{ name }}", args = [
   "name",
 ] }
-# `pixi run export main_mutations [Figures/Figure_7/]` writes build/<name>/: PDF, SVG and the
-# Overleaf bundle; the optional second argument is the folder of the figure inside Overleaf.
-export = { cmd = "python scripts/export_figure.py {{ name }} {{ overleaf_dir }}", args = [
+# `pixi run promote main_mutations [Figures/Figure_7/]` copies the latest build into the tracked
+# figures/<name>/final/, with PDF, SVG and the Overleaf files; the optional second argument is
+# the folder of the figure inside Overleaf.
+promote = { cmd = "python scripts/promote_figure.py {{ name }} {{ overleaf_dir }}", args = [
   "name",
   { arg = "overleaf_dir", default = "" },
+] }
+# `pixi run use-layout main_mutations custom` makes layout.custom.yaml the selected layout
+# (figures/<name>/layout.yaml is a symlink to it).
+use-layout = { cmd = "ln -sfn layout.{{ variant }}.yaml figures/{{ name }}/layout.yaml && ls -l figures/{{ name }}/layout.yaml", args = [
+  "name",
+  "variant",
 ] }
 # `pixi run view main_mutations` opens the figure in the browser viewer.
 view = { cmd = "plotplate view figures/{{ name }}", args = ["name"] }

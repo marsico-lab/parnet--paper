@@ -108,17 +108,22 @@ git branch --show-current        # must show figure/<name>
 When a part of the figure works:
 
 ```sh
-pixi run figure main_mutations   # rebuild; it must end with "OK"
 git add figures/main_mutations
 git commit -m "Add panel B heatmap"
+pixi run figure main_mutations    # rebuild; it must end with "OK"
+pixi run promote main_mutations   # copy the result into figures/main_mutations/final/
+git add figures/main_mutations/final
+git commit -m "Promote main_mutations"
 git push
 ```
 
+The build writes its files on your computer only; git ignores them.
+`promote` copies them into `final/`, the version that the co-authors see.
 Each push updates the pull request.
-The **Files changed** tab shows the new `preview.png` next to the old one.
+The **Files changed** tab shows the new `final/page.png` next to the old one.
 
 To show a step to the co-authors, write a comment in the pull request.
-Drag `figures/<name>/preview.png` into the comment box to attach the image.
+Drag `figures/<name>/final/page.png` into the comment box to attach the image.
 
 ### Get the latest changes from `dev`
 
@@ -147,8 +152,9 @@ Describe it in the pull request, so that the reviewers see it.
 Do these checks first:
 
 ```sh
-pixi run figure main_mutations   # must end with "OK"
-pixi run check-all               # must show no "Failed"
+pixi run figure main_mutations    # must end with "OK"
+pixi run promote main_mutations   # then commit final/
+pixi run check-all                # must show no "Failed"
 ```
 
 Then:
@@ -163,7 +169,7 @@ With `gh`: `gh pr ready`, then `gh pr edit --add-reviewer <github-name>`.
 You receive an email or a GitHub notification.
 Open the pull request.
 
-1. Look at the figure: open **Files changed**, then find `preview.png`.
+1. Look at the figure: open **Files changed**, then find `final/page.png`.
    GitHub shows the old and the new image.
    Select **2-up**, **Swipe** or **Onion skin** to compare them.
 1. To comment on one line, move the mouse over the line and click **+**.
@@ -214,8 +220,9 @@ The maintainer makes the final decision.
 - One branch and one pull request for each figure.
 - Do not recompute an analysis in this repository.
   Copy the result tables from the analysis repository, and write their origin in a `README.md` next to them.
-- Commit the outputs (`panels/`, `preview.*`, `<name>.tex`) after each rebuild, and `<name>-figure.tex` when you change it.
-  The reviewers see the figure through them.
+- Share a version of the figure with `pixi run promote <name>`, then commit `final/`.
+  The reviewers see the figure through `final/`; the build files next to `layout.yaml` stay on your computer.
+- `layout.yaml` is a symlink to the selected `layout.<qualifier>.yaml`; never replace it with a file.
 - Write Markdown with one sentence per line.
 
 ## Checks
