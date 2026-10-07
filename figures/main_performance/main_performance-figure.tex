@@ -1,0 +1,14 @@
+% main_performance: this file is yours. Edit the caption, the label, the
+% placement ([t], [h!], ...), or wrap it in a starred figure* for a wide one.
+% plotplate never overwrites it; it rewrites the panels in the file included below.
+\begin{figure}[tbp]
+  \centering
+  \input{panels/main_performance.tex}%
+  \caption{...}
+  \label{fig:main_performance}
+  % To reference one panel (\ref{fig:main_performancea} prints 7a), load subcaption in the
+  % preamble and uncomment the lines below. They print nothing and take no space.
+  % \begin{subfigure}[t]{0pt}\phantomsubcaption\label{fig:main_performancea}\end{subfigure}%  panel A
+  % \begin{subfigure}[t]{0pt}\phantomsubcaption\label{fig:main_performanceb}\end{subfigure}%  panel B
+  % \begin{subfigure}[t]{0pt}\phantomsubcaption\label{fig:main_performancec}\end{subfigure}%  panel C
+\end{figure}

@@ -1,0 +1,22 @@
+method	window	auroc
+PARNET profile	1	0.7915
+PARNET profile	3	0.8237
+PARNET profile	5	0.8523
+PARNET profile	11	0.8917
+PARNET profile	21	0.9109
+PARNET profile	51	0.9217
+PARNET profile	101	0.9265
+RiNALMo embedding	1	0.7224
+RiNALMo embedding	3	0.7717
+RiNALMo embedding	5	0.7862
+RiNALMo embedding	11	0.7967
+RiNALMo embedding	21	0.8002
+RiNALMo embedding	51	0.7884
+RiNALMo embedding	101	0.7989
+SpliceAI	1	0.8432
+SpliceAI	3	0.9012
+SpliceAI	5	0.927
+SpliceAI	11	0.9466
+SpliceAI	21	0.952
+SpliceAI	51	0.9552
+SpliceAI	101	0.9494
