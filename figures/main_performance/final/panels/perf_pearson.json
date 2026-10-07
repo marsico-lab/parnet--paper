@@ -1,0 +1,97 @@
+{
+  "panel": "perf_pearson",
+  "layout": "main_performance",
+  "box_mm": [
+    0.0,
+    0.0,
+    58.0,
+    50.0
+  ],
+  "size_mm": [
+    58.0,
+    50.0
+  ],
+  "files": [
+    "perf_pearson.pdf",
+    "perf_pearson.svg",
+    "perf_pearson.png"
+  ],
+  "source": "perf_pearson.py",
+  "saved": "2026-10-07T08:24:15+00:00",
+  "issues": [
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'YBX3_HepG2' overlaps 'SRSF7_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'YBX3_HepG2' overlaps 'SRSF7_K562'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'YBX3_HepG2' overlaps 'NIP7_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'SRSF7_HepG2' overlaps 'SRSF7_K562'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'SRSF7_HepG2' overlaps 'NIP7_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'SRSF7_HepG2' overlaps 'LARP7_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'SRSF7_K562' overlaps 'NIP7_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'SRSF7_K562' overlaps 'LARP7_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'NIP7_HepG2' overlaps 'LARP7_HepG2'"
+    }
+  ],
+  "geometry": {
+    "axes": {
+      "main": {
+        "box_edges": {
+          "left": 14.0,
+          "right": 50.0,
+          "top": 6.0,
+          "bottom": 42.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "cbar": {
+        "box_edges": {
+          "left": 36.0,
+          "right": 49.0,
+          "top": 36.5,
+          "bottom": 37.5
+        },
+        "spines": [
+          "outline"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {}
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "panel": "kmer_benefit",
+  "layout": "main_performance",
+  "box_mm": [
+    137.0,
+    118.0,
+    46.0,
+    40.0
+  ],
+  "size_mm": [
+    46.0,
+    40.0
+  ],
+  "files": [
+    "kmer_benefit.pdf",
+    "kmer_benefit.svg",
+    "kmer_benefit.png"
+  ],
+  "source": "kmer_benefit.py",
+  "saved": "2026-10-07T08:24:21+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "main": {
+        "box_edges": {
+          "left": 150.0,
+          "right": 182.0,
+          "top": 123.0,
+          "bottom": 150.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {}
+  }
+}
