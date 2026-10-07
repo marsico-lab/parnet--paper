@@ -53,7 +53,7 @@ def attribution(model, track):
     return table[f"fi_ig__{model}__{track}"]
 
 
-rows = list(TRACKS) + ["delta"]
+rows = [*TRACKS, "delta"]
 ylims = {r: max(np.abs(attribution(m, r)).max() for m in MODELS) * 1.05 for r in rows}
 pred_max = {t: max(table[f"pred__{m}__{t}"].max() for m in MODELS) for t in TRACKS}
 
@@ -105,7 +105,7 @@ for col, (model, label) in enumerate(MODELS.items()):
             )
             ax.set_ylim(min(-0.05, (a / ylims[track]).min() * 1.05), 1)
         ax.axhline(0, color="#424242", linewidth=0.3)
-for r, name in enumerate(["log10(RS+1)"] + list(TRACKS.values()) + ["Target -\ncontrol"]):
+for r, name in enumerate(["log10(RS+1)", *TRACKS.values(), "Target -\ncontrol"]):
     axes[r, 0].set_ylabel(name, labelpad=2)
 for ax in axes.flat:
     ax.set_xticks([])
