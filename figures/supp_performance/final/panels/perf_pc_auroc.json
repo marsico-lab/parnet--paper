@@ -17,8 +17,13 @@
     "perf_pc_auroc.png"
   ],
   "source": "perf_pc_auroc.py",
-  "saved": "2026-10-13T18:48:30+00:00",
+  "saved": "2026-10-13T19:08:15+00:00",
   "issues": [
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'PCBP1_HepG2' overlaps 'FTO_HepG2'"
+    },
     {
       "level": "warning",
       "code": "text-overlap",
@@ -37,7 +42,17 @@
     {
       "level": "warning",
       "code": "text-overlap",
-      "message": "'PCBP1_HepG2' overlaps 'SSB_K562'"
+      "message": "'FTO_HepG2' overlaps 'YBX3_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'FTO_HepG2' overlaps 'AQR_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'FTO_HepG2' overlaps 'UTP18_HepG2'"
     },
     {
       "level": "warning",
@@ -52,22 +67,7 @@
     {
       "level": "warning",
       "code": "text-overlap",
-      "message": "'YBX3_HepG2' overlaps 'SSB_K562'"
-    },
-    {
-      "level": "warning",
-      "code": "text-overlap",
       "message": "'AQR_HepG2' overlaps 'UTP18_HepG2'"
-    },
-    {
-      "level": "warning",
-      "code": "text-overlap",
-      "message": "'AQR_HepG2' overlaps 'SSB_K562'"
-    },
-    {
-      "level": "warning",
-      "code": "text-overlap",
-      "message": "'UTP18_HepG2' overlaps 'SSB_K562'"
     }
   ],
   "geometry": {

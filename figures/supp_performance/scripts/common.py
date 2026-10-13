@@ -10,7 +10,7 @@ def model_scatter(ax, x, y, labels, color_better, n_labels=5, label_side="right"
     """Per-RBP scatter of the single-task model (x) vs PARNET (y), with the diagonal.
 
     RBPs where PARNET is better are drawn in `color_better` (legend entry with their count), the others
-    in light grey. The `n_labels` RBPs with the largest |y - x| are ringed and named in a column above
+    in light grey. The `n_labels` RBPs with the largest gain (y - x) are ringed and named in a column above
     the diagonal, each label an annotation so its leader line ends on the text.
     """
     x, y = np.asarray(x), np.asarray(y)
@@ -30,7 +30,7 @@ def model_scatter(ax, x, y, labels, color_better, n_labels=5, label_side="right"
         zorder=2,
         label=f"PARNET better ({int(better.sum())} / {len(x)} RBPs)",
     )
-    order = np.argsort(-np.abs(y - x))[:n_labels]
+    order = np.argsort(-(y - x))[:n_labels]  # the largest gains of PARNET
     ax.scatter(
         x[order], y[order], s=9, facecolor="none", edgecolor="#212121", linewidths=0.5, zorder=3
     )

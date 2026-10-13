@@ -2035,19 +2035,19 @@
 <path transform="matrix(1,0,0,-1,265.03938,130.3937)" d="M31.181103 22.677166H113.38583V113.38583H31.181103Z"/>
 </clipPath>
 <clipPath id="clip_679">
-<path transform="matrix(1,0,0,-1,330.23277,98.85619)" d="M-2-2H2V2H-2Z"/>
+<path transform="matrix(1,0,0,-1,314.59364,61.410814)" d="M-2-2H2V2H-2Z"/>
 </clipPath>
 <clipPath id="clip_680">
-<path transform="matrix(1,0,0,-1,314.59364,61.410818)" d="M-2-2H2V2H-2Z"/>
-</clipPath>
-<clipPath id="clip_681">
 <path transform="matrix(1,0,0,-1,307.72554,73.15584)" d="M-2-2H2V2H-2Z"/>
 </clipPath>
-<clipPath id="clip_682">
+<clipPath id="clip_681">
 <path transform="matrix(1,0,0,-1,325.05229,54.047727)" d="M-2-2H2V2H-2Z"/>
 </clipPath>
-<clipPath id="clip_683">
+<clipPath id="clip_682">
 <path transform="matrix(1,0,0,-1,323.61756,57.84669)" d="M-2-2H2V2H-2Z"/>
+</clipPath>
+<clipPath id="clip_683">
+<path transform="matrix(1,0,0,-1,324.88453,56.97362)" d="M-2-2H2V2H-2Z"/>
 </clipPath>
 <clipPath id="clip_684">
 <path transform="matrix(1,0,0,-1,397.55906,130.3937)" d="M0 0H121.1811V130.3937H0Z"/>
@@ -7580,33 +7580,33 @@
 <path transform="matrix(1,0,0,-1,265.03938,130.3937)" stroke-width=".5" stroke-linecap="square" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M31.181103 22.677165H113.385829"/>
 <g clip-path="url(#clip_678)">
 <g clip-path="url(#clip_679)">
-<path transform="matrix(1,0,0,-1,330.23277,98.85619)" stroke-width=".5" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#212121" d="M0-1.5C.397805-1.5 .77937-1.341951 1.06066-1.06066 1.341951-.77937 1.5-.397805 1.5 0 1.5 .397805 1.341951 .77937 1.06066 1.06066 .77937 1.341951 .397805 1.5 0 1.5-.397805 1.5-.77937 1.341951-1.06066 1.06066-1.341951 .77937-1.5 .397805-1.5 0-1.5-.397805-1.341951-.77937-1.06066-1.06066-.77937-1.341951-.397805-1.5 0-1.5Z"/>
+<path transform="matrix(1,0,0,-1,314.59364,61.410814)" stroke-width=".5" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#212121" d="M0-1.5C.397805-1.5 .77937-1.341951 1.06066-1.06066 1.341951-.77937 1.5-.397805 1.5 0 1.5 .397805 1.341951 .77937 1.06066 1.06066 .77937 1.341951 .397805 1.5 0 1.5-.397805 1.5-.77937 1.341951-1.06066 1.06066-1.341951 .77937-1.5 .397805-1.5 0-1.5-.397805-1.341951-.77937-1.06066-1.06066-.77937-1.341951-.397805-1.5 0-1.5Z"/>
 </g>
 <g clip-path="url(#clip_680)">
-<path transform="matrix(1,0,0,-1,314.59364,61.410818)" stroke-width=".5" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#212121" d="M0-1.5C.397805-1.5 .77937-1.341951 1.06066-1.06066 1.341951-.77937 1.5-.397805 1.5 0 1.5 .397805 1.341951 .77937 1.06066 1.06066 .77937 1.341951 .397805 1.5 0 1.5-.397805 1.5-.77937 1.341951-1.06066 1.06066-1.341951 .77937-1.5 .397805-1.5 0-1.5-.397805-1.341951-.77937-1.06066-1.06066-.77937-1.341951-.397805-1.5 0-1.5Z"/>
-</g>
-<g clip-path="url(#clip_681)">
 <path transform="matrix(1,0,0,-1,307.72554,73.15584)" stroke-width=".5" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#212121" d="M0-1.5C.397805-1.5 .77937-1.341951 1.06066-1.06066 1.341951-.77937 1.5-.397805 1.5 0 1.5 .397805 1.341951 .77937 1.06066 1.06066 .77937 1.341951 .397805 1.5 0 1.5-.397805 1.5-.77937 1.341951-1.06066 1.06066-1.341951 .77937-1.5 .397805-1.5 0-1.5-.397805-1.341951-.77937-1.06066-1.06066-.77937-1.341951-.397805-1.5 0-1.5Z"/>
 </g>
-<g clip-path="url(#clip_682)">
+<g clip-path="url(#clip_681)">
 <path transform="matrix(1,0,0,-1,325.05229,54.047727)" stroke-width=".5" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#212121" d="M0-1.5C.397805-1.5 .77937-1.341951 1.06066-1.06066 1.341951-.77937 1.5-.397805 1.5 0 1.5 .397805 1.341951 .77937 1.06066 1.06066 .77937 1.341951 .397805 1.5 0 1.5-.397805 1.5-.77937 1.341951-1.06066 1.06066-1.341951 .77937-1.5 .397805-1.5 0-1.5-.397805-1.341951-.77937-1.06066-1.06066-.77937-1.341951-.397805-1.5 0-1.5Z"/>
 </g>
-<g clip-path="url(#clip_683)">
+<g clip-path="url(#clip_682)">
 <path transform="matrix(1,0,0,-1,323.61756,57.84669)" stroke-width=".5" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#212121" d="M0-1.5C.397805-1.5 .77937-1.341951 1.06066-1.06066 1.341951-.77937 1.5-.397805 1.5 0 1.5 .397805 1.341951 .77937 1.06066 1.06066 .77937 1.341951 .397805 1.5 0 1.5-.397805 1.5-.77937 1.341951-1.06066 1.06066-1.341951 .77937-1.5 .397805-1.5 0-1.5-.397805-1.341951-.77937-1.06066-1.06066-.77937-1.341951-.397805-1.5 0-1.5Z"/>
+</g>
+<g clip-path="url(#clip_683)">
+<path transform="matrix(1,0,0,-1,324.88453,56.97362)" stroke-width=".5" stroke-linecap="butt" stroke-linejoin="round" fill="none" stroke="#212121" d="M0-1.5C.397805-1.5 .77937-1.341951 1.06066-1.06066 1.341951-.77937 1.5-.397805 1.5 0 1.5 .397805 1.341951 .77937 1.06066 1.06066 .77937 1.341951 .397805 1.5 0 1.5-.397805 1.5-.77937 1.341951-1.06066 1.06066-1.341951 .77937-1.5 .397805-1.5 0-1.5-.397805-1.341951-.77937-1.06066-1.06066-.77937-1.341951-.397805-1.5 0-1.5Z"/>
 </g>
 </g>
 <text xml:space="preserve" transform="matrix(1 0 -0 1 292.34629 8.470772)" font-size="6" font-family="Arial"><tspan y="0" x="0 4.000047 8.327165 12.654282 17.327164 21.654282 23.327164 25.000046 29.000094 32.34293 34.342885 37.685724 42.01284 45.355676 47.028558 50.919229 52.59211 55.59211 57.592065 60.9349 63.9349 66.9349 68.26202 69.589138 72.93197 75.93197 77.60485 80.60485 81.93197 83.60485 86.947689">AUROC, PureCLIP crosslink sites</tspan></text>
 <text xml:space="preserve" transform="matrix(1 0 -0 1 301.68223 15.007881)" font-size="6" font-family="Arial"><tspan y="0" x="0 4.9999535 8.34279 11.685626 15.028462 16.701346 20.044182 23.387019 24.714137 28.056973 29.729855 33.22995 36.572786 38.245668 41.5885 46.915666 48.588548 51.93138 55.274217 57.27417 58.947053 63.27417 67.274219">mean gain +2.5% per RBP</tspan></text>
-<path transform="matrix(1,0,0,-1,265.03938,130.3937)" stroke-width=".3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#9e9e9e" d="M67.135089 104.44513C64.96591 95.8871 62.79674 87.32907 60.62757 78.77104"/>
-<text fill="#424242" xml:space="preserve" transform="matrix(1 0 -0 1 333.52095 21.93042)" font-size="5" font-family="Arial"><tspan y="0" x="0 3.3281644 6.9367 10.264864 13.593028 16.373517 19.154006 22.76254 25.54303 28.323519 32.214986">PCBP1_HepG2</tspan></text>
-<path transform="matrix(1,0,0,-1,265.03938,130.3937)" stroke-width=".3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#9e9e9e" d="M68.52116 98.58353C65.504199 90.68337 62.487245 82.78321 59.470289 74.88306"/>
-<text fill="#424242" xml:space="preserve" transform="matrix(1 0 -0 1 335.57609 27.826478)" font-size="5" font-family="Arial"><tspan y="0" x="0 3.3281644 6.6563289 9.984493 12.764982 15.545471 19.154007 21.934496 24.714985 28.60645">YBX3_HepG2</tspan></text>
-<path transform="matrix(1,0,0,-1,265.03938,130.3937)" stroke-width=".3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#9e9e9e" d="M69.96829 94.66482C63.68277 86.7573 57.397249 78.849788 51.111726 70.94227"/>
-<text fill="#424242" xml:space="preserve" transform="matrix(1 0 -0 1 337.6312 33.72254)" font-size="5" font-family="Arial"><tspan y="0" x="0 3.3281644 7.2196295 10.828165 13.608654 17.21719 19.997679 22.778168 26.669632">AQR_HepG2</tspan></text>
-<path transform="matrix(1,0,0,-1,265.03938,130.3937)" stroke-width=".3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#9e9e9e" d="M71.97266 89.15481C62.773553 79.12946 53.57445 69.104129 44.37535 59.078786"/>
-<text fill="#424242" xml:space="preserve" transform="matrix(1 0 -0 1 339.6863 39.618608)" font-size="5" font-family="Arial"><tspan y="0" x="0 3.6085356 6.6562116 9.984376 12.764864 15.545353 18.325842 21.934378 24.714867 27.495356 31.386822">UTP18_HepG2</tspan></text>
-<path transform="matrix(1,0,0,-1,265.03938,130.3937)" stroke-width=".3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#9e9e9e" d="M75.58053 80.848949C72.28996 65.22744 68.99939 49.605936 65.708827 33.98443"/>
-<text fill="#424242" xml:space="preserve" transform="matrix(1 0 -0 1 341.74143 45.51467)" font-size="5" font-family="Arial"><tspan y="0" x="0 3.3281644 6.6563289 9.984493 12.764982 16.093148 18.873637 21.654126">SSB_K562</tspan></text>
+<path transform="matrix(1,0,0,-1,265.03938,130.3937)" stroke-width=".3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#9e9e9e" d="M62.775484 104.41675C61.936346 95.890209 61.097208 87.36366 60.258069 78.83713"/>
+<text fill="#424242" xml:space="preserve" transform="matrix(1 0 -0 1 328.34046 21.93042)" font-size="5" font-family="Arial"><tspan y="0" x="0 3.3281644 6.9367 10.264864 13.593028 16.373517 19.154006 22.76254 25.54303 28.323519 32.214986">PCBP1_HepG2</tspan></text>
+<path transform="matrix(1,0,0,-1,265.03938,130.3937)" stroke-width=".3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#9e9e9e" d="M64.39156 98.53305C63.024644 90.982608 61.65772 83.43217 60.290796 75.88172"/>
+<text fill="#424242" xml:space="preserve" transform="matrix(1 0 -0 1 330.39558 27.826478)" font-size="5" font-family="Arial"><tspan y="0" x="0 3.0476759 6.0016019 9.893066 12.673555 16.282092 19.06258 21.84307 25.734536">FTO_HepG2</tspan></text>
+<path transform="matrix(1,0,0,-1,265.03938,130.3937)" stroke-width=".3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#9e9e9e" d="M65.57263 92.67431C63.514657 86.75225 61.45668 80.8302 59.3987 74.90814"/>
+<text fill="#424242" xml:space="preserve" transform="matrix(1 0 -0 1 332.45069 33.72254)" font-size="5" font-family="Arial"><tspan y="0" x="0 3.3281644 6.6563289 9.984493 12.764982 15.545471 19.154007 21.934496 24.714985 28.60645">YBX3_HepG2</tspan></text>
+<path transform="matrix(1,0,0,-1,265.03938,130.3937)" stroke-width=".3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#9e9e9e" d="M66.812229 88.99197C61.603799 82.953258 56.39537 76.91455 51.18694 70.87584"/>
+<text fill="#424242" xml:space="preserve" transform="matrix(1 0 -0 1 334.5058 39.618608)" font-size="5" font-family="Arial"><tspan y="0" x="0 3.3281644 7.2196295 10.828165 13.608654 17.21719 19.997679 22.778168 26.669632">AQR_HepG2</tspan></text>
+<path transform="matrix(1,0,0,-1,265.03938,130.3937)" stroke-width=".3" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#9e9e9e" d="M68.81449 83.45677C60.692979 75.307109 52.571466 67.15744 44.449949 59.007776"/>
+<text fill="#424242" xml:space="preserve" transform="matrix(1 0 -0 1 336.5609 45.51467)" font-size="5" font-family="Arial"><tspan y="0" x="0 3.6085356 6.6562116 9.984376 12.764864 15.545353 18.325842 21.934378 24.714867 27.495356 31.386822">UTP18_HepG2</tspan></text>
 <path transform="matrix(1,0,0,-1,265.03938,130.3937)" d="M34.167078 25.54191C34.56488 25.54191 34.946447 25.69996 35.227739 25.98125 35.509027 26.262543 35.667078 26.644108 35.667078 27.04191 35.667078 27.439717 35.509027 27.821282 35.227739 28.102572 34.946447 28.383862 34.56488 28.54191 34.167078 28.54191 33.76927 28.54191 33.387708 28.383862 33.10642 28.102572 32.825128 27.821282 32.667078 27.439717 32.667078 27.04191 32.667078 26.644108 32.825128 26.262543 33.10642 25.98125 33.387708 25.69996 33.76927 25.54191 34.167078 25.54191Z" fill="#e8609f"/>
 <text xml:space="preserve" transform="matrix(1 0 -0 1 302.70646 104.66429)" font-size="5" font-family="Arial"><tspan y="0" x="0 2.9531644 6.2813289 9.889864 13.4984 16.826565 19.78049 21.171956 23.952445 26.732933 28.124398 29.515862 32.29635 33.968187 35.35965 37.031488 39.811975 42.59246 45.372949 46.764413 48.155878 49.54734 52.327829 55.108316 57.8888 59.280267 62.8888 66.216968 69.54513 72.04513">PARNET better (184 / 206 RBPs)</tspan></text>
 </g>
