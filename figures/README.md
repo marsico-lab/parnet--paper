@@ -7,11 +7,12 @@ To share your work with the co-authors, read [CONTRIBUTING.md](../CONTRIBUTING.m
 
 ## Index
 
-| Folder                                   | Paper figure | Content                                                                             | Issue                                                       |
-| ---------------------------------------- | ------------ | ----------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| [`_example/`](_example/)                 | none         | Example: a plot, a schematic and an image                                           |                                                             |
-| [`main_mutations/`](main_mutations/)     | Figure 7     | Mutations: ROC/PRC (SpliceBench, MutSpliceDB), RBP impact heatmap, ISM examples     | [#1](https://github.com/marsico-lab/parnet--paper/issues/1) |
-| [`main_performance/`](main_performance/) | Figure 2     | Performance vs single-task RBPNet, penalty and attributions, iCLIP, STMN2, RNA maps | [#4](https://github.com/marsico-lab/parnet--paper/issues/4) |
+| Folder                                   | Paper figure  | Content                                                                             | Issue                                                       |
+| ---------------------------------------- | ------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| [`_example/`](_example/)                 | none          | Example: a plot, a schematic and an image                                           |                                                             |
+| [`main_mutations/`](main_mutations/)     | Figure 7      | Mutations: ROC/PRC (SpliceBench, MutSpliceDB), RBP impact heatmap, ISM examples     | [#1](https://github.com/marsico-lab/parnet--paper/issues/1) |
+| [`main_performance/`](main_performance/) | Figure 2      | Performance vs single-task RBPNet, penalty and attributions, iCLIP, STMN2, RNA maps | [#4](https://github.com/marsico-lab/parnet--paper/issues/4) |
+| [`supp_splicebench/`](supp_splicebench/) | Supplementary | SpliceBench: AUROC and AUPRC per dataset, pooled group first                        |                                                             |
 
 Add a row when your figure is merged into `dev`.
 Update the **Paper figure** column when the figure order changes.
