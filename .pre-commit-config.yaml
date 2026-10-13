@@ -61,4 +61,4 @@ repos:
       - id: detect-private-key
 
 # Exported data and generated outputs are written by tools, not edited by hand.
-exclude: (^\.pixi/|\.ipynb$|^data/|^figures/[^/]+/(data|panels|assets|reference)/|^figures/[^/]+/preview\.|\.tex$|^pixi\.lock$)
+exclude: (^\.pixi/|layout\.(detected|optimized)\.yaml$|\.ipynb$|^data/|^figures/[^/]+/(data|assets|reference|output|final)/|\.tex$|^pixi\.lock$)

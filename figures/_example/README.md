@@ -11,4 +11,4 @@ Copy it to start a new figure: see [figures/README.md](../README.md).
 
 Build it with `pixi run figure _example`.
 
-![Example figure](preview.png)
+![Example figure](final/page.png)

@@ -1,0 +1,8 @@
+date: 2026-10-07T09:38:56+02:00
+commit: 6500e62
+uncommitted_changes: false
+layout: layout.manual.yaml
+plotplate: 0.4.0
+overleaf_dir: figures/_example/
+missing_panels: []
+deliverables: true

@@ -4,7 +4,7 @@ Closes #<issue number>
 
 Folder: `figures/<name>/`
 
-![preview](../blob/%3Cbranch%3E/figures/%3Cname%3E/preview.png)
+To show the figure, drag `figures/<name>/final/page.png` into this box.
 
 ## Changes
 
@@ -17,6 +17,7 @@ None, or: `figures/style.yaml`, `data/`, `parnet_paper/`, `pixi.toml` (one commi
 ## Checks
 
 - [ ] `pixi run figure <name>` ends with `OK`.
+- [ ] `pixi run promote <name>` was run, and `final/` is committed.
 - [ ] `pixi run check-all` shows no `Failed`.
 - [ ] The origin of each new table is in a `README.md` next to it.
 - [ ] The figure has a row in `figures/README.md`.

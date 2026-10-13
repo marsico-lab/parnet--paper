@@ -11,8 +11,10 @@ __pycache__/
 # Panel notebooks are tracked as percent-format .py; the paired .ipynb stays local.
 *.ipynb
 
-# plotplate bundles for Overleaf / journal submission: regenerated with `plotplate bundle/export`.
-build/
+# Build outputs of each figure: local only. `pixi run promote <name>` copies the version to
+# share into figures/<name>/final/, which is tracked.
+# Every layout sets output_dir: output.
+figures/*/output/
 
 # Editors and agents
 .vscode/

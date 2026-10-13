@@ -13,6 +13,8 @@ A panel that is not drawn with matplotlib still gets a panel notebook, so that
 
 from __future__ import annotations
 
+import datetime
+import json
 import shutil
 from pathlib import Path
 from typing import Any
@@ -28,7 +30,8 @@ def place_pdf(panel: Any, path: str | Path, tolerance_mm: float = 0.2, dpi: int 
 
     Draw the schematic at the size printed in the error message, in Inkscape, Illustrator
     or BioRender, and export it as PDF with text kept as text. A PNG copy is written next
-    to it for previews.
+    to it for the page view, and a ``<name>.json`` report like the one ``panel.save``
+    writes, without axes: ``plotplate check`` reports a panel without it as missing.
 
     Raises:
         ValueError: the PDF page is not the size of the panel box.
@@ -48,6 +51,19 @@ def place_pdf(panel: Any, path: str | Path, tolerance_mm: float = 0.2, dpi: int 
         out = outdir / f"{panel.name}.pdf"
         shutil.copyfile(path, out)
         doc[0].get_pixmap(dpi=dpi).save(outdir / f"{panel.name}.png")
+    box = panel.box
+    report = {
+        "panel": panel.name,
+        "layout": panel.layout.name,
+        "box_mm": [box.x, box.y, box.w, box.h],
+        "size_mm": [want_w, want_h],
+        "files": [f"{panel.name}.pdf", f"{panel.name}.png"],
+        "source": path.name,
+        "saved": datetime.datetime.now(datetime.UTC).isoformat(timespec="seconds"),
+        "issues": [],
+        "geometry": {"axes": {}, "marks": {}, "anchors": {}},
+    }
+    (outdir / f"{panel.name}.json").write_text(json.dumps(report, indent=2) + "\n")
     return out
 
 

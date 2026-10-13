@@ -30,23 +30,30 @@ The index above gives the current number.
 
 ```text
 figures/main_mutations/
-  README.md            what the figure shows, one line per panel
-  layout.yaml          size of the figure, position of each panel and its axes
-  notebooks/           one notebook per panel: panel_A_<name>.py, panel_B_<name>.py, ...
-  scripts/             optional: scripts that prepare the data of this figure
-  rules.smk            optional: runs the scripts of scripts/ before the build
-  data/                tables used by this figure only, with a README.md about their origin
-  assets/              panels made outside Python (PDF schematics, PNG images), with a README.md
-  reference/           sketches, screenshots, old versions: help for the design, not used by the build
-  panels/              made by the build: one PDF, SVG and PNG per panel
-  preview.pdf/png/svg  made by the build: the full figure
-  main_mutations.tex   made by the build: the panels placed for LaTeX
+  README.md                  how to build the figure and run its notebooks
+  docs/                      what the figure shows, choices made, how it was made
+  layout.yaml                symlink to the selected layout (see "Layout files")
+  layout.<qualifier>.yaml    the layouts: layout.manual.yaml, layout.detected.yaml, ...
   main_mutations-figure.tex  the LaTeX figure block: caption, label, panel references
+  notebooks/                 one notebook per panel: panel_A_<name>.py, panel_B_<name>.py, ...
+  scripts/                   optional: code of this figure (data preparation, helpers)
+  rules.smk                  optional: runs data preparation before the build
+  data/                      tables of this figure, with a README.md about their origin
+  assets/                    panels made outside Python (PDF schematics, PNG images), with a README.md
+  reference/                 sketches, screenshots, old versions: not used by the build
+  output/                    the build results (git ignores them)
+  final/                     the shared version, made by `pixi run promote` (tracked by git)
 ```
 
-You edit `layout.yaml`, `notebooks/`, `scripts/`, `data/`, `assets/` and `main_mutations-figure.tex`.
-The build makes `panels/`, `preview.*` and `main_mutations.tex`.
-Do not edit these files by hand.
+You edit everything above except `output/` and `final/`.
+
+The build writes its files into `output/` (every layout sets `output_dir: output`): `panels/`, `page.pdf`, `page.png`, `page.svg` and `main_mutations.tex`.
+`page.*` is the figure on its A4 page, with the panel boxes outlined.
+They are your local results: git ignores them, and every build replaces them.
+When the figure is the version to share, copy them into `final/` with `pixi run promote main_mutations` (see [Share the figure](#share-the-figure)).
+
+`main_mutations-figure.tex` is written once by the first build, as a template.
+The build never overwrites it: write the caption and the label in it.
 
 Some things are shared by all figures:
 
@@ -69,6 +76,55 @@ The build must end with `OK`.
 You now have a working figure with three example panels.
 Replace them one by one with your own panels.
 
+## From an existing figure
+
+Most figures already exist: in Overleaf, in a slide, or as panels in an analysis notebook.
+Do the steps in this order: first the picture, then the layout, then the code.
+
+1. **Save a picture of the existing figure** in `reference/`.
+   A screenshot (PNG) is enough.
+   A PDF of the figure page is better, because plotplate reads the exact positions from it.
+
+1. **Read the layout from the picture.**
+   From a screenshot:
+
+   ```sh
+   pixi run plotplate detect figures/main_mutations/reference/overleaf_figure7.png --width 183 -o figures/main_mutations/layout.detected.yaml
+   ```
+
+   From a PDF:
+
+   ```sh
+   pixi run plotplate detect figures/main_mutations/reference/old.pdf -o figures/main_mutations/layout.detected.yaml --journal nature --width double
+   ```
+
+   `--width` is the width of the figure in millimetres (183 for a Nature double column).
+
+1. **Look at the result.**
+   Open `layout.detected.wireframe.png`, which `detect` writes next to the layout.
+   Each blue box is one block that plotplate found.
+   Several blocks can belong to one panel (for example a heatmap and its legends).
+
+1. **Write your layout.**
+   Give one letter to each panel, and keep the arrangement of the detected blocks.
+   Remove the white space of the old figure: the panel letters of plotplate take no space.
+   Name the axes of each panel (see below).
+   Save it as `layout.manual.yaml`, and select it: `pixi run use-layout <name> manual`.
+   Keep `layout.detected.yaml` next to it: `pixi run view <name>` shows both, for comparison.
+
+1. **Find the code of each panel** in the analysis repository.
+   Note the notebook and the cells that make the plot, and the files that they read.
+
+1. **Copy the data files** into `data/`, and write their origin in `data/README.md`.
+
+1. **Write one notebook per panel** in `notebooks/`.
+   Copy the plotting code, then replace the figure creation with `panel.figure()` and `panel.axes(...)`.
+   Keep the intermediate results visible in the notebook (tables, counts), so that a reader can check each step.
+
+1. **Build** with `pixi run figure <name>`, and fix the errors that it reports.
+
+`figures/main_mutations/` was made with these steps; `docs/how-it-was-made.md` in that folder lists what was done.
+
 ## Make the layout
 
 The layout gives the size of the figure and the position of each panel, in millimetres.
@@ -80,21 +136,29 @@ Look at the layout in the browser:
 pixi run view main_mutations
 ```
 
-To change the panels, edit `layout.yaml`, or move them in the browser with `pixi run plotplate view figures/main_mutations --edit`.
+To change the panels, edit `layout.yaml`, or move them in the browser with `pixi run view main_mutations`.
 
-You can also start from a figure that already exists:
+### Layout files
 
-1. Put the PDF of the old figure in `reference/`.
+`layout.yaml` is never a file of its own: it is a symlink to the selected layout.
+Every plotplate command uses `layout.yaml` unless you give another file.
+Each layout file has a qualifier that says where it comes from:
 
-1. Read the layout from it:
+| File                    | Made by                                                                 |
+| ----------------------- | ----------------------------------------------------------------------- |
+| `layout.manual.yaml`    | You, by hand (or `plotplate new layout.manual.yaml --mosaic ...`)       |
+| `layout.detected.yaml`  | `plotplate detect`, from a picture in `reference/`                      |
+| `layout.optimized.yaml` | `plotplate optimize`                                                    |
+| `layout.<name>.yaml`    | `plotplate view`, button **Save as** (for example `layout.custom.yaml`) |
 
-   ```sh
-   pixi run plotplate from-pdf figures/main_mutations/reference/old.pdf -o figures/main_mutations/layout.detected.yaml --journal nature --width double --axes --guides
-   ```
+To select a layout:
 
-1. Compare `layout.detected.yaml` with `layout.yaml` in `pixi run view main_mutations`.
+```sh
+pixi run use-layout main_mutations custom     # layout.yaml -> layout.custom.yaml
+```
 
-1. Copy the parts that you want into `layout.yaml`.
+`plotplate view figures/main_mutations` shows all layout files, one over the other.
+Commit the layouts that you want to keep; git then records every change to them.
 
 Each panel in `layout.yaml` names its notebook:
 
@@ -106,7 +170,8 @@ panels:
       main: {left: 12, top: 4, right: 80, bottom: 40}   # millimetres from the top-left corner of the figure
 ```
 
-The plotplate documentation gives all options: [layout.yaml](https://github.com/lambosaur/plotplate/blob/v0.2.0/docs/layout-spec.md), [layout sources](https://github.com/lambosaur/plotplate/blob/v0.2.0/docs/layout-sources.md), [panel recipes](https://github.com/lambosaur/plotplate/blob/v0.2.0/docs/panel-recipes.md).
+plotplate refuses a key that it does not know, and suggests the nearest one.
+The plotplate documentation gives all options: [layout.yaml](https://github.com/lambosaur/plotplate/blob/v0.4.0/docs/layout.md), [layout sources](https://github.com/lambosaur/plotplate/blob/v0.4.0/docs/layout-sources.md), [Python API](https://github.com/lambosaur/plotplate/blob/v0.4.0/docs/python-api.md).
 
 ## Make a panel
 
@@ -185,31 +250,46 @@ pixi run view main_mutations       # look at the result in the browser
 ```
 
 The build runs the data scripts, runs each panel notebook, then assembles the figure.
+It also draws the figure on an A4 page (`output/page.png`), with the panel boxes outlined (`page: {outlines: true}` in the layout), so that you see its size in the paper.
 At the end, it checks the font sizes, the positions of the axes, and the text that is cut.
 It ends with `OK`, or with a list of errors.
 
 After a change in the shared `data/`, rebuild all figures with `pixi run figures --forcerun plotplate_build`.
 
-## Deliver
+## Share the figure
 
-```sh
-pixi run export main_mutations                              # Overleaf folder figures/main_mutations/
-pixi run export main_mutations Figures/Figure_7_mutations   # or the folder used in your Overleaf project
-```
+When the figure is the version to share with the co-authors:
 
-This writes `build/main_mutations/`:
+1. Commit your changes (notebooks, layout, data).
 
-| File                 | Use                                                                              |
-| -------------------- | -------------------------------------------------------------------------------- |
-| `overleaf/`          | The files to upload to the figure folder in Overleaf.                            |
-| `main_mutations.pdf` | The full figure in one vector PDF.                                               |
-| `main_mutations.svg` | The same figure as one SVG file, with text kept as text. Send it to the journal. |
+1. Build the figure: `pixi run figure main_mutations`.
 
-Git ignores the folder `build/`.
+1. Copy the result into `final/`:
+
+   ```sh
+   pixi run promote main_mutations                              # Overleaf folder figures/main_mutations/
+   pixi run promote main_mutations Figures/Figure_7_mutations   # or the folder used in your Overleaf project
+   ```
+
+1. Commit `final/` and push.
+
+`promote` refuses a figure whose check reports errors.
+It writes `figures/main_mutations/final/`:
+
+| File                               | Use                                                                              |
+| ---------------------------------- | -------------------------------------------------------------------------------- |
+| `page.png`, `page.pdf`, `page.svg` | The figure on its A4 page: what the reviewers look at.                           |
+| `panels/`                          | One PDF, SVG and PNG per panel.                                                  |
+| `main_mutations.pdf`               | The full figure in one vector PDF.                                               |
+| `main_mutations.svg`               | The same figure as one SVG file, with text kept as text. Send it to the journal. |
+| `overleaf/`                        | The files to upload to the figure folder in Overleaf (`plotplate latex`).        |
+| `promoted.yaml`                    | Date, commit, selected layout and plotplate version of this version.             |
+
+While panels are missing, `promote` copies the page view and the panels only, and `promoted.yaml` lists the missing panels.
 
 ### Use the figure in Overleaf
 
-1. Upload the content of `build/main_mutations/overleaf/` to the figure folder in Overleaf.
+1. Upload the content of `figures/main_mutations/final/overleaf/` to the figure folder in Overleaf.
 
 1. In the manuscript, add one line where the figure goes:
 
@@ -240,4 +320,4 @@ It must not be wider than the text of the manuscript.
 In Overleaf, write `\the\textwidth` in the document to see the text width in points (1 mm = 2.845 pt).
 
 In the manuscript, LaTeX writes the panel letters in the sans-serif font of the manuscript.
-In the SVG and in `main_mutations.pdf`, the letters are in Arial.
+In `final/main_mutations.svg` and `final/main_mutations.pdf`, the letters are in Arial.
