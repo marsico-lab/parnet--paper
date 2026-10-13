@@ -1,0 +1,24 @@
+# Supplementary figure, SpliceBench: AUROC and AUPRC of each method on each SpliceBench dataset.
+# Text 6 / 5 pt, as the main figures.
+# Box: [x, y, width, height] in mm from the figure's top-left corner.
+schema: 1
+name: supp_splicebench
+journal: nature
+style_files: [../style.yaml]
+style:
+  font: {size: 6, small: 5, large: 6}
+page: {paper: a4, margins: {left: 13.5, right: 13.5, top: 25, bottom: 25}, outlines: true, dpi: 600}
+area:
+  width: double  # 183 mm
+  height: 31
+gutter: 4
+output_dir: output  # build files, ignored by git
+labels: auto
+panels:
+  sb_performance:  # AUROC and AUPRC of each method, per SpliceBench dataset, with the pooled group first
+    box: [0, 0, 183, 31]
+    source: notebooks/sb_performance.py
+    axes:
+      auroc: {ref: panel, left: 9, top: 1, right: 140, bottom: 11.5}
+      auprc: {ref: panel, left: 9, top: 13.5, right: 140, bottom: 24}
+      legend: {ref: panel, left: 143, top: 0, right: 183, bottom: 31}
