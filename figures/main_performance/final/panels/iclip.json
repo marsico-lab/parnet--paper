@@ -1,0 +1,49 @@
+{
+  "panel": "iclip",
+  "layout": "main_performance",
+  "box_mm": [
+    0.0,
+    136.0,
+    82.0,
+    36.0
+  ],
+  "size_mm": [
+    82.0,
+    36.0
+  ],
+  "files": [
+    "iclip.pdf",
+    "iclip.svg",
+    "iclip.png"
+  ],
+  "source": "iclip.py",
+  "saved": "2026-10-13T09:26:11+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "main": {
+        "box_edges": {
+          "left": 11.0,
+          "right": 80.0,
+          "top": 139.0,
+          "bottom": 166.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {
+      "main.legend": {
+        "box_edges": {
+          "left": 11.0,
+          "right": 54.984,
+          "top": 139.0,
+          "bottom": 142.12
+        }
+      }
+    }
+  }
+}

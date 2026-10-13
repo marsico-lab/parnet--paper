@@ -1,0 +1,49 @@
+{
+  "panel": "perf_quartiles",
+  "layout": "main_performance",
+  "box_mm": [
+    125.0,
+    0.0,
+    58.0,
+    46.0
+  ],
+  "size_mm": [
+    58.0,
+    46.0
+  ],
+  "files": [
+    "perf_quartiles.pdf",
+    "perf_quartiles.svg",
+    "perf_quartiles.png"
+  ],
+  "source": "perf_quartiles.py",
+  "saved": "2026-10-13T09:26:05+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "main": {
+        "box_edges": {
+          "left": 135.0,
+          "right": 178.0,
+          "top": 6.0,
+          "bottom": 38.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {
+      "main.legend": {
+        "box_edges": {
+          "left": 169.547,
+          "right": 178.0,
+          "top": 6.0,
+          "bottom": 9.066
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "panel": "perf_correlation",
+  "layout": "main_performance",
+  "box_mm": [
+    0.0,
+    0.0,
+    58.0,
+    46.0
+  ],
+  "size_mm": [
+    58.0,
+    46.0
+  ],
+  "files": [
+    "perf_correlation.pdf",
+    "perf_correlation.svg",
+    "perf_correlation.png"
+  ],
+  "source": "perf_correlation.py",
+  "saved": "2026-10-13T09:26:04+00:00",
+  "issues": [
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'YBX3_HepG2' overlaps 'SRSF7_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'YBX3_HepG2' overlaps 'SRSF7_K562'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'YBX3_HepG2' overlaps 'NOLC1_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'YBX3_HepG2' overlaps 'NIP7_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'SRSF7_HepG2' overlaps 'SRSF7_K562'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'SRSF7_HepG2' overlaps 'NOLC1_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'SRSF7_HepG2' overlaps 'NIP7_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'SRSF7_K562' overlaps 'NOLC1_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'SRSF7_K562' overlaps 'NIP7_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'NOLC1_HepG2' overlaps 'NIP7_HepG2'"
+    }
+  ],
+  "geometry": {
+    "axes": {
+      "main": {
+        "box_edges": {
+          "left": 14.0,
+          "right": 49.0,
+          "top": 6.0,
+          "bottom": 39.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {
+      "main.legend": {
+        "box_edges": {
+          "left": 18.535,
+          "right": 49.0,
+          "top": 35.88,
+          "bottom": 39.0
+        }
+      }
+    }
+  }
+}
