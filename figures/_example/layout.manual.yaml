@@ -4,7 +4,7 @@ schema: 1
 name: _example
 journal: nature
 style_files: [../style.yaml]
-page: {paper: a4, margins: {left: 13.5, right: 13.5, top: 25, bottom: 25}, outlines: true}
+page: {paper: a4, margins: {left: 13.5, right: 13.5, top: 25, bottom: 25}, outlines: true, dpi: 600}
 area:
   width: double  # 183 mm (Nature double column)
   height: 100

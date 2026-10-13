@@ -61,6 +61,5 @@ rule plotplate_build:
         # changes this value, which makes Snakemake rebuild the figure.
         layout=lambda wc: Path(f"figures/{wc.figure}/layout.yaml").resolve().name,
     shell:
-        # page.png again at 600 dpi: plotplate writes it at 200 dpi.
+        # page.png at 600 dpi: page: {dpi: 600} in every layout.
         "plotplate build figures/{wildcards.figure}"
-        " && python scripts/page_png.py figures/{wildcards.figure}/output/page.pdf"

@@ -7,7 +7,7 @@ Run it when the figure is the version you want to share; then commit final/.
 The build writes its files into figures/<name>/output/, which git ignores.
 
 figures/<name>/final/
-  page.pdf/png/svg        the figure on its A4 page (PNG at 600 dpi)
+  page.pdf/png/svg        the figure on its A4 page (PNG at page.dpi of the layout, 600)
   panels/                 one PDF, SVG and PNG per panel
   <name>.pdf              the figure in one vector file (plotplate export)
   <name>.svg              the same figure as one SVG file, text kept as text
@@ -27,7 +27,6 @@ from importlib.metadata import version
 from pathlib import Path
 
 import pymupdf
-from page_png import render
 
 REPO = Path(__file__).resolve().parents[1]
 COPIED = ["page.pdf", "page.png", "page.svg"]  # in the figure's output/ folder
@@ -61,7 +60,6 @@ def main(name: str, overleaf_dir: str = "") -> None:
     final.mkdir()
     for f in COPIED:
         shutil.copy2(output / f, final / f)
-    render(final / "page.pdf", final / "page.png")  # 600 dpi, whatever the build wrote
     shutil.copytree(output / "panels", final / "panels")
 
     missing_panels = sorted(
