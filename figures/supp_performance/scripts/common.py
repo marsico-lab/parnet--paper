@@ -109,23 +109,29 @@ def quality_panel(
     panel, x_col, y_col, xlabel, ylabel, title, log_x=False, diagonal=False, zero_line=False
 ):
     """One dot per RBP: a data-quality measure (x) against a performance value (y), with a LOWESS trend
-    line (on log10 x for a log axis) and the Spearman rho in the title."""
+    line (on log10 x for a log axis), its bootstrap 95% confidence band, and the Spearman rho in the title."""
     t = load_table().dropna(subset=[x_col, y_col])
     rho = spearmanr(t[x_col], t[y_col])
     fig = panel.figure()
     ax = panel.axes(fig, "main")
     ax.scatter(t[x_col], t[y_col], s=4, color=panel.colors[PARNET], linewidths=0, zorder=2)
-    # LOWESS trend (fraction 2/3 of the RBPs per local fit), on log10(x) when the axis is logarithmic.
+    # LOWESS trend (fraction 2/3 of the RBPs per local fit), on log10(x) when the axis is logarithmic, with a
+    # 95% confidence band from 500 bootstrap resamples of the RBPs (fixed seed).
     xs = np.log10(t[x_col].to_numpy()) if log_x else t[x_col].to_numpy()
-    fit = lowess(t[y_col].to_numpy(), xs, frac=2 / 3, return_sorted=True)
-    ax.plot(
-        10 ** fit[:, 0] if log_x else fit[:, 0],
-        fit[:, 1],
-        color="#212121",
-        linewidth=0.8,
-        zorder=3,
-        label="LOWESS",
+    ys = t[y_col].to_numpy()
+    grid = np.linspace(xs.min(), xs.max(), 100)
+    fit = lowess(ys, xs, frac=2 / 3, xvals=grid)
+    rng = np.random.default_rng(42)
+    boot = np.array(
+        [
+            lowess(ys[i], xs[i], frac=2 / 3, xvals=grid)
+            for i in (rng.integers(0, len(xs), len(xs)) for _ in range(500))
+        ]
     )
+    lo, hi = np.nanpercentile(boot, [2.5, 97.5], axis=0)
+    gx = 10**grid if log_x else grid
+    ax.fill_between(gx, lo, hi, color="#9e9e9e", alpha=0.35, linewidth=0, zorder=1, label="95% CI")
+    ax.plot(gx, fit, color="#212121", linewidth=0.8, zorder=3, label="LOWESS")
     if log_x:
         ax.set_xscale("log")
     if diagonal:
