@@ -12,6 +12,7 @@ To share your work with the co-authors, read [CONTRIBUTING.md](../CONTRIBUTING.m
 | [`_example/`](_example/)                 | none          | Example: a plot, a schematic and an image                                           |                                                             |
 | [`main_mutations/`](main_mutations/)     | Figure 7      | Mutations: ROC/PRC (SpliceBench, MutSpliceDB), RBP impact heatmap, ISM examples     | [#1](https://github.com/marsico-lab/parnet--paper/issues/1) |
 | [`main_performance/`](main_performance/) | Figure 2      | Performance vs single-task RBPNet, penalty and attributions, iCLIP, STMN2, RNA maps | [#4](https://github.com/marsico-lab/parnet--paper/issues/4) |
+| [`supp_performance/`](supp_performance/) | Supplementary | Performance: other metrics vs single-task RBPNet, performance vs data quality       |                                                             |
 | [`supp_splicebench/`](supp_splicebench/) | Supplementary | SpliceBench: AUROC and AUPRC per dataset, pooled group first                        |                                                             |
 
 Add a row when your figure is merged into `dev`.

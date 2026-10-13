@@ -1,0 +1,40 @@
+{
+  "panel": "quality_peaks",
+  "layout": "supp_performance",
+  "box_mm": [
+    0.0,
+    50.0,
+    42.75,
+    46.0
+  ],
+  "size_mm": [
+    42.75,
+    46.0
+  ],
+  "files": [
+    "quality_peaks.pdf",
+    "quality_peaks.svg",
+    "quality_peaks.png"
+  ],
+  "source": "quality_peaks.py",
+  "saved": "2026-10-13T10:06:26+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "main": {
+        "box_edges": {
+          "left": 11.0,
+          "right": 40.0,
+          "top": 56.0,
+          "bottom": 88.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {}
+  }
+}

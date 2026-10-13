@@ -1,0 +1,95 @@
+{
+  "panel": "perf_np_auroc",
+  "layout": "supp_performance",
+  "box_mm": [
+    46.75,
+    0.0,
+    42.75,
+    46.0
+  ],
+  "size_mm": [
+    42.75,
+    46.0
+  ],
+  "files": [
+    "perf_np_auroc.pdf",
+    "perf_np_auroc.svg",
+    "perf_np_auroc.png"
+  ],
+  "source": "perf_np_auroc.py",
+  "saved": "2026-10-13T10:06:23+00:00",
+  "issues": [
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'RPS3_K562' overlaps 'AQR_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'RPS3_K562' overlaps 'YBX3_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'RPS3_K562' overlaps 'NOLC1_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'AQR_HepG2' overlaps 'YBX3_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'AQR_HepG2' overlaps 'NOLC1_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'AQR_HepG2' overlaps 'UTP18_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'YBX3_HepG2' overlaps 'NOLC1_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'YBX3_HepG2' overlaps 'UTP18_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'NOLC1_HepG2' overlaps 'UTP18_HepG2'"
+    }
+  ],
+  "geometry": {
+    "axes": {
+      "main": {
+        "box_edges": {
+          "left": 57.75,
+          "right": 86.75,
+          "top": 6.0,
+          "bottom": 38.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {
+      "main.legend": {
+        "box_edges": {
+          "left": 56.285,
+          "right": 86.75,
+          "top": 34.88,
+          "bottom": 38.0
+        }
+      }
+    }
+  }
+}

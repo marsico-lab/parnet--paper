@@ -1,0 +1,85 @@
+{
+  "panel": "perf_spearman",
+  "layout": "supp_performance",
+  "box_mm": [
+    0.0,
+    0.0,
+    42.75,
+    46.0
+  ],
+  "size_mm": [
+    42.75,
+    46.0
+  ],
+  "files": [
+    "perf_spearman.pdf",
+    "perf_spearman.svg",
+    "perf_spearman.png"
+  ],
+  "source": "perf_spearman.py",
+  "saved": "2026-10-13T10:06:22+00:00",
+  "issues": [
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'YBX3_HepG2' overlaps 'UPF1_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'YBX3_HepG2' overlaps 'NOLC1_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'UPF1_HepG2' overlaps 'NOLC1_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'UPF1_HepG2' overlaps 'NIP7_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'NOLC1_HepG2' overlaps 'NIP7_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'NOLC1_HepG2' overlaps 'PCBP1_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'NIP7_HepG2' overlaps 'PCBP1_HepG2'"
+    }
+  ],
+  "geometry": {
+    "axes": {
+      "main": {
+        "box_edges": {
+          "left": 11.0,
+          "right": 40.0,
+          "top": 6.0,
+          "bottom": 38.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {
+      "main.legend": {
+        "box_edges": {
+          "left": 9.666,
+          "right": 40.0,
+          "top": 34.88,
+          "bottom": 38.0
+        }
+      }
+    }
+  }
+}

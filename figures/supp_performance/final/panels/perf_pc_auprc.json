@@ -1,0 +1,100 @@
+{
+  "panel": "perf_pc_auprc",
+  "layout": "supp_performance",
+  "box_mm": [
+    140.25,
+    0.0,
+    42.75,
+    46.0
+  ],
+  "size_mm": [
+    42.75,
+    46.0
+  ],
+  "files": [
+    "perf_pc_auprc.pdf",
+    "perf_pc_auprc.svg",
+    "perf_pc_auprc.png"
+  ],
+  "source": "perf_pc_auprc.py",
+  "saved": "2026-10-13T10:06:25+00:00",
+  "issues": [
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'PCBP1_HepG2' overlaps 'YBX3_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'PCBP1_HepG2' overlaps 'EXOSC5_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'PCBP1_HepG2' overlaps 'RPS3_K562'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'PCBP1_HepG2' overlaps 'UTP18_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'YBX3_HepG2' overlaps 'EXOSC5_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'YBX3_HepG2' overlaps 'RPS3_K562'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'YBX3_HepG2' overlaps 'UTP18_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'EXOSC5_HepG2' overlaps 'RPS3_K562'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'EXOSC5_HepG2' overlaps 'UTP18_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'RPS3_K562' overlaps 'UTP18_HepG2'"
+    }
+  ],
+  "geometry": {
+    "axes": {
+      "main": {
+        "box_edges": {
+          "left": 151.25,
+          "right": 180.25,
+          "top": 6.0,
+          "bottom": 38.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {
+      "main.legend": {
+        "box_edges": {
+          "left": 149.785,
+          "right": 180.25,
+          "top": 34.88,
+          "bottom": 38.0
+        }
+      }
+    }
+  }
+}

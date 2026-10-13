@@ -1,0 +1,40 @@
+{
+  "panel": "quality_gain",
+  "layout": "supp_performance",
+  "box_mm": [
+    140.25,
+    50.0,
+    42.75,
+    46.0
+  ],
+  "size_mm": [
+    42.75,
+    46.0
+  ],
+  "files": [
+    "quality_gain.pdf",
+    "quality_gain.svg",
+    "quality_gain.png"
+  ],
+  "source": "quality_gain.py",
+  "saved": "2026-10-13T10:06:29+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "main": {
+        "box_edges": {
+          "left": 151.25,
+          "right": 180.25,
+          "top": 56.0,
+          "bottom": 88.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {}
+  }
+}

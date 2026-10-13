@@ -1,0 +1,52 @@
+# Supplementary figure, performance (related to Figure 2): other metrics, and performance vs data quality.
+# Same windows, models and RBP names as main_performance panels a to c. Text 6 / 5 pt.
+# Box: [x, y, width, height] in mm from the figure's top-left corner.
+schema: 1
+name: supp_performance
+journal: nature
+style_files: [../style.yaml]
+style:
+  font: {size: 6, small: 5, large: 6}
+page: {paper: a4, margins: {left: 13.5, right: 13.5, top: 25, bottom: 25}, outlines: true, dpi: 600}
+area:
+  width: double  # 183 mm
+  height: 96
+gutter: 4
+output_dir: output  # build files, ignored by git
+labels: auto
+panels:
+  # --- PARNET vs single-task RBPNet, the metrics not shown in Figure 2 ---
+  perf_spearman:  # Spearman correlation with read starts
+    box: [0, 0, 42.75, 46]
+    source: notebooks/perf_spearman.py
+    axes: &axes
+      main: {ref: panel, left: 11, top: 6, right: 40, bottom: 38}
+  perf_np_auroc:  # AUROC against ENCODE narrowPeak 5' ends
+    box: [46.75, 0, 42.75, 46]
+    source: notebooks/perf_np_auroc.py
+    axes: *axes
+  perf_pc_auroc:  # AUROC against PureCLIP crosslink sites
+    box: [93.5, 0, 42.75, 46]
+    source: notebooks/perf_pc_auroc.py
+    axes: *axes
+  perf_pc_auprc:  # AUPRC against PureCLIP crosslink sites
+    box: [140.25, 0, 42.75, 46]
+    source: notebooks/perf_pc_auprc.py
+    axes: *axes
+  # --- PARNET performance vs data quality ---
+  quality_peaks:  # PARNET Pearson vs number of IDR peaks
+    box: [0, 50, 42.75, 46]
+    source: notebooks/quality_peaks.py
+    axes: *axes
+  quality_nonpcr:  # PARNET Pearson vs fraction of non-PCR-duplicate reads, worst replicate
+    box: [46.75, 50, 42.75, 46]
+    source: notebooks/quality_nonpcr.py
+    axes: *axes
+  quality_replicates:  # PARNET Pearson vs replicate 1 vs replicate 2 Pearson, same windows
+    box: [93.5, 50, 42.75, 46]
+    source: notebooks/quality_replicates.py
+    axes: *axes
+  quality_gain:  # relative gain of PARNET over single-task RBPNet vs number of IDR peaks
+    box: [140.25, 50, 42.75, 46]
+    source: notebooks/quality_gain.py
+    axes: *axes
