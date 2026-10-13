@@ -1,0 +1,73 @@
+{
+  "panel": "sb_roc_prc",
+  "layout": "main_mutations",
+  "box_mm": [
+    0.0,
+    0.0,
+    89.5,
+    58.0
+  ],
+  "size_mm": [
+    89.5,
+    58.0
+  ],
+  "files": [
+    "sb_roc_prc.pdf",
+    "sb_roc_prc.svg",
+    "sb_roc_prc.png"
+  ],
+  "source": "sb_roc_prc.py",
+  "saved": "2026-10-13T09:15:48+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "roc": {
+        "box_edges": {
+          "left": 8.0,
+          "right": 41.5,
+          "top": 2.0,
+          "bottom": 33.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "prc": {
+        "box_edges": {
+          "left": 51.5,
+          "right": 85.0,
+          "top": 2.0,
+          "bottom": 33.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "legend": {
+        "box_edges": {
+          "left": 3.5,
+          "right": 89.5,
+          "top": 41.0,
+          "bottom": 58.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {
+      "legend.legend": {
+        "box_edges": {
+          "left": 11.449,
+          "right": 81.551,
+          "top": 41.0,
+          "bottom": 55.302
+        }
+      }
+    }
+  }
+}

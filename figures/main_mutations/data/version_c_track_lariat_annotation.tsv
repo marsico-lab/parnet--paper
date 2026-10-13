@@ -1,0 +1,13 @@
+rbp_ct	ratio_c1_c11_donor_ss0	auPRC_donor	auPRC_acceptor	signal_class	n_donor_ss0
+AQR_K562	9.7810	0.8698	0.0951	lariat-signature	119
+PRPF8_HepG2	4.9495	0.8484	0.0782	lariat-signature	119
+AQR_HepG2	9.4419	0.7890	0.1398	lariat-signature	119
+PRPF8_K562	4.2368	0.7215	0.0876	lariat-signature	119
+SF3B4_K562	8.9642	0.5445	0.1200	lariat-signature	119
+EFTUD2_HepG2	5.6998	0.4608	0.0748	lariat-signature	119
+U2AF1_K562	0.7212	0.0826	0.3298	other	119
+U2AF2_K562	1.0237	0.0756	0.2462	other	119
+U2AF2_HepG2	1.2155	0.0732	0.2266	other	119
+GPKOW_K562	6.1626	0.3613	0.2114	lariat-signature	119
+U2AF1_HepG2	0.5328	0.1121	0.1894	other	119
+SND1_K562	0.4768	0.1314	0.1587	other	119

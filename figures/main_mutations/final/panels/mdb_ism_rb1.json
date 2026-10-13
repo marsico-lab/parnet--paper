@@ -1,0 +1,88 @@
+{
+  "panel": "mdb_ism_rb1",
+  "layout": "main_mutations",
+  "box_mm": [
+    0.0,
+    116.0,
+    89.5,
+    50.0
+  ],
+  "size_mm": [
+    89.5,
+    50.0
+  ],
+  "files": [
+    "mdb_ism_rb1.pdf",
+    "mdb_ism_rb1.svg",
+    "mdb_ism_rb1.png"
+  ],
+  "source": "mdb_ism_rb1.py",
+  "saved": "2026-10-13T09:15:52+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "header": {
+        "box_edges": {
+          "left": 4.0,
+          "right": 89.0,
+          "top": 116.0,
+          "bottom": 122.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "tracks1": {
+        "box_edges": {
+          "left": 12.0,
+          "right": 87.0,
+          "top": 123.5,
+          "bottom": 131.375
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "tracks2": {
+        "box_edges": {
+          "left": 12.0,
+          "right": 87.0,
+          "top": 132.875,
+          "bottom": 140.75
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "tracks3": {
+        "box_edges": {
+          "left": 12.0,
+          "right": 87.0,
+          "top": 142.25,
+          "bottom": 150.125
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "tracks4": {
+        "box_edges": {
+          "left": 12.0,
+          "right": 87.0,
+          "top": 151.625,
+          "bottom": 159.5
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {}
+  }
+}

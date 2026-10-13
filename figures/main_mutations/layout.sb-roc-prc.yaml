@@ -1,0 +1,47 @@
+# Main figure, mutations (Figure 7): SpliceBench pooled ROC/PRC beside the MutSpliceDB one.
+# Nature's maximum height is 170 mm (room for the legend underneath); text 6 / 5 pt (Nature: 5 to 7 pt).
+# Panel keys are ids; the letters follow the reading order (labels: auto).
+# Box: [x, y, width, height] in mm from the figure's top-left corner.
+schema: 1
+name: main_mutations
+journal: nature
+style_files: [../style.yaml]
+style:
+  font: {size: 6, small: 5, large: 6}
+page: {paper: a4, margins: {left: 13.5, right: 13.5, top: 25, bottom: 25}, outlines: true, dpi: 600}
+area:
+  width: double  # 183 mm
+  height: 166  # Nature maximum: 170
+gutter: 4
+output_dir: output  # build files, ignored by git
+labels: auto
+panels:
+  sb_roc_prc:  # ROC and PRC of 9 methods, SpliceBench (6 datasets pooled): SDV against neutral variants
+    box: [0, 0, 89.5, 58]
+    source: notebooks/sb_roc_prc.py
+    axes: &roc_prc_axes  # panel coordinates, the same in both ROC/PRC panels; legend centred on roc + prc
+      roc: {ref: panel, left: 8, top: 2, right: 41.5, bottom: 33}
+      prc: {ref: panel, left: 51.5, top: 2, right: 85, bottom: 33}
+      legend: {ref: panel, left: 3.5, top: 41, right: 89.5, bottom: 58}
+  mdb_roc_prc:  # ROC and PRC of 9 methods, MutSpliceDB mutations against local gnomAD SNVs
+    box: [93.5, 0, 89.5, 58]
+    source: notebooks/mdb_roc_prc.py
+    axes: *roc_prc_axes
+  mdb_heatmap:  # RBP impact heatmap (12 tracks x 428 mutations), full width, legends on the left
+    box: [0, 62, 183, 50]
+    source: notebooks/mdb_heatmap.py
+    axes:
+      cbar: {ref: panel, left: 4, top: 3, right: 30, bottom: 4.2}
+      legend: {ref: panel, left: 0, top: 9, right: 40, bottom: 40}
+      auprc_cbar: {ref: panel, left: 4, top: 45, right: 24, bottom: 46.2}
+      heatmap: {ref: panel, left: 62, top: 6, right: 166, bottom: 40}
+  mdb_ism_rb1:  # ISM around a donor mutation (RB1)
+    box: [0, 116, 89.5, 50]
+    source: notebooks/mdb_ism_rb1.py
+    axes: &mdb_ism_axes  # panel coordinates, the same in both MutSpliceDB examples
+      header: {ref: panel, left: 4, top: 0, right: 89, bottom: 6}
+      tracks: {ref: panel, left: 12, top: 7.5, right: 87, bottom: 43.5, nrows: 4, hgap: 1.5}
+  mdb_ism_nf1:  # ISM around an acceptor mutation (NF1)
+    box: [93.5, 116, 89.5, 50]
+    source: notebooks/mdb_ism_nf1.py
+    axes: *mdb_ism_axes
