@@ -27,7 +27,13 @@ panel = pp.Layout.load("../layout.yaml").panel("quality_peaks")
 
 # %%
 fig, t = common.quality_panel(
-    panel, "idr_peaks", "pearson__parnet21m_0", "IDR peaks (ENCODE)", "PARNET Pearson r", "Vs number of peaks", log_x=True
+    panel,
+    "idr_peaks",
+    "pearson__parnet21m_0",
+    "IDR peaks (ENCODE)",
+    "PARNET Pearson r",
+    "Vs number of peaks",
+    log_x=True,
 )
 
 # %%

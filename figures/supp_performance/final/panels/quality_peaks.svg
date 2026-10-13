@@ -655,6 +655,22 @@ L 31.181102 17.007874
 L 113.385827 107.716535 
 " style="fill: none; stroke: #000000; stroke-width: 0.5; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
+   <g id="line2d_42">
+    <path d="M 34.917681 71.390553 
+L 51.742985 66.966907 
+L 60.97858 64.401367 
+L 66.665874 62.473458 
+L 83.595373 56.637652 
+L 85.121113 56.086108 
+L 87.201848 55.147562 
+L 89.024187 54.191103 
+L 93.043601 51.758332 
+L 96.024369 49.479271 
+L 105.313718 41.962977 
+L 109.649248 38.285155 
+L 109.649248 38.285155 
+" clip-path="url(#p904f837d56)" style="fill: none; stroke: #212121; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
    <g id="text_13">
     <text style="font-size: 6px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif" transform="translate(45.604558 8.477601)">Vs number of peaks</text>
     <text style="font-size: 6px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif" transform="translate(32.219402 15.007874)">Spearman ρ = 0.62, p = 7e-25</text>

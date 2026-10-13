@@ -83,7 +83,7 @@ L 0 2
      </g>
     </g>
     <g id="text_5">
-     <text style="font-size: 6px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif; text-anchor: middle" x="72.283465" y="122.277082" transform="rotate(-0 72.283465 122.277082)">Non-PCR-dup. fraction (worst rep.)</text>
+     <text style="font-size: 6px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif; text-anchor: middle" x="72.283465" y="122.277082" transform="rotate(-0 72.283465 122.277082)">Usable reads, fraction (worst rep.)</text>
     </g>
    </g>
    <g id="matplotlib.axis_2">
@@ -405,8 +405,27 @@ L 31.181102 17.007874
 L 113.385827 107.716535 
 " style="fill: none; stroke: #000000; stroke-width: 0.5; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
+   <g id="line2d_11">
+    <path d="M 34.917681 69.094804 
+L 39.498311 65.287066 
+L 45.281741 60.829391 
+L 49.095346 58.106587 
+L 49.791695 57.671943 
+L 52.199272 56.621807 
+L 54.897438 55.86311 
+L 58.984357 55.049797 
+L 61.66802 54.50885 
+L 69.994351 52.541271 
+L 75.238404 51.431869 
+L 79.961528 50.702737 
+L 87.800948 49.481438 
+L 102.720095 47.05604 
+L 109.649248 46.04719 
+L 109.649248 46.04719 
+" clip-path="url(#p904f837d56)" style="fill: none; stroke: #212121; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
    <g id="text_13">
-    <text style="font-size: 6px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif" transform="translate(44.777683 8.477483)">Vs library complexity</text>
+    <text style="font-size: 6px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif" transform="translate(45.268933 8.477483)">Vs usable read yield</text>
     <text style="font-size: 6px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif" transform="translate(32.219402 15.007874)">Spearman ρ = 0.56, p = 6e-20</text>
    </g>
   </g>

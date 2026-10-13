@@ -11,7 +11,8 @@
 # ---
 
 # %% [markdown]
-# # supp_performance, quality_nonpcr: PARNET Pearson r vs the fraction of non-PCR-duplicate uniquely mapped reads, worst replicate
+# # supp_performance, quality_nonpcr: PARNET Pearson r vs the usable read yield: uniquely mapped, non-PCR-duplicate reads as a fraction of all reads,
+# worst replicate (higher is better)
 #
 # Data: data/per_rbp_quality.600nt_test_split.tsv (see data/README.md).
 
@@ -30,9 +31,9 @@ fig, t = common.quality_panel(
     panel,
     "nonpcr_frac_worst",
     "pearson__parnet21m_0",
-    "Non-PCR-dup. fraction (worst rep.)",
+    "Usable reads, fraction (worst rep.)",
     "PARNET Pearson r",
-    "Vs library complexity",
+    "Vs usable read yield",
 )
 
 # %%

@@ -38,7 +38,15 @@ fig, t = common.quality_panel(
     diagonal=True,
 )
 ax = fig.axes[0]
-ax.text(0.98, 0.04, f"PARNET above the diagonal\nfor {above} / {len(t)} RBPs", transform=ax.transAxes, ha="right", va="bottom", fontsize=5)
+ax.text(
+    0.98,
+    0.04,
+    f"PARNET above the diagonal\nfor {above} / {len(t)} RBPs",
+    transform=ax.transAxes,
+    ha="right",
+    va="bottom",
+    fontsize=5,
+)
 
 # %%
 report = panel.save(fig, source="quality_replicates.py")

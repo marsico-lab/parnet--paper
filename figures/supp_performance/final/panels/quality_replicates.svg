@@ -400,6 +400,20 @@ L 31.181102 17.007874
 L 113.385827 107.716535 
 " style="fill: none; stroke: #000000; stroke-width: 0.5; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
+   <g id="line2d_11">
+    <path d="M 34.917681 67.722208 
+L 44.54893 57.666005 
+L 50.094654 51.781438 
+L 51.282668 50.470483 
+L 53.370934 48.675642 
+L 59.698529 43.375326 
+L 61.391141 42.372944 
+L 66.697349 39.62607 
+L 70.215767 37.651837 
+L 89.190557 26.03759 
+L 89.190557 26.03759 
+" clip-path="url(#p904f837d56)" style="fill: none; stroke: #212121; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
    <g id="text_12">
     <text style="font-size: 5px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif" transform="translate(48.278451 97.219195)">PARNET above the diagonal</text>
     <text style="font-size: 5px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif" transform="translate(69.497982 102.661187)">for 217 / 222 RBPs</text>

@@ -3,6 +3,7 @@
 import numpy as np
 import pandas as pd
 from scipy.stats import spearmanr
+from statsmodels.nonparametric.smoothers_lowess import lowess
 
 
 def model_scatter(ax, x, y, labels, color_better, n_labels=5, label_side="right"):
@@ -85,7 +86,11 @@ def load_table():
 
 def metric_panel(panel, metric, label_side="left"):
     """Single-task RBPNet (x) vs PARNET 21M (y) on one metric, as the main figure's scatters."""
-    t = load_table().dropna(subset=[f"{metric}__single", f"{metric}__parnet21m_0"]).reset_index(drop=True)
+    t = (
+        load_table()
+        .dropna(subset=[f"{metric}__single", f"{metric}__parnet21m_0"])
+        .reset_index(drop=True)
+    )
     x, y = t[f"{metric}__single"].to_numpy(), t[f"{metric}__parnet21m_0"].to_numpy()
     rel = 100 * ((y - x) / x).mean()
     fig = panel.figure()
@@ -100,13 +105,27 @@ def metric_panel(panel, metric, label_side="left"):
     return fig
 
 
-def quality_panel(panel, x_col, y_col, xlabel, ylabel, title, log_x=False, diagonal=False, zero_line=False):
-    """One dot per RBP: a data-quality measure (x) against a performance value (y), Spearman rho in the title."""
+def quality_panel(
+    panel, x_col, y_col, xlabel, ylabel, title, log_x=False, diagonal=False, zero_line=False
+):
+    """One dot per RBP: a data-quality measure (x) against a performance value (y), with a LOWESS trend
+    line (on log10 x for a log axis) and the Spearman rho in the title."""
     t = load_table().dropna(subset=[x_col, y_col])
     rho = spearmanr(t[x_col], t[y_col])
     fig = panel.figure()
     ax = panel.axes(fig, "main")
     ax.scatter(t[x_col], t[y_col], s=4, color=panel.colors[PARNET], linewidths=0, zorder=2)
+    # LOWESS trend (fraction 2/3 of the RBPs per local fit), on log10(x) when the axis is logarithmic.
+    xs = np.log10(t[x_col].to_numpy()) if log_x else t[x_col].to_numpy()
+    fit = lowess(t[y_col].to_numpy(), xs, frac=2 / 3, return_sorted=True)
+    ax.plot(
+        10 ** fit[:, 0] if log_x else fit[:, 0],
+        fit[:, 1],
+        color="#212121",
+        linewidth=0.8,
+        zorder=3,
+        label="LOWESS",
+    )
     if log_x:
         ax.set_xscale("log")
     if diagonal:
