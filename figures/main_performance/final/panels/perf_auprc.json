@@ -1,0 +1,100 @@
+{
+  "panel": "perf_auprc",
+  "layout": "main_performance",
+  "box_mm": [
+    62.5,
+    0.0,
+    58.0,
+    46.0
+  ],
+  "size_mm": [
+    58.0,
+    46.0
+  ],
+  "files": [
+    "perf_auprc.pdf",
+    "perf_auprc.svg",
+    "perf_auprc.png"
+  ],
+  "source": "perf_auprc.py",
+  "saved": "2026-10-13T09:26:04+00:00",
+  "issues": [
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'RPS3_K562' overlaps 'NIP7_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'RPS3_K562' overlaps 'NOLC1_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'RPS3_K562' overlaps 'RPS11_K562'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'RPS3_K562' overlaps 'SLBP_K562'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'NIP7_HepG2' overlaps 'NOLC1_HepG2'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'NIP7_HepG2' overlaps 'RPS11_K562'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'NIP7_HepG2' overlaps 'SLBP_K562'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'NOLC1_HepG2' overlaps 'RPS11_K562'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'NOLC1_HepG2' overlaps 'SLBP_K562'"
+    },
+    {
+      "level": "warning",
+      "code": "text-overlap",
+      "message": "'RPS11_K562' overlaps 'SLBP_K562'"
+    }
+  ],
+  "geometry": {
+    "axes": {
+      "main": {
+        "box_edges": {
+          "left": 76.5,
+          "right": 111.5,
+          "top": 6.0,
+          "bottom": 39.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {
+      "main.legend": {
+        "box_edges": {
+          "left": 81.035,
+          "right": 111.5,
+          "top": 35.88,
+          "bottom": 39.0
+        }
+      }
+    }
+  }
+}
