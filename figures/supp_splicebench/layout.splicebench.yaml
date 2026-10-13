@@ -1,4 +1,5 @@
-# Supplementary figure, SpliceBench: AUROC and AUPRC of each method on each SpliceBench dataset.
+# Supplementary figure, SpliceBench: AUROC and AUPRC of each method on each dataset, then two in silico
+# mutagenesis examples (RON exon 11, WT1 exon 9).
 # Text 6 / 5 pt, as the main figures.
 # Box: [x, y, width, height] in mm from the figure's top-left corner.
 schema: 1
@@ -10,7 +11,7 @@ style:
 page: {paper: a4, margins: {left: 13.5, right: 13.5, top: 25, bottom: 25}, outlines: true, dpi: 600}
 area:
   width: double  # 183 mm
-  height: 31
+  height: 80
 gutter: 4
 output_dir: output  # build files, ignored by git
 labels: auto
@@ -22,3 +23,14 @@ panels:
       auroc: {ref: panel, left: 9, top: 1, right: 140, bottom: 11.5}
       auprc: {ref: panel, left: 9, top: 13.5, right: 140, bottom: 24}
       legend: {ref: panel, left: 143, top: 0, right: 183, bottom: 31}
+  sb_ism_ron_ex11:  # RON exon 11: measured effect, PARNET embedding distance, 3 RBP tracks, ISM range
+    box: [0, 35, 89.5, 45]
+    source: notebooks/sb_ism_ron_ex11.py
+    axes: &ism_axes
+      title: {ref: panel, left: 4, top: 0, right: 89, bottom: 3}
+      gene: {ref: panel, left: 12, top: 3.5, right: 89, bottom: 5.5}
+      tracks: {ref: panel, left: 12, top: 6.5, right: 89, bottom: 39, nrows: 5, hgap: 1.2}
+  sb_ism_wt1_ex9:  # WT1 exon 9, same rows
+    box: [93.5, 35, 89.5, 45]
+    source: notebooks/sb_ism_wt1_ex9.py
+    axes: *ism_axes

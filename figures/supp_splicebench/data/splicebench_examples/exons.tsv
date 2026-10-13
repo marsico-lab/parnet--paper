@@ -1,0 +1,3 @@
+dataset	gene	chrom	strand	exon_num	exon_start	exon_end	ism_start	ism_end
+ron_ex11	RON	chr3	-	11	49895961	49896107	49895911	49896157
+wt1_ex9	WT1	chr11	-	9	32391972	32392064	32391922	32392114
