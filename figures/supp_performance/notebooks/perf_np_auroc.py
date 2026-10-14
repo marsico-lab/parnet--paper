@@ -13,7 +13,7 @@
 # %% [markdown]
 # # supp_performance, perf_np_auroc: PARNET vs single-task RBPNet, AUROC against narrowPeak 5' ends +- 5 nt
 #
-# Data: data/per_rbp_quality.600nt_test_split.tsv (see data/README.md).
+# Data: data/performance/ (see data/performance/README.md).
 
 # %%
 import sys

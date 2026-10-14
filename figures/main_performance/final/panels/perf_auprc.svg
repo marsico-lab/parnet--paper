@@ -201,6 +201,7 @@ z
      <use xlink:href="#mf2c2e0ef51" x="94.260587" y="59.442668" style="fill: #bdbdbd"/>
      <use xlink:href="#mf2c2e0ef51" x="86.884498" y="67.029503" style="fill: #bdbdbd"/>
      <use xlink:href="#mf2c2e0ef51" x="47.70331" y="103.33953" style="fill: #bdbdbd"/>
+     <use xlink:href="#mf2c2e0ef51" x="49.044417" y="107.217245" style="fill: #bdbdbd"/>
      <use xlink:href="#mf2c2e0ef51" x="57.284775" y="94.721448" style="fill: #bdbdbd"/>
      <use xlink:href="#mf2c2e0ef51" x="87.644459" y="66.329828" style="fill: #bdbdbd"/>
     </g>
@@ -469,7 +470,7 @@ z
    </g>
    <g id="text_14">
     <text style="font-size: 6px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif" transform="translate(45.946964 8.477601)">AUPRC, ENCODE narrowPeaks</text>
-    <text style="font-size: 6px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif" transform="translate(52.242745 15.007874)">mean gain +11.6% per RBP</text>
+    <text style="font-size: 6px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif" transform="translate(52.242745 15.007874)">mean gain +11.5% per RBP</text>
    </g>
    <g id="patch_5">
     <path d="M 64.110888 26.089288 
@@ -531,7 +532,7 @@ z
      </g>
     </g>
     <g id="text_20">
-     <text style="font-size: 5px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif; text-anchor: start" x="63.165607" y="107.498837" transform="rotate(-0 63.165607 107.498837)">PARNET better (205 / 222 RBPs)</text>
+     <text style="font-size: 5px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif; text-anchor: start" x="63.165607" y="107.498837" transform="rotate(-0 63.165607 107.498837)">PARNET better (205 / 223 RBPs)</text>
     </g>
    </g>
   </g>

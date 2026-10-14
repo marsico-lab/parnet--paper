@@ -13,7 +13,7 @@
 # %% [markdown]
 # # supp_performance, perf_pc_auprc: PARNET vs single-task RBPNet, AUPRC against PureCLIP crosslink sites +- 5 nt
 #
-# Data: data/per_rbp_quality.600nt_test_split.tsv (see data/README.md).
+# Data: data/performance/ (see data/performance/README.md).
 
 # %%
 import sys

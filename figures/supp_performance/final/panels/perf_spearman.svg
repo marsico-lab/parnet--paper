@@ -384,6 +384,7 @@ z
      <use xlink:href="#mb67d2dc4aa" x="71.083482" y="54.570631" style="fill: #e8609f"/>
      <use xlink:href="#mb67d2dc4aa" x="98.238254" y="33.207703" style="fill: #e8609f"/>
      <use xlink:href="#mb67d2dc4aa" x="70.95318" y="59.844505" style="fill: #e8609f"/>
+     <use xlink:href="#mb67d2dc4aa" x="64.894174" y="66.087461" style="fill: #e8609f"/>
      <use xlink:href="#mb67d2dc4aa" x="89.964127" y="42.605206" style="fill: #e8609f"/>
      <use xlink:href="#mb67d2dc4aa" x="81.046312" y="51.23492" style="fill: #e8609f"/>
      <use xlink:href="#mb67d2dc4aa" x="88.512571" y="44.192544" style="fill: #e8609f"/>
@@ -527,11 +528,11 @@ z
 "/>
      </defs>
      <g>
-      <use xlink:href="#me89a82cb73" x="34.524889" y="103.351692" style="fill: #e8609f"/>
+      <use xlink:href="#me89a82cb73" x="34.153796" y="103.351692" style="fill: #e8609f"/>
      </g>
     </g>
     <g id="text_20">
-     <text style="font-size: 5px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif; text-anchor: start" x="38.024889" y="104.664192" transform="rotate(-0 38.024889 104.664192)">PARNET better (211 / 222 RBPs)</text>
+     <text style="font-size: 5px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif; text-anchor: start" x="37.653796" y="104.664192" transform="rotate(-0 37.653796 104.664192)">PARNET better (212 / 223 RBPs)</text>
     </g>
    </g>
   </g>

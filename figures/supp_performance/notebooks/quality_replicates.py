@@ -13,7 +13,7 @@
 # %% [markdown]
 # # supp_performance, quality_replicates: PARNET Pearson r vs the Pearson r between the two replicates, on the same windows
 #
-# Data: data/per_rbp_quality.600nt_test_split.tsv (see data/README.md).
+# Data: data/performance/ (see data/performance/README.md).
 
 # %%
 import sys

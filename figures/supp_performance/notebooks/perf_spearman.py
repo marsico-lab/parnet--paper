@@ -13,7 +13,7 @@
 # %% [markdown]
 # # supp_performance, perf_spearman: PARNET vs single-task RBPNet, per-window Spearman correlation with read starts
 #
-# Data: data/per_rbp_quality.600nt_test_split.tsv (see data/README.md).
+# Data: data/performance/ (see data/performance/README.md).
 
 # %%
 import sys
