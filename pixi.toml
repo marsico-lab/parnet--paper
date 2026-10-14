@@ -20,6 +20,7 @@ snakemake-minimal = ">=9"
 # Notebook editing: VS Code kernel + Jupytext pairing of panel_*.py <-> panel_*.ipynb.
 ipykernel = "*"
 jupytext = "*"
+statsmodels = ">=0.15.0,<0.16"
 
 [pypi-dependencies]
 parnet-paper = { path = ".", editable = true }
