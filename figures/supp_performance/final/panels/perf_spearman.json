@@ -17,7 +17,7 @@
     "perf_spearman.png"
   ],
   "source": "perf_spearman.py",
-  "saved": "2026-10-14T07:00:47+00:00",
+  "saved": "2026-10-14T08:30:26+00:00",
   "issues": [
     {
       "level": "warning",
@@ -74,7 +74,7 @@
     "anchors": {
       "main.legend": {
         "box_edges": {
-          "left": 9.666,
+          "left": 9.535,
           "right": 40.0,
           "top": 34.88,
           "bottom": 38.0

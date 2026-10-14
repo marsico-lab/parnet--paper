@@ -376,6 +376,7 @@ z
      <use xlink:href="#mb67d2dc4aa" x="75.205189" y="67.101072" style="fill: #e8609f"/>
      <use xlink:href="#mb67d2dc4aa" x="101.245862" y="51.780985" style="fill: #e8609f"/>
      <use xlink:href="#mb67d2dc4aa" x="78.036071" y="69.462783" style="fill: #e8609f"/>
+     <use xlink:href="#mb67d2dc4aa" x="77.989047" y="66.068008" style="fill: #e8609f"/>
      <use xlink:href="#mb67d2dc4aa" x="91.934985" y="61.116986" style="fill: #e8609f"/>
      <use xlink:href="#mb67d2dc4aa" x="86.660389" y="64.093511" style="fill: #e8609f"/>
      <use xlink:href="#mb67d2dc4aa" x="52.39981" y="88.971288" style="fill: #e8609f"/>
@@ -459,7 +460,7 @@ z
    </g>
    <g id="text_13">
     <text style="font-size: 6px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif" transform="translate(60.613214 8.477601)">Pearson r, read starts</text>
-    <text style="font-size: 6px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif" transform="translate(52.020089 15.007874)">mean gain +10.5% per RBP</text>
+    <text style="font-size: 6px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif" transform="translate(52.020089 15.007874)">mean gain +10.6% per RBP</text>
    </g>
    <g id="patch_5">
     <path d="M 78.578254 26.056304 
@@ -521,7 +522,7 @@ z
      </g>
     </g>
     <g id="text_19">
-     <text style="font-size: 5px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif; text-anchor: start" x="63.165607" y="107.498837" transform="rotate(-0 63.165607 107.498837)">PARNET better (197 / 222 RBPs)</text>
+     <text style="font-size: 5px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif; text-anchor: start" x="63.165607" y="107.498837" transform="rotate(-0 63.165607 107.498837)">PARNET better (198 / 223 RBPs)</text>
     </g>
    </g>
   </g>

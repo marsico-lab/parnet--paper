@@ -16,17 +16,18 @@
 # Per RBP: mean over test windows of the METRIC (Pearson or Spearman) correlation between the predicted total track and
 # eCLIP read starts (summed replicates), for the single-task RBPNet (0.5M parameters, x) and
 # PARNET (21M, λ = 0, y). Both models are scored on the same windows.
-# Data: data/perf/per_rbp_metrics.600nt_test_split.tsv, test split of the 600 nt training dataset, windows with
-# >= 10 read starts and >= 5 covered positions with consecutive gaps <= 3 nt, RBPs with >= 20 such windows.
+# Data: data/performance/per_rbp_performance.tsv (eclip_tiles_600nt), test split of the 600 nt training dataset,
+# windows with >= 10 read starts and >= 5 covered positions with consecutive gaps <= 3 nt, RBPs with >= 10 such windows.
 
 # %%
 import sys
 
-import pandas as pd
 import plotplate as pp
 
 sys.path.insert(0, "../scripts")
 from common import PARNET, model_scatter
+
+from parnet_paper.performance import load_eclip
 
 layout = pp.Layout.load("../layout.yaml")
 panel = layout.panel("perf_correlation")
@@ -34,8 +35,7 @@ METRIC = "pearson"  # or "spearman"
 METRIC_NAME = {"pearson": "Pearson r", "spearman": "Spearman ρ"}[METRIC]  # noqa: RUF001
 
 # %%
-t = pd.read_csv("../data/perf/per_rbp_metrics.600nt_test_split.tsv", sep="\t")
-t = t[t.metric == METRIC].reset_index(drop=True)
+t = load_eclip(METRIC)
 x, y = t.single.to_numpy(), t.parnet21m_0.to_numpy()
 gain = y - x
 wins = int((gain > 0).sum())

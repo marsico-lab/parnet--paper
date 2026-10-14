@@ -15,8 +15,8 @@
 #
 # RBPs are grouped into quartiles of the single-task RBPNet score (METRIC, mean over windows; pd.qcut).
 # Test: Spearman rho between the single-task score and the relative gain over all RBPs (no binning).
-# Data: data/perf/per_rbp_metrics.600nt_test_split.tsv, test split of the 600 nt training dataset, windows with
-# >= 10 read starts and >= 5 covered positions with consecutive gaps <= 3 nt, RBPs with >= 20 such windows.
+# Data: data/performance/per_rbp_performance.tsv (eclip_tiles_600nt), test split of the 600 nt training dataset,
+# windows with >= 10 read starts and >= 5 covered positions with consecutive gaps <= 3 nt, RBPs with >= 10 such windows.
 # Box and dots: gain of PARNET over the single-task model per RBP, (PARNET - single) / single,
 # with quartiles and gain from the same windows; coloured dot and text: mean.
 
@@ -33,13 +33,14 @@ from scipy.stats import spearmanr
 sys.path.insert(0, "../scripts")
 from common import PARNET
 
+from parnet_paper.performance import load_eclip
+
 layout = pp.Layout.load("../layout.yaml")
 panel = layout.panel("perf_quartiles")
 METRIC = "pearson"  # or "spearman"
 
 # %%
-q = pd.read_csv("../data/perf/per_rbp_metrics.600nt_test_split.tsv", sep="\t")
-q = q[q.metric == METRIC].reset_index(drop=True)
+q = load_eclip(METRIC)
 q["quartile"] = pd.qcut(q.single, 4, labels=[1, 2, 3, 4]).astype(int)
 q["gain_pct"] = (q.parnet21m_0 - q.single) / q.single * 100
 rho = spearmanr(q.single, q.gain_pct)

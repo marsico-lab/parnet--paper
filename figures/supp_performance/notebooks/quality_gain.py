@@ -13,7 +13,7 @@
 # %% [markdown]
 # # supp_performance, quality_gain: relative gain of PARNET over single-task RBPNet (Pearson) vs the number of IDR peaks
 #
-# Data: data/per_rbp_quality.600nt_test_split.tsv (see data/README.md).
+# Data: data/performance/ (see data/performance/README.md).
 
 # %%
 import sys

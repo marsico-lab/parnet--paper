@@ -1,9 +1,10 @@
 """Drawing helpers shared by the supp_performance panels (model_scatter as in main_performance)."""
 
 import numpy as np
-import pandas as pd
 from scipy.stats import spearmanr
 from statsmodels.nonparametric.smoothers_lowess import lowess
+
+from parnet_paper.performance import ECLIP_MODELS, load_long, load_quality
 
 
 def model_scatter(ax, x, y, labels, color_better, n_labels=5, label_side="right"):
@@ -66,7 +67,6 @@ def model_scatter(ax, x, y, labels, color_better, n_labels=5, label_side="right"
 
 
 PARNET = "PARNET profile"  # colour key in figures/style.yaml
-DATA = "../data/per_rbp_quality.600nt_test_split.tsv"
 METRIC_NAMES = {
     "pearson": "Pearson r",
     "spearman": "Spearman \u03c1",
@@ -78,8 +78,16 @@ METRIC_NAMES = {
 
 
 def load_table():
-    """Per-RBP table: performance of the 3 models and the data-quality measures (data/README.md)."""
-    t = pd.read_csv(DATA, sep="\t")
+    """Per-RBP table: data-quality measures and `<metric>__<model>` performance on the 600 nt test tiles.
+
+    From data/performance/ (see data/performance/README.md); a metric is NaN for an RBP with < MIN_N windows.
+    """
+    perf = load_long()
+    perf = perf[perf.test_set == "eclip_tiles_600nt"]
+    perf = perf.assign(col=perf.metric + "__" + perf.model.map(ECLIP_MODELS)).pivot(
+        index="rbp", columns="col", values="value"
+    )
+    t = load_quality().merge(perf.reset_index(), on="rbp", how="left")
     t["gain_pct"] = (t["pearson__parnet21m_0"] - t["pearson__single"]) / t["pearson__single"] * 100
     return t
 

@@ -13,7 +13,7 @@
 # %% [markdown]
 # # supp_performance, quality_peaks: PARNET Pearson r vs the number of IDR peaks of the experiment (ENCODE)
 #
-# Data: data/per_rbp_quality.600nt_test_split.tsv (see data/README.md).
+# Data: data/performance/ (see data/performance/README.md).
 
 # %%
 import sys

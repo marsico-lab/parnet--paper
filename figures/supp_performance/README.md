@@ -2,7 +2,7 @@
 
 Supplementary figure related to Figure 2 ([main_performance](../main_performance/)): PARNET 21M against the single-task RBPNet models on the metrics not shown in Figure 2, and PARNET performance against the quality of the eCLIP data.
 
-Windows, models and RBP names are those of main_performance panels a to c: test split of the 600 nt training dataset, windows with >= 10 read starts and >= 5 covered positions with consecutive gaps \<= 3 nt, RBPs with >= 20 such windows.
+Windows, models and RBP names are those of main_performance panels a to c: test split of the 600 nt training dataset, windows with >= 10 read starts and >= 5 covered positions with consecutive gaps \<= 3 nt, RBPs with >= 10 such windows.
 
 | Panel                | Content                                                                                                  | Made with                         |
 | -------------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------- |
@@ -15,11 +15,10 @@ Windows, models and RBP names are those of main_performance panels a to c: test 
 | `quality_peaks`      | PARNET Pearson r vs the number of IDR peaks of the experiment                                            | `notebooks/quality_peaks.py`      |
 | `quality_gain`       | Relative gain of PARNET over single-task RBPNet (Pearson) vs the number of IDR peaks                     | `notebooks/quality_gain.py`       |
 
-All panels read `data/per_rbp_quality.600nt_test_split.tsv`; the drawing code is in `scripts/common.py`.
+All panels read the shared tables of [data/performance/](../../data/performance/README.md) (test set `eclip_tiles_600nt` and the data-quality table); the drawing code is in `scripts/common.py`.
 Panels e to h show a LOWESS trend (2/3 of the RBPs per local fit; on log10 x for e and h), its 95% confidence band (500 bootstrap resamples of the RBPs, seed 42) and the Spearman rho.
 The scatters use the same code as main_performance: pink, PARNET better; grey, single-task better; the 5 RBPs with the largest gain of PARNET are ringed and named.
 
-The origin of the table is in [data/README.md](data/README.md).
 Build it with `pixi run figure supp_performance`.
 
 ![supp_performance](final/page.png)
