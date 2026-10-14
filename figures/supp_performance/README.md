@@ -10,9 +10,9 @@ Windows, models and RBP names are those of main_performance panels a to c: test 
 | `perf_np_auroc`      | AUROC against ENCODE narrowPeak 5' ends +- 5 nt                                                          | `notebooks/perf_np_auroc.py`      |
 | `perf_pc_auroc`      | AUROC against PureCLIP crosslink sites +- 5 nt                                                           | `notebooks/perf_pc_auroc.py`      |
 | `perf_pc_auprc`      | AUPRC against PureCLIP crosslink sites +- 5 nt                                                           | `notebooks/perf_pc_auprc.py`      |
-| `quality_peaks`      | PARNET Pearson r vs the number of IDR peaks of the experiment                                            | `notebooks/quality_peaks.py`      |
 | `quality_nonpcr`     | PARNET Pearson r vs the usable read yield: unique, non-PCR-duplicate reads / all reads (worst replicate) | `notebooks/quality_nonpcr.py`     |
 | `quality_replicates` | PARNET Pearson r vs the Pearson r between the two replicates, on the same windows                        | `notebooks/quality_replicates.py` |
+| `quality_peaks`      | PARNET Pearson r vs the number of IDR peaks of the experiment                                            | `notebooks/quality_peaks.py`      |
 | `quality_gain`       | Relative gain of PARNET over single-task RBPNet (Pearson) vs the number of IDR peaks                     | `notebooks/quality_gain.py`       |
 
 All panels read `data/per_rbp_quality.600nt_test_split.tsv`; the drawing code is in `scripts/common.py`.

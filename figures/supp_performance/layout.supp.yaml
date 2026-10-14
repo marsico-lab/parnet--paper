@@ -34,17 +34,17 @@ panels:
     source: notebooks/perf_pc_auprc.py
     axes: *axes
   # --- PARNET performance vs data quality ---
-  quality_peaks:  # PARNET Pearson vs number of IDR peaks
-    box: [0, 50, 42.75, 46]
-    source: notebooks/quality_peaks.py
-    axes: *axes
   quality_nonpcr:  # PARNET Pearson vs fraction of non-PCR-duplicate reads, worst replicate
-    box: [46.75, 50, 42.75, 46]
+    box: [0, 50, 42.75, 46]
     source: notebooks/quality_nonpcr.py
     axes: *axes
   quality_replicates:  # PARNET Pearson vs replicate 1 vs replicate 2 Pearson, same windows
-    box: [93.5, 50, 42.75, 46]
+    box: [46.75, 50, 42.75, 46]
     source: notebooks/quality_replicates.py
+    axes: *axes
+  quality_peaks:  # PARNET Pearson vs number of IDR peaks
+    box: [93.5, 50, 42.75, 46]
+    source: notebooks/quality_peaks.py
     axes: *axes
   quality_gain:  # relative gain of PARNET over single-task RBPNet vs number of IDR peaks
     box: [140.25, 50, 42.75, 46]
