@@ -1,0 +1,329 @@
+{
+  "panel": "region_featimp_qki",
+  "layout": "supp_penalty",
+  "box_mm": [
+    0.0,
+    107.0,
+    183.0,
+    63.0
+  ],
+  "size_mm": [
+    183.0,
+    63.0
+  ],
+  "files": [
+    "region_featimp_qki.pdf",
+    "region_featimp_qki.svg",
+    "region_featimp_qki.png"
+  ],
+  "source": "region_featimp_qki.py",
+  "saved": "2026-10-15T09:10:55+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "title": {
+        "box_edges": {
+          "left": 13.0,
+          "right": 183.0,
+          "top": 107.0,
+          "bottom": 110.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "tracks1": {
+        "box_edges": {
+          "left": 13.0,
+          "right": 43.8,
+          "top": 115.0,
+          "bottom": 123.8
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "tracks2": {
+        "box_edges": {
+          "left": 47.8,
+          "right": 78.6,
+          "top": 115.0,
+          "bottom": 123.8
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "tracks3": {
+        "box_edges": {
+          "left": 82.6,
+          "right": 113.4,
+          "top": 115.0,
+          "bottom": 123.8
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "tracks4": {
+        "box_edges": {
+          "left": 117.4,
+          "right": 148.2,
+          "top": 115.0,
+          "bottom": 123.8
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "tracks5": {
+        "box_edges": {
+          "left": 152.2,
+          "right": 183.0,
+          "top": 115.0,
+          "bottom": 123.8
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "tracks6": {
+        "box_edges": {
+          "left": 13.0,
+          "right": 43.8,
+          "top": 125.3,
+          "bottom": 134.1
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks7": {
+        "box_edges": {
+          "left": 47.8,
+          "right": 78.6,
+          "top": 125.3,
+          "bottom": 134.1
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks8": {
+        "box_edges": {
+          "left": 82.6,
+          "right": 113.4,
+          "top": 125.3,
+          "bottom": 134.1
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks9": {
+        "box_edges": {
+          "left": 117.4,
+          "right": 148.2,
+          "top": 125.3,
+          "bottom": 134.1
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks10": {
+        "box_edges": {
+          "left": 152.2,
+          "right": 183.0,
+          "top": 125.3,
+          "bottom": 134.1
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks11": {
+        "box_edges": {
+          "left": 13.0,
+          "right": 43.8,
+          "top": 135.6,
+          "bottom": 144.4
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks12": {
+        "box_edges": {
+          "left": 47.8,
+          "right": 78.6,
+          "top": 135.6,
+          "bottom": 144.4
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks13": {
+        "box_edges": {
+          "left": 82.6,
+          "right": 113.4,
+          "top": 135.6,
+          "bottom": 144.4
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks14": {
+        "box_edges": {
+          "left": 117.4,
+          "right": 148.2,
+          "top": 135.6,
+          "bottom": 144.4
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks15": {
+        "box_edges": {
+          "left": 152.2,
+          "right": 183.0,
+          "top": 135.6,
+          "bottom": 144.4
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks16": {
+        "box_edges": {
+          "left": 13.0,
+          "right": 43.8,
+          "top": 145.9,
+          "bottom": 154.7
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks17": {
+        "box_edges": {
+          "left": 47.8,
+          "right": 78.6,
+          "top": 145.9,
+          "bottom": 154.7
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks18": {
+        "box_edges": {
+          "left": 82.6,
+          "right": 113.4,
+          "top": 145.9,
+          "bottom": 154.7
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks19": {
+        "box_edges": {
+          "left": 117.4,
+          "right": 148.2,
+          "top": 145.9,
+          "bottom": 154.7
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks20": {
+        "box_edges": {
+          "left": 152.2,
+          "right": 183.0,
+          "top": 145.9,
+          "bottom": 154.7
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks21": {
+        "box_edges": {
+          "left": 13.0,
+          "right": 43.8,
+          "top": 156.2,
+          "bottom": 165.0
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks22": {
+        "box_edges": {
+          "left": 47.8,
+          "right": 78.6,
+          "top": 156.2,
+          "bottom": 165.0
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks23": {
+        "box_edges": {
+          "left": 82.6,
+          "right": 113.4,
+          "top": 156.2,
+          "bottom": 165.0
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks24": {
+        "box_edges": {
+          "left": 117.4,
+          "right": 148.2,
+          "top": 156.2,
+          "bottom": 165.0
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "tracks25": {
+        "box_edges": {
+          "left": 152.2,
+          "right": 183.0,
+          "top": 156.2,
+          "bottom": 165.0
+        },
+        "spines": [
+          "left"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {
+      "title.legend": {
+        "box_edges": {
+          "left": 125.596,
+          "right": 183.0,
+          "top": 106.629,
+          "bottom": 110.371
+        }
+      }
+    }
+  }
+}
