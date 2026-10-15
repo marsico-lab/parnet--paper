@@ -1,0 +1,26 @@
+{
+  "panel": "abstract",
+  "layout": "main_overview",
+  "box_mm": [
+    0.0,
+    0.0,
+    183.0,
+    83.8
+  ],
+  "size_mm": [
+    183.0,
+    83.8
+  ],
+  "files": [
+    "abstract.pdf",
+    "abstract.png"
+  ],
+  "source": "abstract.scaled.pdf",
+  "saved": "2026-10-15T08:22:35+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {},
+    "marks": {},
+    "anchors": {}
+  }
+}

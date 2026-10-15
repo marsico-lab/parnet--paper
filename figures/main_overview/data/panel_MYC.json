@@ -1,0 +1,193 @@
+{
+  "gene": "MYC",
+  "transcript": "ENST00000621592.8",
+  "locus": "chr8:127,736,231-127,742,951:+",
+  "chrom": "chr8",
+  "start": 127736230,
+  "end": 127742951,
+  "strand": "+",
+  "length": 6721,
+  "annotation": "MANE Select v1.4, unspliced (genomic span of the transcript)",
+  "model": "parnet.21m-5.0 (RBPNet_21M_20241126_Penalty-5.0.pt)",
+  "prediction_field": "pred_total is the total profile, pred_target the de-biased one",
+  "precision": "predictions stored as float16 to keep the repository light; rerun this script for float32",
+  "row_order": "profiles_*.parquet has no position column; rows run 0..length-1 within each rbp, in track order",
+  "gene_model": [
+    [
+      "exon",
+      0,
+      393
+    ],
+    [
+      "CDS",
+      363,
+      393
+    ],
+    [
+      "CDS",
+      2017,
+      2789
+    ],
+    [
+      "exon",
+      2017,
+      2789
+    ],
+    [
+      "CDS",
+      4165,
+      4728
+    ],
+    [
+      "exon",
+      4165,
+      6721
+    ]
+  ],
+  "tracks": [
+    {
+      "rbp": "HNRNPA1_HepG2",
+      "total_read_starts": 616,
+      "n_positions_covered": 489,
+      "n_positions_narrowpeak": 223,
+      "n_positions_pureclip": 36,
+      "pearson_total": 0.534,
+      "pearson_target": 0.528,
+      "spearman_total": 0.278,
+      "auprc_narrowpeak": 0.169,
+      "auroc_narrowpeak": 0.837,
+      "pct_all_pairs": 0.979,
+      "pct_within_rbp": 0.964,
+      "signal_share": {
+        "5UTR": {
+          "observed": 0.094,
+          "predicted": 0.113,
+          "transcript_fraction": 0.054
+        },
+        "CDS": {
+          "observed": 0.192,
+          "predicted": 0.193,
+          "transcript_fraction": 0.203
+        },
+        "3UTR": {
+          "observed": 0.18,
+          "predicted": 0.271,
+          "transcript_fraction": 0.297
+        },
+        "intron": {
+          "observed": 0.534,
+          "predicted": 0.423,
+          "transcript_fraction": 0.446
+        }
+      }
+    },
+    {
+      "rbp": "IGF2BP1_HepG2",
+      "total_read_starts": 1179,
+      "n_positions_covered": 708,
+      "n_positions_narrowpeak": 293,
+      "n_positions_pureclip": 129,
+      "pearson_total": 0.515,
+      "pearson_target": 0.539,
+      "spearman_total": 0.38,
+      "auprc_narrowpeak": 0.206,
+      "auroc_narrowpeak": 0.85,
+      "pct_all_pairs": 0.975,
+      "pct_within_rbp": 0.986,
+      "signal_share": {
+        "5UTR": {
+          "observed": 0.112,
+          "predicted": 0.117,
+          "transcript_fraction": 0.054
+        },
+        "CDS": {
+          "observed": 0.722,
+          "predicted": 0.419,
+          "transcript_fraction": 0.203
+        },
+        "3UTR": {
+          "observed": 0.066,
+          "predicted": 0.13,
+          "transcript_fraction": 0.297
+        },
+        "intron": {
+          "observed": 0.1,
+          "predicted": 0.334,
+          "transcript_fraction": 0.446
+        }
+      }
+    },
+    {
+      "rbp": "IGF2BP3_HepG2",
+      "total_read_starts": 1655,
+      "n_positions_covered": 920,
+      "n_positions_narrowpeak": 298,
+      "n_positions_pureclip": 210,
+      "pearson_total": 0.599,
+      "pearson_target": 0.55,
+      "spearman_total": 0.447,
+      "auprc_narrowpeak": 0.142,
+      "auroc_narrowpeak": 0.788,
+      "pct_all_pairs": 0.989,
+      "pct_within_rbp": 0.999,
+      "signal_share": {
+        "5UTR": {
+          "observed": 0.119,
+          "predicted": 0.122,
+          "transcript_fraction": 0.054
+        },
+        "CDS": {
+          "observed": 0.628,
+          "predicted": 0.448,
+          "transcript_fraction": 0.203
+        },
+        "3UTR": {
+          "observed": 0.079,
+          "predicted": 0.106,
+          "transcript_fraction": 0.297
+        },
+        "intron": {
+          "observed": 0.175,
+          "predicted": 0.325,
+          "transcript_fraction": 0.446
+        }
+      }
+    },
+    {
+      "rbp": "IGF2BP2_K562",
+      "total_read_starts": 1377,
+      "n_positions_covered": 737,
+      "n_positions_narrowpeak": 270,
+      "n_positions_pureclip": 110,
+      "pearson_total": 0.437,
+      "pearson_target": 0.431,
+      "spearman_total": 0.35,
+      "auprc_narrowpeak": 0.187,
+      "auroc_narrowpeak": 0.826,
+      "pct_all_pairs": 0.951,
+      "pct_within_rbp": 0.934,
+      "signal_share": {
+        "5UTR": {
+          "observed": 0.094,
+          "predicted": 0.138,
+          "transcript_fraction": 0.054
+        },
+        "CDS": {
+          "observed": 0.696,
+          "predicted": 0.453,
+          "transcript_fraction": 0.203
+        },
+        "3UTR": {
+          "observed": 0.161,
+          "predicted": 0.115,
+          "transcript_fraction": 0.297
+        },
+        "intron": {
+          "observed": 0.048,
+          "predicted": 0.294,
+          "transcript_fraction": 0.446
+        }
+      }
+    }
+  ]
+}

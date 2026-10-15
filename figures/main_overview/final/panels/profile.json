@@ -1,0 +1,195 @@
+{
+  "panel": "profile",
+  "layout": "main_overview",
+  "box_mm": [
+    0.0,
+    87.8,
+    183.0,
+    98.0
+  ],
+  "size_mm": [
+    183.0,
+    98.0
+  ],
+  "files": [
+    "profile.pdf",
+    "profile.svg",
+    "profile.png"
+  ],
+  "source": "profile_example_BHLHE40.py",
+  "saved": "2026-10-15T08:22:38+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "gene_model": {
+        "box_edges": {
+          "left": 27.0,
+          "right": 175.5,
+          "top": 90.8,
+          "bottom": 93.8
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "AQR_K562.eclip": {
+        "box_edges": {
+          "left": 27.0,
+          "right": 175.5,
+          "top": 95.3,
+          "bottom": 99.33
+        },
+        "spines": [
+          "bottom"
+        ]
+      },
+      "AQR_K562.peaks": {
+        "box_edges": {
+          "left": 27.0,
+          "right": 175.5,
+          "top": 99.63,
+          "bottom": 106.23
+        },
+        "spines": []
+      },
+      "AQR_K562.parnet": {
+        "box_edges": {
+          "left": 27.0,
+          "right": 175.5,
+          "top": 106.53,
+          "bottom": 110.56
+        },
+        "spines": [
+          "bottom"
+        ]
+      },
+      "U2AF2_K562.eclip": {
+        "box_edges": {
+          "left": 27.0,
+          "right": 175.5,
+          "top": 112.36,
+          "bottom": 116.39
+        },
+        "spines": [
+          "bottom"
+        ]
+      },
+      "U2AF2_K562.peaks": {
+        "box_edges": {
+          "left": 27.0,
+          "right": 175.5,
+          "top": 116.69,
+          "bottom": 123.29
+        },
+        "spines": []
+      },
+      "U2AF2_K562.parnet": {
+        "box_edges": {
+          "left": 27.0,
+          "right": 175.5,
+          "top": 123.59,
+          "bottom": 127.62
+        },
+        "spines": [
+          "bottom"
+        ]
+      },
+      "TIA1_K562.eclip": {
+        "box_edges": {
+          "left": 27.0,
+          "right": 175.5,
+          "top": 129.42,
+          "bottom": 133.45
+        },
+        "spines": [
+          "bottom"
+        ]
+      },
+      "TIA1_K562.peaks": {
+        "box_edges": {
+          "left": 27.0,
+          "right": 175.5,
+          "top": 133.75,
+          "bottom": 140.35
+        },
+        "spines": []
+      },
+      "TIA1_K562.parnet": {
+        "box_edges": {
+          "left": 27.0,
+          "right": 175.5,
+          "top": 140.65,
+          "bottom": 144.68
+        },
+        "spines": [
+          "bottom"
+        ]
+      },
+      "PUM2_K562.eclip": {
+        "box_edges": {
+          "left": 27.0,
+          "right": 175.5,
+          "top": 146.48,
+          "bottom": 150.51
+        },
+        "spines": [
+          "bottom"
+        ]
+      },
+      "PUM2_K562.peaks": {
+        "box_edges": {
+          "left": 27.0,
+          "right": 175.5,
+          "top": 150.81,
+          "bottom": 157.41
+        },
+        "spines": []
+      },
+      "PUM2_K562.parnet": {
+        "box_edges": {
+          "left": 27.0,
+          "right": 175.5,
+          "top": 157.71,
+          "bottom": 161.74
+        },
+        "spines": [
+          "bottom"
+        ]
+      },
+      "TARDBP_K562.eclip": {
+        "box_edges": {
+          "left": 27.0,
+          "right": 175.5,
+          "top": 163.54,
+          "bottom": 167.57
+        },
+        "spines": [
+          "bottom"
+        ]
+      },
+      "TARDBP_K562.peaks": {
+        "box_edges": {
+          "left": 27.0,
+          "right": 175.5,
+          "top": 167.87,
+          "bottom": 174.47
+        },
+        "spines": []
+      },
+      "TARDBP_K562.parnet": {
+        "box_edges": {
+          "left": 27.0,
+          "right": 175.5,
+          "top": 174.77,
+          "bottom": 178.8
+        },
+        "spines": [
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {}
+  }
+}

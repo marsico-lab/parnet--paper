@@ -38,7 +38,9 @@ def load_eclip(metric: str, test_set: str = "eclip_tiles_600nt", min_n: int = MI
     t = load_long(min_n)
     t = t[(t.test_set == test_set) & (t.metric == metric)]
     assert len(t), (test_set, metric)
-    w = t.assign(model=t.model.map(ECLIP_MODELS)).pivot(index=["rbp", "n"], columns="model", values="value")
+    w = t.assign(model=t.model.map(ECLIP_MODELS)).pivot(
+        index=["rbp", "n"], columns="model", values="value"
+    )
     return w.reset_index()[["rbp", "n", *ECLIP_MODELS.values()]].dropna().reset_index(drop=True)
 
 
@@ -46,7 +48,9 @@ def load_iclip(metric: str = "pearson", min_n: int = MIN_N) -> pd.DataFrame:
     """iCLIP test tiles, one row per RBP with both models: rbp, n, zero_shot, fine_tuned."""
     t = load_long(min_n)
     t = t[(t.test_set == "iclip_tiles_600nt") & (t.metric == metric)]
-    w = t.assign(model=t.model.map(ICLIP_MODELS)).pivot(index=["rbp", "n"], columns="model", values="value")
+    w = t.assign(model=t.model.map(ICLIP_MODELS)).pivot(
+        index=["rbp", "n"], columns="model", values="value"
+    )
     return w.reset_index()[["rbp", "n", *ICLIP_MODELS.values()]].dropna().reset_index(drop=True)
 
 

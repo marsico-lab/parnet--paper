@@ -1,0 +1,249 @@
+{
+  "gene": "BHLHE40",
+  "transcript": "ENST00000256495.4",
+  "locus": "chr3:4,979,437-4,985,323:+",
+  "chrom": "chr3",
+  "start": 4979436,
+  "end": 4985323,
+  "strand": "+",
+  "length": 5887,
+  "annotation": "MANE Select v1.4, unspliced (genomic span of the transcript)",
+  "model": "parnet.21m-5.0 (RBPNet_21M_20241126_Penalty-5.0.pt)",
+  "prediction_field": "pred_total is the total profile, pred_target the de-biased one",
+  "precision": "predictions stored as float16 to keep the repository light; rerun this script for float32",
+  "row_order": "profiles_*.parquet has no position column; rows run 0..length-1 within each rbp, in track order",
+  "gene_model": [
+    [
+      "exon",
+      0,
+      362
+    ],
+    [
+      "CDS",
+      282,
+      362
+    ],
+    [
+      "CDS",
+      525,
+      595
+    ],
+    [
+      "exon",
+      525,
+      595
+    ],
+    [
+      "CDS",
+      864,
+      972
+    ],
+    [
+      "exon",
+      864,
+      972
+    ],
+    [
+      "CDS",
+      1955,
+      2079
+    ],
+    [
+      "exon",
+      1955,
+      2079
+    ],
+    [
+      "CDS",
+      3399,
+      4256
+    ],
+    [
+      "exon",
+      3399,
+      5887
+    ]
+  ],
+  "tracks": [
+    {
+      "rbp": "AQR_K562",
+      "total_read_starts": 1963,
+      "n_positions_covered": 805,
+      "n_positions_narrowpeak": 249,
+      "n_positions_pureclip": 99,
+      "pearson_total": 0.913,
+      "pearson_target": 0.913,
+      "spearman_total": 0.382,
+      "auprc_narrowpeak": 0.345,
+      "auroc_narrowpeak": 0.92,
+      "pct_all_pairs": 1.0,
+      "pct_within_rbp": 0.993,
+      "signal_share": {
+        "5UTR": {
+          "observed": 0.017,
+          "predicted": 0.027,
+          "transcript_fraction": 0.048
+        },
+        "CDS": {
+          "observed": 0.173,
+          "predicted": 0.176,
+          "transcript_fraction": 0.21
+        },
+        "3UTR": {
+          "observed": 0.093,
+          "predicted": 0.14,
+          "transcript_fraction": 0.277
+        },
+        "intron": {
+          "observed": 0.717,
+          "predicted": 0.658,
+          "transcript_fraction": 0.465
+        }
+      }
+    },
+    {
+      "rbp": "U2AF2_K562",
+      "total_read_starts": 1876,
+      "n_positions_covered": 1097,
+      "n_positions_narrowpeak": 313,
+      "n_positions_pureclip": 132,
+      "pearson_total": 0.615,
+      "pearson_target": 0.604,
+      "spearman_total": 0.431,
+      "auprc_narrowpeak": 0.184,
+      "auroc_narrowpeak": 0.771,
+      "pct_all_pairs": 0.99,
+      "pct_within_rbp": 0.892,
+      "signal_share": {
+        "5UTR": {
+          "observed": 0.042,
+          "predicted": 0.04,
+          "transcript_fraction": 0.048
+        },
+        "CDS": {
+          "observed": 0.227,
+          "predicted": 0.215,
+          "transcript_fraction": 0.21
+        },
+        "3UTR": {
+          "observed": 0.277,
+          "predicted": 0.199,
+          "transcript_fraction": 0.277
+        },
+        "intron": {
+          "observed": 0.455,
+          "predicted": 0.546,
+          "transcript_fraction": 0.465
+        }
+      }
+    },
+    {
+      "rbp": "TIA1_K562",
+      "total_read_starts": 3378,
+      "n_positions_covered": 1390,
+      "n_positions_narrowpeak": 303,
+      "n_positions_pureclip": 209,
+      "pearson_total": 0.563,
+      "pearson_target": 0.562,
+      "spearman_total": 0.434,
+      "auprc_narrowpeak": 0.121,
+      "auroc_narrowpeak": 0.701,
+      "pct_all_pairs": 0.984,
+      "pct_within_rbp": 0.984,
+      "signal_share": {
+        "5UTR": {
+          "observed": 0.024,
+          "predicted": 0.036,
+          "transcript_fraction": 0.048
+        },
+        "CDS": {
+          "observed": 0.208,
+          "predicted": 0.201,
+          "transcript_fraction": 0.21
+        },
+        "3UTR": {
+          "observed": 0.654,
+          "predicted": 0.318,
+          "transcript_fraction": 0.277
+        },
+        "intron": {
+          "observed": 0.114,
+          "predicted": 0.445,
+          "transcript_fraction": 0.465
+        }
+      }
+    },
+    {
+      "rbp": "PUM2_K562",
+      "total_read_starts": 2333,
+      "n_positions_covered": 788,
+      "n_positions_narrowpeak": 167,
+      "n_positions_pureclip": 130,
+      "pearson_total": 0.703,
+      "pearson_target": 0.695,
+      "spearman_total": 0.373,
+      "auprc_narrowpeak": 0.165,
+      "auroc_narrowpeak": 0.805,
+      "pct_all_pairs": 0.996,
+      "pct_within_rbp": 0.998,
+      "signal_share": {
+        "5UTR": {
+          "observed": 0.01,
+          "predicted": 0.025,
+          "transcript_fraction": 0.048
+        },
+        "CDS": {
+          "observed": 0.115,
+          "predicted": 0.228,
+          "transcript_fraction": 0.21
+        },
+        "3UTR": {
+          "observed": 0.841,
+          "predicted": 0.538,
+          "transcript_fraction": 0.277
+        },
+        "intron": {
+          "observed": 0.034,
+          "predicted": 0.209,
+          "transcript_fraction": 0.465
+        }
+      }
+    },
+    {
+      "rbp": "TARDBP_K562",
+      "total_read_starts": 4179,
+      "n_positions_covered": 854,
+      "n_positions_narrowpeak": 38,
+      "n_positions_pureclip": 84,
+      "pearson_total": 0.947,
+      "pearson_target": 0.898,
+      "spearman_total": 0.376,
+      "auprc_narrowpeak": 0.043,
+      "auroc_narrowpeak": 0.827,
+      "pct_all_pairs": 1.0,
+      "pct_within_rbp": 1.0,
+      "signal_share": {
+        "5UTR": {
+          "observed": 0.008,
+          "predicted": 0.019,
+          "transcript_fraction": 0.048
+        },
+        "CDS": {
+          "observed": 0.068,
+          "predicted": 0.163,
+          "transcript_fraction": 0.21
+        },
+        "3UTR": {
+          "observed": 0.894,
+          "predicted": 0.647,
+          "transcript_fraction": 0.277
+        },
+        "intron": {
+          "observed": 0.03,
+          "predicted": 0.172,
+          "transcript_fraction": 0.465
+        }
+      }
+    }
+  ]
+}
