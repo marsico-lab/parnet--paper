@@ -1,0 +1,40 @@
+{
+  "panel": "mix_classifier_b",
+  "layout": "supp_penalty",
+  "box_mm": [
+    50.0,
+    0.0,
+    46.0,
+    46.0
+  ],
+  "size_mm": [
+    46.0,
+    46.0
+  ],
+  "files": [
+    "mix_classifier_b.pdf",
+    "mix_classifier_b.svg",
+    "mix_classifier_b.png"
+  ],
+  "source": "mix_classifier_b.py",
+  "saved": "2026-10-15T09:39:15+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "main": {
+        "box_edges": {
+          "left": 60.0,
+          "right": 95.0,
+          "top": 6.0,
+          "bottom": 39.0
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {}
+  }
+}

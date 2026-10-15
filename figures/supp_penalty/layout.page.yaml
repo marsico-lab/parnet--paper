@@ -1,0 +1,40 @@
+# Extended Data Figure 2 (related to Figure 2): mixing coefficient and penalty λ.
+# Row 1: a, b mixing coefficient as a peak-vs-background classifier (draft, data of a separate session), c heatmap.
+# c: RNA Bind-n-Seq version of Figure 2 panel kmer_heatmap. d: QKI_HepG2 version of Figure 2 panel region_featimp.
+# Text 7 / 6 pt, nothing below 6 pt (checked: font min).
+schema: 1
+name: supp_penalty
+journal: nature
+style_files: [../style.yaml]
+style:
+  font: {size: 7, small: 6, large: 7, min: 6}
+page: {paper: a4, margins: {left: 13.5, right: 13.5, top: 25, bottom: 25}, outlines: true}
+area:
+  width: double  # 183 mm
+  height: 113
+gutter: 4
+output_dir: output  # build files, ignored by git
+labels: auto
+panels:
+  mix_classifier_a:  # per-RBP AUROC of the mixing coefficient, peak vs nearby background windows, per λ
+    box: [0, 0, 46, 46]
+    source: notebooks/mix_classifier_a.py
+    axes:
+      main: {ref: panel, left: 10, top: 6, right: 45, bottom: 39}
+  mix_classifier_b:  # the same, AUPRC relative to the fraction of peak windows
+    box: [50, 0, 46, 46]
+    source: notebooks/mix_classifier_b.py
+    axes:
+      main: {ref: panel, left: 10, top: 6, right: 45, bottom: 39}
+  kmer_heatmap_rbns:  # Δ correlation of 5-mer scores with RNA Bind-n-Seq, target - total, per λ
+    box: [100, 0, 83, 46]
+    source: notebooks/kmer_heatmap_rbns.py
+    axes:
+      heatmap: {ref: panel, left: 8, top: 7, right: 69, bottom: 25}
+      cbar: {ref: panel, left: 71, top: 7, right: 72.5, bottom: 25}
+  region_featimp_qki:  # QKI_HepG2 attributions per track and λ
+    box: [0, 50, 183, 63]
+    source: notebooks/region_featimp_qki.py
+    axes:
+      title: {ref: panel, left: 13, top: 0, right: 183, bottom: 3}
+      tracks: {ref: panel, left: 13, top: 8, right: 183, bottom: 58, nrows: 5, ncols: 5, hgap: 1.5, wgap: 4}
