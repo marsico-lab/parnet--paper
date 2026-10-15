@@ -54,7 +54,7 @@ ax.set_xlabel("")
 ax.set_ylabel("λ")
 ax.tick_params(axis="x", rotation=90, length=0)
 ax.tick_params(axis="y", rotation=0, length=0)
-ax.set_title("Δ correlation of 5-mer scores with RNA Bind-n-Seq (target − total)", pad=2)  # noqa: RUF001
+ax.set_title("5-mers vs RNA Bind-n-Seq, Δ correlation\n(target − total)", pad=2)  # noqa: RUF001
 cax.set_ylabel("Δ correlation", labelpad=1)
 cax.tick_params(length=1)
 

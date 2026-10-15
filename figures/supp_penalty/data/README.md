@@ -16,3 +16,13 @@ That table was made by `INTERP/notebooks/figures/panel_featimp_vs_penalty.py.ipy
 - Region: chr8:123,325,766-123,325,895 (minus strand, 129 nt; 0-based start), the QKI example of the preprint; rows run 5' to 3' (`position` 1-129), `genomic` is the 0-based coordinate, `nucleotide` the RNA-sense base from hg38.
 - `signal__*`: eCLIP and SMI read starts; `pred__<model>__<track>`: predicted profile; `fi_ig__<model>__<track>`: Integrated Gradients attribution, summed over nucleotides; `fi_rbpnet__*`: input x gradient.
 - Annotations: ENCODE IDR narrowPeak (`bed10_peaks_narrowpeaks/QKI_HepG2/narrowPeak.1_1-2_1.bed.gz`, score = column 8) and PureCLIP crosslink sites (`bed6_peaks_pureclip/QKI_HepG2/peaks.crosslink.bed6`) on the minus strand, as 0-based half-open region positions 5' to 3'.
+
+## mixcoef/ (draft)
+
+`mixcoef_peak_vs_nearby.csv`: per RBP and penalty λ, how well the mixing coefficient w of the RBP's task separates peak windows from nearby background windows.
+Draft: taken from `/localscratch/l10n/mixcoef/calib_rerun.csv.gz` (ms-01-2), written by `/localscratch/l10n/mixcoef/scripts/calib_7m_ext.py` in a separate analysis session; the script is not in a repository yet and its input folder is not recorded.
+
+- Windows: the 500 nt tiles of the test chromosomes, with stored predictions of w (`predictions/<model>/predictions.mix_coeff.*.npy.gz`) for the models of panel kmer_heatmap_rbns (same λ labels; `lam`).
+- Positives: windows with >= 1 position of a narrowPeak 5' end +- 5 nt (union of replicates, `intervals.narrowpeak_union_5p-5nt`); negatives: non-peak windows within 4 windows (2 kb) of a peak window of the same task; tasks with >= 25 of each.
+- Columns: `task` (output index), `rbp_ct` and `swapped` from `parnet--meta/resources/rbp_tables/full_rbp_ct_indexed.ascii-order-corrected.tsv`, `model`, `lam`, `n_pos`, `n_neg`, `prevalence` (fraction of positives), `auroc`, `auprc`, mean w of positives and negatives.
+- To check: whether the peak masks of the 10 `swapped` tasks follow the output order of the models.
