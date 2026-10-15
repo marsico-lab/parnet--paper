@@ -3,7 +3,7 @@
   "layout": "supp_penalty",
   "box_mm": [
     0.0,
-    107.0,
+    50.0,
     183.0,
     63.0
   ],
@@ -17,7 +17,7 @@
     "region_featimp_qki.png"
   ],
   "source": "region_featimp_qki.py",
-  "saved": "2026-10-15T09:10:55+00:00",
+  "saved": "2026-10-15T09:39:18+00:00",
   "issues": [],
   "geometry": {
     "axes": {
@@ -25,8 +25,8 @@
         "box_edges": {
           "left": 13.0,
           "right": 183.0,
-          "top": 107.0,
-          "bottom": 110.0
+          "top": 50.0,
+          "bottom": 53.0
         },
         "spines": [
           "left",
@@ -37,8 +37,8 @@
         "box_edges": {
           "left": 13.0,
           "right": 43.8,
-          "top": 115.0,
-          "bottom": 123.8
+          "top": 58.0,
+          "bottom": 66.8
         },
         "spines": [
           "left",
@@ -49,8 +49,8 @@
         "box_edges": {
           "left": 47.8,
           "right": 78.6,
-          "top": 115.0,
-          "bottom": 123.8
+          "top": 58.0,
+          "bottom": 66.8
         },
         "spines": [
           "left",
@@ -61,8 +61,8 @@
         "box_edges": {
           "left": 82.6,
           "right": 113.4,
-          "top": 115.0,
-          "bottom": 123.8
+          "top": 58.0,
+          "bottom": 66.8
         },
         "spines": [
           "left",
@@ -73,8 +73,8 @@
         "box_edges": {
           "left": 117.4,
           "right": 148.2,
-          "top": 115.0,
-          "bottom": 123.8
+          "top": 58.0,
+          "bottom": 66.8
         },
         "spines": [
           "left",
@@ -85,8 +85,8 @@
         "box_edges": {
           "left": 152.2,
           "right": 183.0,
-          "top": 115.0,
-          "bottom": 123.8
+          "top": 58.0,
+          "bottom": 66.8
         },
         "spines": [
           "left",
@@ -97,8 +97,8 @@
         "box_edges": {
           "left": 13.0,
           "right": 43.8,
-          "top": 125.3,
-          "bottom": 134.1
+          "top": 68.3,
+          "bottom": 77.1
         },
         "spines": [
           "left"
@@ -108,8 +108,8 @@
         "box_edges": {
           "left": 47.8,
           "right": 78.6,
-          "top": 125.3,
-          "bottom": 134.1
+          "top": 68.3,
+          "bottom": 77.1
         },
         "spines": [
           "left"
@@ -119,8 +119,8 @@
         "box_edges": {
           "left": 82.6,
           "right": 113.4,
-          "top": 125.3,
-          "bottom": 134.1
+          "top": 68.3,
+          "bottom": 77.1
         },
         "spines": [
           "left"
@@ -130,8 +130,8 @@
         "box_edges": {
           "left": 117.4,
           "right": 148.2,
-          "top": 125.3,
-          "bottom": 134.1
+          "top": 68.3,
+          "bottom": 77.1
         },
         "spines": [
           "left"
@@ -141,8 +141,8 @@
         "box_edges": {
           "left": 152.2,
           "right": 183.0,
-          "top": 125.3,
-          "bottom": 134.1
+          "top": 68.3,
+          "bottom": 77.1
         },
         "spines": [
           "left"
@@ -152,8 +152,8 @@
         "box_edges": {
           "left": 13.0,
           "right": 43.8,
-          "top": 135.6,
-          "bottom": 144.4
+          "top": 78.6,
+          "bottom": 87.4
         },
         "spines": [
           "left"
@@ -163,8 +163,8 @@
         "box_edges": {
           "left": 47.8,
           "right": 78.6,
-          "top": 135.6,
-          "bottom": 144.4
+          "top": 78.6,
+          "bottom": 87.4
         },
         "spines": [
           "left"
@@ -174,8 +174,8 @@
         "box_edges": {
           "left": 82.6,
           "right": 113.4,
-          "top": 135.6,
-          "bottom": 144.4
+          "top": 78.6,
+          "bottom": 87.4
         },
         "spines": [
           "left"
@@ -185,8 +185,8 @@
         "box_edges": {
           "left": 117.4,
           "right": 148.2,
-          "top": 135.6,
-          "bottom": 144.4
+          "top": 78.6,
+          "bottom": 87.4
         },
         "spines": [
           "left"
@@ -196,8 +196,8 @@
         "box_edges": {
           "left": 152.2,
           "right": 183.0,
-          "top": 135.6,
-          "bottom": 144.4
+          "top": 78.6,
+          "bottom": 87.4
         },
         "spines": [
           "left"
@@ -207,8 +207,8 @@
         "box_edges": {
           "left": 13.0,
           "right": 43.8,
-          "top": 145.9,
-          "bottom": 154.7
+          "top": 88.9,
+          "bottom": 97.7
         },
         "spines": [
           "left"
@@ -218,8 +218,8 @@
         "box_edges": {
           "left": 47.8,
           "right": 78.6,
-          "top": 145.9,
-          "bottom": 154.7
+          "top": 88.9,
+          "bottom": 97.7
         },
         "spines": [
           "left"
@@ -229,8 +229,8 @@
         "box_edges": {
           "left": 82.6,
           "right": 113.4,
-          "top": 145.9,
-          "bottom": 154.7
+          "top": 88.9,
+          "bottom": 97.7
         },
         "spines": [
           "left"
@@ -240,8 +240,8 @@
         "box_edges": {
           "left": 117.4,
           "right": 148.2,
-          "top": 145.9,
-          "bottom": 154.7
+          "top": 88.9,
+          "bottom": 97.7
         },
         "spines": [
           "left"
@@ -251,8 +251,8 @@
         "box_edges": {
           "left": 152.2,
           "right": 183.0,
-          "top": 145.9,
-          "bottom": 154.7
+          "top": 88.9,
+          "bottom": 97.7
         },
         "spines": [
           "left"
@@ -262,8 +262,8 @@
         "box_edges": {
           "left": 13.0,
           "right": 43.8,
-          "top": 156.2,
-          "bottom": 165.0
+          "top": 99.2,
+          "bottom": 108.0
         },
         "spines": [
           "left"
@@ -273,8 +273,8 @@
         "box_edges": {
           "left": 47.8,
           "right": 78.6,
-          "top": 156.2,
-          "bottom": 165.0
+          "top": 99.2,
+          "bottom": 108.0
         },
         "spines": [
           "left"
@@ -284,8 +284,8 @@
         "box_edges": {
           "left": 82.6,
           "right": 113.4,
-          "top": 156.2,
-          "bottom": 165.0
+          "top": 99.2,
+          "bottom": 108.0
         },
         "spines": [
           "left"
@@ -295,8 +295,8 @@
         "box_edges": {
           "left": 117.4,
           "right": 148.2,
-          "top": 156.2,
-          "bottom": 165.0
+          "top": 99.2,
+          "bottom": 108.0
         },
         "spines": [
           "left"
@@ -306,8 +306,8 @@
         "box_edges": {
           "left": 152.2,
           "right": 183.0,
-          "top": 156.2,
-          "bottom": 165.0
+          "top": 99.2,
+          "bottom": 108.0
         },
         "spines": [
           "left"
@@ -320,8 +320,8 @@
         "box_edges": {
           "left": 125.596,
           "right": 183.0,
-          "top": 106.629,
-          "bottom": 110.371
+          "top": 49.629,
+          "bottom": 53.371
         }
       }
     }

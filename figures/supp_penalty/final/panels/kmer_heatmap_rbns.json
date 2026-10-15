@@ -2,14 +2,14 @@
   "panel": "kmer_heatmap_rbns",
   "layout": "supp_penalty",
   "box_mm": [
+    100.0,
     0.0,
-    59.0,
-    183.0,
-    44.0
+    83.0,
+    46.0
   ],
   "size_mm": [
-    183.0,
-    44.0
+    83.0,
+    46.0
   ],
   "files": [
     "kmer_heatmap_rbns.pdf",
@@ -17,25 +17,25 @@
     "kmer_heatmap_rbns.png"
   ],
   "source": "kmer_heatmap_rbns.py",
-  "saved": "2026-10-15T09:10:53+00:00",
+  "saved": "2026-10-15T09:39:16+00:00",
   "issues": [],
   "geometry": {
     "axes": {
       "heatmap": {
         "box_edges": {
-          "left": 12.0,
-          "right": 168.0,
-          "top": 66.0,
-          "bottom": 84.0
+          "left": 108.0,
+          "right": 169.0,
+          "top": 7.0,
+          "bottom": 25.0
         },
         "spines": []
       },
       "cbar": {
         "box_edges": {
-          "left": 172.0,
-          "right": 174.5,
-          "top": 66.0,
-          "bottom": 84.0
+          "left": 171.0,
+          "right": 172.5,
+          "top": 7.0,
+          "bottom": 25.0
         },
         "spines": [
           "outline"
