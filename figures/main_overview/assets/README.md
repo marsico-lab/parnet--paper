@@ -1,8 +1,7 @@
 # Assets
 
-Panels made outside Python, placed by the panel notebooks.
-
 | File | Panel | Origin |
 | --- | --- | --- |
-| `schematic.pdf` | B | Stand-in drawn with matplotlib. In a real figure: Inkscape, Illustrator or BioRender export at the exact box size. |
-| `image.png` | C | Stand-in synthetic image. In a real figure: microscopy, screenshot, genome browser view. |
+| `parnet-pipeline-applications.pdf` | `abstract` | Hand-made schematic (vector, text converted to outlines), 184.7 x 94.6 mm; scaled to 183 mm wide by the notebook. |
+
+Text size, estimated from the outlined glyphs at the scale of the figure: 6 to 8.5 pt in the schematic and the section titles; about 2.5 to 3.5 pt in the four thumbnails of the bottom row (UMAP labels and legend, scatter axes, attribution axes, splicing sequence).

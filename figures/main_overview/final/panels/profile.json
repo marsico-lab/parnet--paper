@@ -1,0 +1,205 @@
+{
+  "panel": "profile",
+  "layout": "main_overview",
+  "box_mm": [
+    0.0,
+    97.7,
+    183.0,
+    98.0
+  ],
+  "size_mm": [
+    183.0,
+    98.0
+  ],
+  "files": [
+    "profile.pdf",
+    "profile.svg",
+    "profile.png"
+  ],
+  "source": "profile_example_BHLHE40.py",
+  "saved": "2026-10-15T07:03:28+00:00",
+  "issues": [],
+  "geometry": {
+    "axes": {
+      "gene_model": {
+        "box_edges": {
+          "left": 31.5,
+          "right": 182.0,
+          "top": 100.7,
+          "bottom": 103.7
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "AQR_K562.eclip": {
+        "box_edges": {
+          "left": 31.5,
+          "right": 182.0,
+          "top": 105.2,
+          "bottom": 109.23
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "AQR_K562.peaks": {
+        "box_edges": {
+          "left": 31.5,
+          "right": 182.0,
+          "top": 109.53,
+          "bottom": 116.13
+        },
+        "spines": []
+      },
+      "AQR_K562.parnet": {
+        "box_edges": {
+          "left": 31.5,
+          "right": 182.0,
+          "top": 116.43,
+          "bottom": 120.46
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "U2AF2_K562.eclip": {
+        "box_edges": {
+          "left": 31.5,
+          "right": 182.0,
+          "top": 122.26,
+          "bottom": 126.29
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "U2AF2_K562.peaks": {
+        "box_edges": {
+          "left": 31.5,
+          "right": 182.0,
+          "top": 126.59,
+          "bottom": 133.19
+        },
+        "spines": []
+      },
+      "U2AF2_K562.parnet": {
+        "box_edges": {
+          "left": 31.5,
+          "right": 182.0,
+          "top": 133.49,
+          "bottom": 137.52
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "TIA1_K562.eclip": {
+        "box_edges": {
+          "left": 31.5,
+          "right": 182.0,
+          "top": 139.32,
+          "bottom": 143.35
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "TIA1_K562.peaks": {
+        "box_edges": {
+          "left": 31.5,
+          "right": 182.0,
+          "top": 143.65,
+          "bottom": 150.25
+        },
+        "spines": []
+      },
+      "TIA1_K562.parnet": {
+        "box_edges": {
+          "left": 31.5,
+          "right": 182.0,
+          "top": 150.55,
+          "bottom": 154.58
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "PUM2_K562.eclip": {
+        "box_edges": {
+          "left": 31.5,
+          "right": 182.0,
+          "top": 156.38,
+          "bottom": 160.41
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "PUM2_K562.peaks": {
+        "box_edges": {
+          "left": 31.5,
+          "right": 182.0,
+          "top": 160.71,
+          "bottom": 167.31
+        },
+        "spines": []
+      },
+      "PUM2_K562.parnet": {
+        "box_edges": {
+          "left": 31.5,
+          "right": 182.0,
+          "top": 167.61,
+          "bottom": 171.64
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "TARDBP_K562.eclip": {
+        "box_edges": {
+          "left": 31.5,
+          "right": 182.0,
+          "top": 173.44,
+          "bottom": 177.47
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      },
+      "TARDBP_K562.peaks": {
+        "box_edges": {
+          "left": 31.5,
+          "right": 182.0,
+          "top": 177.77,
+          "bottom": 184.37
+        },
+        "spines": []
+      },
+      "TARDBP_K562.parnet": {
+        "box_edges": {
+          "left": 31.5,
+          "right": 182.0,
+          "top": 184.67,
+          "bottom": 188.7
+        },
+        "spines": [
+          "left",
+          "bottom"
+        ]
+      }
+    },
+    "marks": {},
+    "anchors": {}
+  }
+}

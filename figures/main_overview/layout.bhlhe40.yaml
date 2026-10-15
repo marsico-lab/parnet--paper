@@ -1,0 +1,24 @@
+# Main figure, overview (Figure 1 in the manuscript): graphical abstract and one transcript profile.
+# Profile candidate: BHLHE40 (5 RBPs). layout.yaml links to the selected candidate (BHLHE40 in the paper);
+# layout.{bhlhe40,gata2,myc}.yaml differ only in the profile notebook and its height.
+# Text 7 / 6 pt, nothing below 6 pt (checked: font min).
+schema: 1
+name: main_overview
+journal: nature
+style_files: [../style.yaml]
+style:
+  font: {size: 7, small: 6, large: 7, min: 6}
+page: {paper: a4, margins: {left: 13.5, right: 13.5, top: 25, bottom: 25}, outlines: true}
+area:
+  width: double  # 183 mm
+  height: 195.7
+gutter: 4
+output_dir: output  # build files, ignored by git
+labels: auto
+panels:
+  abstract:  # assets/parnet-pipeline-applications.pdf, 184.7 x 94.6 mm, scaled to the column width
+    box: [0, 0, 183, 93.7]
+    source: notebooks/graphical_abstract.py
+  profile:  # observed eCLIP, peaks and PARNET prediction along one test transcript
+    box: [0, 97.7, 183, 98]
+    source: notebooks/profile_example_BHLHE40.py
