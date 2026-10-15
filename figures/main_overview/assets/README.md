@@ -2,6 +2,6 @@
 
 | File | Panel | Origin |
 | --- | --- | --- |
-| `parnet-pipeline-applications.pdf` | `abstract` | Hand-made schematic (vector, text converted to outlines), 184.7 x 94.6 mm; scaled to 183 mm wide by the notebook. |
+| `parnet-pipeline-applications.pdf` | `abstract` | Hand-made schematic (vector, text converted to outlines), 182.0 x 83.4 mm, version of 2026-10-15; scaled to 183 mm wide by the notebook. |
 
-Text size, estimated from the outlined glyphs at the scale of the figure: 6 to 8.5 pt in the schematic and the section titles; about 2.5 to 3.5 pt in the four thumbnails of the bottom row (UMAP labels and legend, scatter axes, attribution axes, splicing sequence).
+Text size, estimated from the outlined glyphs (about +-10%): 6 to 8 pt in the schematic and the titles; below 6 pt: the UMAP legend (about 3.9 pt), the axis labels of the performance scatter (about 4.4 pt), "Translation" and "Intron retention" (about 5.5 pt), "Dropout" (about 5.7 pt).

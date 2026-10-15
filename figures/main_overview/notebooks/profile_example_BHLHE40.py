@@ -78,11 +78,13 @@ data.summary()
 # Layout `layout.bhlhe40.yaml` (`pixi run use-layout main_overview bhlhe40`).
 # Rows of each RBP: eCLIP read starts (replicate 1 solid, replicate 2 dashed), narrowPeaks of
 # replicates 1 and 2, PureCLIP crosslink sites, and the PARNET 21M (λ = 5) total profile.
-# One y tick per row: the top of its scale. Grey bands: exons.
+# y axes cut at CLIP x the maximum of each eCLIP and PARNET row (taller peaks are clipped), so
+# that the lower signal stays visible; the tick on the right is the top of the row. Grey bands: exons.
 
 # %%
 import plotplate as pp
 
+CLIP = 0.5
 panel = pp.Layout.load("../layout.yaml").panel("profile")
-fig = profile_panel.draw("BHLHE40", panel=panel)
+fig = profile_panel.draw("BHLHE40", panel=panel, clip=CLIP)
 report = panel.save(fig, source="profile_example_BHLHE40.py")

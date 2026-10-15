@@ -12,11 +12,11 @@ BHLHE40 is the panel of the figure (`layout.bhlhe40.yaml`, selected by `layout.y
 GATA2 and MYC stay in the repository as alternatives, each with its own layout; their
 renderings are below, at their size in the figure.
 
-| Notebook | Transcript | Tracks | What it argues |
-| --- | --- | --- | --- |
-| `notebooks/profile_example_BHLHE40.py` | BHLHE40, chr3, 5,887 nt | AQR, U2AF2, TIA1, PUM2, TARDBP (K562) | Each predicted peak lands on a feature you can name: a splice site, a pyrimidine tract, a UG repeat, a 3'UTR |
-| `notebooks/profile_example_GATA2.py` | GATA2, chr3, 9,104 nt | AQR, U2AF2, TARDBP, IGF2BP2 (K562) | Two positional markers plus two sequence-specific binders, on a transcript that matters in K562 |
-| `notebooks/profile_example_MYC.py` | MYC, chr8, 6,721 nt | HNRNPA1 (HepG2), IGF2BP1, IGF2BP3 (HepG2), IGF2BP2 (K562) | A named binding element from the literature, and agreement across three experiments in two cell lines |
+| Notebook                               | Transcript              | Tracks                                                    | What it argues                                                                                               |
+| -------------------------------------- | ----------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `notebooks/profile_example_BHLHE40.py` | BHLHE40, chr3, 5,887 nt | AQR, U2AF2, TIA1, PUM2, TARDBP (K562)                     | Each predicted peak lands on a feature you can name: a splice site, a pyrimidine tract, a UG repeat, a 3'UTR |
+| `notebooks/profile_example_GATA2.py`   | GATA2, chr3, 9,104 nt   | AQR, U2AF2, TARDBP, IGF2BP2 (K562)                        | Two positional markers plus two sequence-specific binders, on a transcript that matters in K562              |
+| `notebooks/profile_example_MYC.py`     | MYC, chr8, 6,721 nt     | HNRNPA1 (HepG2), IGF2BP1, IGF2BP3 (HepG2), IGF2BP2 (K562) | A named binding element from the literature, and agreement across three experiments in two cell lines        |
 
 BHLHE40 and GATA2 are the stronger two. BHLHE40 answers the criticism of the old panel
 most directly, since there is an independent reason for every peak it shows. GATA2 adds
@@ -91,7 +91,8 @@ RBPs, and only the row heights follow the box height.
 
 Rows of each RBP, top to bottom: eCLIP read starts (replicate 1 solid, replicate 2 dashed),
 the narrowPeaks of replicates 1 and 2, the PureCLIP crosslink sites, and the PARNET profile.
-Each signal row has one y tick, at the top of its scale. Grey bands mark the exons.
+Each eCLIP and PARNET row is cut at half its maximum (`CLIP = 0.5` in the notebooks), so that the lower
+signal is visible next to the tallest peaks; its one y tick, on the right, is the top of the row. Grey bands mark the exons.
 `draw(..., prediction="pred_target")` switches the PARNET row from the total profile, which
 is what the observed read starts correspond to, to the de-biased target profile.
 

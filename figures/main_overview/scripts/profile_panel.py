@@ -34,12 +34,12 @@ PALETTE = ["#2713dc", "#e71515", "#a406de", "#0a8f4a", "#d98200", "#0f8ea8"]
 #: Peak rows of a block, top to bottom: (track in peaks_<GENE>.tsv.gz, row label).
 PEAK_ROWS = [("narrowpeak_rep1", "rep1"), ("narrowpeak_rep2", "rep2"), ("pureclip", "PureCLIP")]
 
-# Geometry, mm. Label columns left of the plots: RBP name, row labels, y tick labels.
+# Geometry, mm. Label columns left of the plots: RBP name, row labels; y tick labels on the right.
 NAME_X = 0.0
 LABEL_RIGHT = 25.5  # right edge of the row labels
 NARROWPEAK_RIGHT = 19.5  # right edge of the "narrow / Peak" label spanning rep1 and rep2
-PLOT_LEFT = 31.5
-PLOT_RIGHT_PAD = 1.0
+PLOT_LEFT = 27.0
+PLOT_RIGHT_PAD = 7.5  # y tick labels, right of the rows
 TITLE_H = 3.0  # gene title line
 GENE_H = 3.0  # gene model
 TOP_GAP = 1.5
@@ -110,7 +110,9 @@ def load(gene: str, data_dir: str | Path = DEFAULT_DATA_DIR) -> PanelData:
     profiles = pd.read_parquet(data_dir / f"profiles_{gene}.parquet")
     counts = profiles.groupby("rbp", sort=False).size()
     if not (counts == meta["length"]).all():
-        raise ValueError(f"profiles_{gene}.parquet: every RBP should have {meta['length']} rows, got {dict(counts)}")
+        raise ValueError(
+            f"profiles_{gene}.parquet: every RBP should have {meta['length']} rows, got {dict(counts)}"
+        )
     profiles["position"] = profiles.groupby("rbp", sort=False).cumcount().astype("int32")
     for column in ("pred_total", "pred_target"):
         profiles[column] = profiles[column].astype("float32")
@@ -132,11 +134,12 @@ def _colour_for(rbp: str, index: int, panel) -> str:
     return PALETTE[index % len(PALETTE)]
 
 
-def _top_tick(ax, top: float, fmt: str) -> None:
+def _top_tick(ax, top: float) -> None:
     """One y tick, at the top of the axis: the scale of a row without crowding it."""
     ax.set_ylim(0, top)
     ax.set_yticks([top])
-    ax.set_yticklabels([fmt.format(top)])
+    ax.set_yticklabels([f"{top:.2g}"])
+    ax.yaxis.tick_right()
     ax.tick_params(axis="y", labelsize=SMALL, length=1.5, pad=1)
 
 
@@ -152,7 +155,23 @@ def _nice_top(value: float) -> float:
     return float(10 ** (exponent + 1))
 
 
-def draw(gene: str, panel, rbps: list[str] | None = None, *, data_dir: str | Path = DEFAULT_DATA_DIR, prediction: str = "pred_total"):
+def _scale_top(maximum: float, clip: float) -> float:
+    """Top of a row: the maximum rounded up to 1, 2 or 5, or clip x maximum (2 digits) when clipped."""
+    if clip >= 1:
+        return _nice_top(maximum)
+    top = clip * maximum
+    return float(f"{top:.2g}")
+
+
+def draw(
+    gene: str,
+    panel,
+    rbps: list[str] | None = None,
+    *,
+    data_dir: str | Path = DEFAULT_DATA_DIR,
+    prediction: str = "pred_total",
+    clip: float = 1.0,
+):
     """Draw the panel in its plotplate box and return the figure.
 
     Args:
@@ -162,6 +181,8 @@ def draw(gene: str, panel, rbps: list[str] | None = None, *, data_dir: str | Pat
         data_dir: folder holding ``panel_*.json``, ``profiles_*.parquet`` and ``peaks_*.tsv.gz``.
         prediction: ``"pred_total"`` for the total profile, which is what the observed read
             starts correspond to, or ``"pred_target"`` for the de-biased one.
+        clip: top of each eCLIP and PARNET row as a fraction of the row maximum; higher
+            values are cut at the top of the row (1 = no clipping).
     """
     data = load(gene, data_dir)
     rbps = rbps or data.rbps
@@ -185,18 +206,27 @@ def draw(gene: str, panel, rbps: list[str] | None = None, *, data_dir: str | Pat
     for kind, start, end in data.meta["gene_model"]:
         h = {"exon": 0.45, "CDS": 0.9}.get(kind)
         if h is not None:
-            ax_gene.add_patch(mpl.patches.Rectangle((start, -h / 2), end - start, h, facecolor="#0C0C78", lw=0))
+            ax_gene.add_patch(
+                mpl.patches.Rectangle((start, -h / 2), end - start, h, facecolor="#0C0C78", lw=0)
+            )
     ax_gene.plot([0, length], [0, 0], color="#0C0C78", lw=0.6, zorder=0)
     ax_gene.set(xlim=(0, length), ylim=(-0.5, 0.5), yticks=[], xticks=[])
     ax_gene.axis("off")
     meta = data.meta
-    text(PLOT_LEFT, TITLE_H / 2, f"{meta['gene']}   {meta['transcript']}   {meta['locus']}   {length:,} nt", fontsize=NORMAL)
+    text(
+        PLOT_LEFT,
+        TITLE_H / 2,
+        f"{meta['gene']}   {meta['transcript']}   {meta['locus']}   {length:,} nt",
+        fontsize=NORMAL,
+    )
 
     block_top = TITLE_H + GENE_H + TOP_GAP
     block_h = (height - block_top - BOTTOM - (n - 1) * BLOCK_GAP) / n
     track_h = (block_h - len(PEAK_ROWS) * PEAK_ROW_H - 2 * ROW_GAP) / 2
     if track_h < 2.5:
-        raise ValueError(f"panel {panel.name}: {height:.0f} mm is too short for {n} RBPs (track rows {track_h:.1f} mm)")
+        raise ValueError(
+            f"panel {panel.name}: {height:.0f} mm is too short for {n} RBPs (track rows {track_h:.1f} mm)"
+        )
 
     axes = [ax_gene]
     for i, rbp in enumerate(rbps):
@@ -209,7 +239,7 @@ def draw(gene: str, panel, rbps: list[str] | None = None, *, data_dir: str | Pat
         ax_signal = add_axes(top, track_h)
         for style, replicate in (("-", 1), ("--", 2)):
             ax_signal.plot(x, rows[f"signal_rep{replicate}"].to_numpy(), style, color=pale, lw=0.5)
-        _top_tick(ax_signal, _nice_top(rows[["signal_rep1", "signal_rep2"]].to_numpy().max()), "{:g}")
+        _top_tick(ax_signal, _scale_top(rows[["signal_rep1", "signal_rep2"]].to_numpy().max(), clip))
         text(LABEL_RIGHT, top + track_h / 2, "eCLIP", ha="right")
 
         peaks_top = top + track_h + ROW_GAP
@@ -221,7 +251,9 @@ def draw(gene: str, panel, rbps: list[str] | None = None, *, data_dir: str | Pat
             for start, end in zip(sel.start, sel.end, strict=True):
                 w = max(end - start, min_w)
                 ax_peaks.add_patch(
-                    mpl.patches.Rectangle((start - (w - (end - start)) / 2, k + 0.15), w, 0.7, facecolor=colour, lw=0)
+                    mpl.patches.Rectangle(
+                        (start - (w - (end - start)) / 2, k + 0.15), w, 0.7, facecolor=colour, lw=0
+                    )
                 )
             text(LABEL_RIGHT, peaks_top + (k + 0.5) * PEAK_ROW_H, label, ha="right")
         text(NARROWPEAK_RIGHT, peaks_top + PEAK_ROW_H, "narrow\nPeak", ha="right", linespacing=0.95)
@@ -231,8 +263,8 @@ def draw(gene: str, panel, rbps: list[str] | None = None, *, data_dir: str | Pat
         pred_top = peaks_top + len(PEAK_ROWS) * PEAK_ROW_H + ROW_GAP
         ax_pred = add_axes(pred_top, track_h)
         ax_pred.plot(x, rows[prediction].to_numpy(), color=colour, lw=0.6)
-        _top_tick(ax_pred, _nice_top(float(rows[prediction].max())), "{:g}")
-        text(LABEL_RIGHT, pred_top + track_h / 2, "PARNET", ha="right")
+        _top_tick(ax_pred, _scale_top(float(rows[prediction].max()), clip))
+        text(LABEL_RIGHT, pred_top + track_h / 2, "PARNET", ha="right", fontweight="bold")
 
         centre = top + block_h / 2
         text(NAME_X, centre - 2.6, name, fontsize=NORMAL, fontweight="bold", ha="left")
@@ -240,7 +272,7 @@ def draw(gene: str, panel, rbps: list[str] | None = None, *, data_dir: str | Pat
         text(NAME_X, centre + 2.4, f"r = {data.track(rbp)['pearson_total']:.2f}", ha="left")
 
         for ax in (ax_signal, ax_pred):
-            for side in ("top", "right"):
+            for side in ("top", "left"):
                 ax.spines[side].set_visible(False)
         for ax in (ax_signal, ax_peaks, ax_pred):
             ax.set_xlim(0, length)

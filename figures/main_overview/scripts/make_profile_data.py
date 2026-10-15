@@ -47,8 +47,13 @@ METRICS = Path(
 )
 MODEL = RESOURCES / "parnet_models" / "RBPNet_21M_20241126_Penalty-5.0.pt"
 TRACK_TABLE = RESOURCES / "parnet_models" / "full_rbp_set.tsv"
-BIGWIG = RESOURCES / "parnet_encore_eclip/bigwig_processed_counts/{rbp}/eCLIP/{rep}/counts.{strand}.bw"
-NARROWPEAK = RESOURCES / "parnet_encore_eclip/bed10_peaks_narrowpeaks_full_folder/GRCh38/{rbp}/narrowPeak.{rep}.bed.gz"
+BIGWIG = (
+    RESOURCES / "parnet_encore_eclip/bigwig_processed_counts/{rbp}/eCLIP/{rep}/counts.{strand}.bw"
+)
+NARROWPEAK = (
+    RESOURCES
+    / "parnet_encore_eclip/bed10_peaks_narrowpeaks_full_folder/GRCh38/{rbp}/narrowPeak.{rep}.bed.gz"
+)
 PURECLIP = RESOURCES / "parnet_encore_eclip/bed6_peaks_pureclip/{rbp}/peaks.crosslink.bed6"
 
 COMPLEMENT = str.maketrans("ACGTN", "TGCAN")
@@ -184,10 +189,14 @@ def region_labels(gene_model: list[tuple[str, int, int]], length: int) -> np.nda
     return labels
 
 
-def build(gene: str, spec: dict, gff: pd.DataFrame, model, percentiles: pd.DataFrame, outdir: Path) -> None:
+def build(
+    gene: str, spec: dict, gff: pd.DataFrame, model, percentiles: pd.DataFrame, outdir: Path
+) -> None:
     region, features = transcript_region(gff, spec["tid"])
     length = region["end"] - region["start"]
-    sequence = str(pyfaidx.Fasta(str(FASTA))[region["chrom"]][region["start"] : region["end"]]).upper()
+    sequence = str(
+        pyfaidx.Fasta(str(FASTA))[region["chrom"]][region["start"] : region["end"]]
+    ).upper()
     if region["strand"] == "-":
         sequence = sequence.translate(COMPLEMENT)[::-1]
 
