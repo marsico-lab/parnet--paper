@@ -3,13 +3,13 @@
   "layout": "main_performance",
   "box_mm": [
     86.0,
-    136.0,
+    123.0,
     97.0,
-    36.0
+    34.0
   ],
   "size_mm": [
     97.0,
-    36.0
+    34.0
   ],
   "files": [
     "tdp43_example.pdf",
@@ -17,16 +17,16 @@
     "tdp43_example.png"
   ],
   "source": "tdp43_example.py",
-  "saved": "2026-10-14T08:30:20+00:00",
+  "saved": "2026-10-16T08:21:26+00:00",
   "issues": [],
   "geometry": {
     "axes": {
       "image": {
         "box_edges": {
-          "left": 86.077,
-          "right": 182.923,
-          "top": 136.0,
-          "bottom": 172.0
+          "left": 88.767,
+          "right": 180.233,
+          "top": 123.0,
+          "bottom": 157.0
         },
         "spines": [
           "left",

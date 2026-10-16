@@ -5,11 +5,11 @@
     0.0,
     0.0,
     58.0,
-    46.0
+    42.0
   ],
   "size_mm": [
     58.0,
-    46.0
+    42.0
   ],
   "files": [
     "perf_correlation.pdf",
@@ -17,7 +17,7 @@
     "perf_correlation.png"
   ],
   "source": "perf_correlation.py",
-  "saved": "2026-10-14T08:30:12+00:00",
+  "saved": "2026-10-16T08:21:18+00:00",
   "issues": [
     {
       "level": "warning",
@@ -75,9 +75,9 @@
       "main": {
         "box_edges": {
           "left": 14.0,
-          "right": 49.0,
+          "right": 43.0,
           "top": 6.0,
-          "bottom": 39.0
+          "bottom": 35.0
         },
         "spines": [
           "left",
@@ -89,10 +89,10 @@
     "anchors": {
       "main.legend": {
         "box_edges": {
-          "left": 18.535,
-          "right": 49.0,
-          "top": 35.88,
-          "bottom": 39.0
+          "left": 12.535,
+          "right": 43.0,
+          "top": 31.88,
+          "bottom": 35.0
         }
       }
     }

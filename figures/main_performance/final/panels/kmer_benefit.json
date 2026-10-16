@@ -3,7 +3,7 @@
   "layout": "main_performance",
   "box_mm": [
     137.0,
-    96.0,
+    84.0,
     46.0,
     36.0
   ],
@@ -17,7 +17,7 @@
     "kmer_benefit.png"
   ],
   "source": "kmer_benefit.py",
-  "saved": "2026-10-14T08:30:18+00:00",
+  "saved": "2026-10-16T08:21:25+00:00",
   "issues": [],
   "geometry": {
     "axes": {
@@ -25,8 +25,8 @@
         "box_edges": {
           "left": 150.0,
           "right": 182.0,
-          "top": 101.0,
-          "bottom": 124.0
+          "top": 89.0,
+          "bottom": 112.0
         },
         "spines": [
           "left",

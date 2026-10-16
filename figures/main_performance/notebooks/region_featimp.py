@@ -26,7 +26,8 @@
 # Dashed lines: the RBFOX motif GCAUGCAUG (positions 76-84), two overlapping GCAUG, the second within UGCAUG.
 # Attributions of each model are divided by that model's peak |attribution| of the total track over
 # the whole 100 nt region (the total track peaks at 1 in every column), and all logos share one y
-# range: the attribution scale differs between models, the shape within a model does not.
+# scale (mm per unit): the attribution scale differs between models, the shape within a model does not.
+# Each logo row is as tall as its own range over the 5 models, so letters have the same size in every row.
 # Column title: λ and the Spearman rho of the predicted total track with eCLIP read starts over the
 # whole 100 nt region (not only the zoomed part).
 
@@ -99,10 +100,27 @@ title_ax.text(
     va="center",
     fontsize=plt.rcParams["axes.titlesize"],
 )
-values = [attribution(m, t) for m in MODELS for t in ROWS]
-lo, hi = min(min(v.min() for v in values), 0), max(v.max() for v in values)
-ylim = (lo - 0.05 * (hi - lo), hi + 0.05 * (hi - lo))
-grid = np.asarray(panel.axes(fig, "tracks")).reshape(5, len(MODELS))
+values = {t: [attribution(m, t) for m in MODELS] for t in ROWS}
+lo = min(min(v.min() for vs in values.values() for v in vs), 0)
+hi = max(v.max() for vs in values.values() for v in vs)
+pad = 0.05 * (hi - lo)
+row_ylim = {
+    t: (min(min(v.min() for v in vs), 0) - pad, max(v.max() for v in vs) + pad)
+    for t, vs in values.items()
+}
+SIGNAL_H, HGAP = 5.3, 1.2  # mm
+logo_h = panel.axes_rect("tracks").h - SIGNAL_H - HGAP * len(ROWS)
+spans = [row_ylim[t][1] - row_ylim[t][0] for t in ROWS]
+heights = [SIGNAL_H] + [logo_h * s / sum(spans) for s in spans]
+gs = panel.gridspec(
+    fig, "tracks", nrows=1 + len(ROWS), ncols=len(MODELS), hgap=HGAP, wgap=4, height_ratios=heights
+)
+grid = np.array(
+    [[fig.add_subplot(gs[r, c]) for c in range(len(MODELS))] for r in range(1 + len(ROWS))]
+)
+for r, row in enumerate(["signal", *ROWS]):
+    for c, model in enumerate(MODELS):
+        grid[r, c].set_label(f"{row}.{model}")
 signal = table[["signal__total", "signal__control"]].iloc[ZOOM]
 signal_max = np.log10(signal["signal__total"].max() + 1) * 1.45  # headroom for the annotations
 peak_shade = {p.start: "#bdbdbd" if p.score < 50 else "#616161" for p in peaks.itertuples()}
@@ -147,7 +165,7 @@ for col, (model, label) in enumerate(MODELS.items()):
         ax = grid[r, col]
         a = attribution(model, track)
         draw_logo(ax, a, seq)
-        ax.set_ylim(*ylim)
+        ax.set_ylim(*row_ylim[track])
         ax.axhline(0, color="#424242", linewidth=0.3)
         for xl in motif_lines:
             ax.axvline(xl, color="#757575", linewidth=0.4, linestyle=(0, (2, 1.5)), zorder=0)

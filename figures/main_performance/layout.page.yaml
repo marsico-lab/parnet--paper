@@ -1,4 +1,5 @@
-# Main figure, performance (Figure 2 in the manuscript), arrangement of 2026-10-07 (second draft): one full A4 page.
+# Main figure, performance (Figure 2 in the manuscript), arrangement of 2026-10-07 (second draft), 220 mm tall (2026-10-16):
+# with one caption line it fits the 228.6 mm text height of the bioRxiv template; 3 mm gaps.
 # Text 6 / 5 pt, as main_mutations.
 # Panel keys are ids; the letters follow the reading order (labels: auto).
 # Box: [x, y, width, height] in mm from the figure's top-left corner.
@@ -12,53 +13,53 @@ style:
 page: {paper: a4, margins: {left: 13.5, right: 13.5, top: 25, bottom: 25}, outlines: true}
 area:
   width: double  # 183 mm
-  height: 238
-gutter: 4
+  height: 220
+gutter: 3
 output_dir: output  # build files, ignored by git
 labels: auto
 panels:
   # --- PARNET vs single-task RBPNet ---
   perf_correlation:  # per-RBP mean per-window Pearson, single-RBPNet (x) vs PARNET (y)
-    box: [0, 0, 58, 46]
+    box: [0, 0, 58, 42]
     source: notebooks/perf_correlation.py
     axes: &scatter_axes
-      main: {ref: panel, left: 14, top: 6, right: 49, bottom: 39}
+      main: {ref: panel, left: 14, top: 6, right: 43, bottom: 35}  # square
   perf_auprc:  # per-RBP mean per-window AUPRC against narrowPeak 5' ends, same models
-    box: [62.5, 0, 58, 46]
+    box: [62.5, 0, 58, 42]
     source: notebooks/perf_auprc.py
     axes: *scatter_axes
   perf_quartiles:  # gain of PARNET over single-RBPNet per quartile of single-RBPNet performance
-    box: [125, 0, 58, 46]
+    box: [125, 0, 58, 42]
     source: notebooks/perf_quartiles.py
     axes:
-      main: {ref: panel, left: 10, top: 6, right: 53, bottom: 38}
+      main: {ref: panel, left: 10, top: 6, right: 53, bottom: 34}
   # --- Penalty on the mixing coefficient ---
   region_featimp:  # RBFOX2_HepG2 region: signal and attributions per track, one column per penalty
-    box: [0, 50, 183, 42]
+    box: [0, 45, 183, 36]
     source: notebooks/region_featimp.py
     axes:
       title: {ref: panel, left: 11, top: 0, right: 183, bottom: 2.5}
-      tracks: {ref: panel, left: 11, top: 7, right: 183, bottom: 38.5, nrows: 5, ncols: 5, hgap: 1.2, wgap: 4}
+      tracks: {ref: panel, left: 11, top: 7, right: 183, bottom: 32.5}  # 5 x 5 grid, row heights set in the notebook
   kmer_heatmap:  # change of 5-mer vs in vitro correlation, target vs total track, per penalty (RNAcompete)
-    box: [0, 96, 133, 36]
+    box: [0, 84, 133, 36]
     source: notebooks/kmer_heatmap.py
     axes:
       heatmap: {ref: panel, left: 10, top: 5, right: 120, bottom: 20}
       cbar: {ref: panel, left: 122, top: 5, right: 123.2, bottom: 20}
   kmer_benefit:  # mean change vs lambda = 0 per RBP, RNAcompete and RBNS
-    box: [137, 96, 46, 36]
+    box: [137, 84, 46, 36]
     source: notebooks/kmer_benefit.py
     axes:
       main: {ref: panel, left: 13, top: 5, right: 45, bottom: 28}
   # --- Examples and iCLIP ---
   iclip:  # iCLIP zero-shot vs fine-tuned, two points per RBP
-    box: [0, 136, 82, 36]
+    box: [0, 123, 82, 34]
     source: notebooks/iclip.py
     axes:
-      main: {ref: panel, left: 11, top: 3, right: 80, bottom: 30}
+      main: {ref: panel, left: 11, top: 3, right: 80, bottom: 28}
   tdp43_example:  # TDP-43 / STMN2 tracks (collaborator image, assets/)
-    box: [86, 136, 97, 36]
+    box: [86, 123, 97, 34]
     source: notebooks/tdp43_example.py
   rna_maps:  # RNA maps of splicing regulation (collaborator image, assets/)
-    box: [0, 176, 183, 62]
+    box: [0, 160, 183, 60]
     source: notebooks/rna_maps.py
