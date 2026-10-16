@@ -31,13 +31,12 @@ DEFAULT_DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 #: Fallback track colours, used when the layout does not define one for the RBP.
 PALETTE = ["#2713dc", "#e71515", "#a406de", "#0a8f4a", "#d98200", "#0f8ea8"]
 
-#: Peak rows of a block, top to bottom: (track in peaks_<GENE>.tsv.gz, row label).
-PEAK_ROWS = [("narrowpeak_rep1", "rep1"), ("narrowpeak_rep2", "rep2"), ("pureclip", "PureCLIP")]
+#: Peak rows of a block: (tracks in peaks_<GENE>.tsv.gz drawn in the row, row label).
+PEAK_ROWS = [(("narrowpeak_rep1", "narrowpeak_rep2"), "narrowPeak"), (("pureclip",), "PureCLIP")]
 
 # Geometry, mm. Label columns left of the plots: RBP name, row labels; y tick labels on the right.
 NAME_X = 0.0
 LABEL_RIGHT = 25.5  # right edge of the row labels
-NARROWPEAK_RIGHT = 19.5  # right edge of the "narrow / Peak" label spanning rep1 and rep2
 PLOT_LEFT = 27.0
 PLOT_RIGHT_PAD = 7.5  # y tick labels, right of the rows
 TITLE_H = 3.0  # gene title line
@@ -246,8 +245,8 @@ def draw(
         ax_peaks = add_axes(peaks_top, len(PEAK_ROWS) * PEAK_ROW_H)
         ax_peaks.set(ylim=(len(PEAK_ROWS), 0), yticks=[])
         min_w = length * 0.0025
-        for k, (track, label) in enumerate(PEAK_ROWS):
-            sel = data.peaks[(data.peaks.rbp == rbp) & (data.peaks.track == track)]
+        for k, (tracks, label) in enumerate(PEAK_ROWS):
+            sel = data.peaks[(data.peaks.rbp == rbp) & data.peaks.track.isin(tracks)]
             for start, end in zip(sel.start, sel.end, strict=True):
                 w = max(end - start, min_w)
                 ax_peaks.add_patch(
@@ -256,7 +255,6 @@ def draw(
                     )
                 )
             text(LABEL_RIGHT, peaks_top + (k + 0.5) * PEAK_ROW_H, label, ha="right")
-        text(NARROWPEAK_RIGHT, peaks_top + PEAK_ROW_H, "narrow\nPeak", ha="right", linespacing=0.95)
         for spine in ax_peaks.spines.values():
             spine.set_visible(False)
 

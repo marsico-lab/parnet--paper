@@ -90,7 +90,7 @@ stays at 7 pt (RBP name, title, x label) and 6 pt (everything else) whatever the
 RBPs, and only the row heights follow the box height.
 
 Rows of each RBP, top to bottom: eCLIP read starts (replicate 1 solid, replicate 2 dashed),
-the narrowPeaks of replicates 1 and 2, the PureCLIP crosslink sites, and the PARNET profile.
+the narrowPeaks of both replicates (one row, union), the PureCLIP crosslink sites, and the PARNET profile.
 Each eCLIP and PARNET row is cut at half its maximum (`CLIP = 0.5` in the notebooks), so that the lower
 signal is visible next to the tallest peaks; its one y tick, on the right, is the top of the row. Grey bands mark the exons.
 `draw(..., prediction="pred_target")` switches the PARNET row from the total profile, which
