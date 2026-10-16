@@ -11,8 +11,8 @@ style:
 page: {paper: a4, margins: {left: 13.5, right: 13.5, top: 25, bottom: 25}, outlines: true, dpi: 600}
 area:
   width: double  # 183 mm
-  height: 166  # Nature maximum: 170
-gutter: 4
+  height: 164  # Nature maximum: 170
+gutter: 3
 output_dir: output  # build files, ignored by git
 labels: auto
 panels:
@@ -28,7 +28,7 @@ panels:
     source: notebooks/mdb_roc_prc.py
     axes: *roc_prc_axes
   mdb_heatmap:  # RBP impact heatmap (12 tracks x 428 mutations), full width, legends on the left
-    box: [0, 62, 183, 50]
+    box: [0, 61, 183, 50]
     source: notebooks/mdb_heatmap.py
     axes:
       cbar: {ref: panel, left: 4, top: 3, right: 30, bottom: 4.2}
@@ -36,12 +36,12 @@ panels:
       auprc_cbar: {ref: panel, left: 4, top: 45, right: 24, bottom: 46.2}
       heatmap: {ref: panel, left: 62, top: 6, right: 166, bottom: 40}
   mdb_ism_rb1:  # ISM around a donor mutation (RB1)
-    box: [0, 116, 89.5, 50]
+    box: [0, 114, 89.5, 50]
     source: notebooks/mdb_ism_rb1.py
     axes: &mdb_ism_axes  # panel coordinates, the same in both MutSpliceDB examples
       header: {ref: panel, left: 4, top: 0, right: 89, bottom: 6}
       tracks: {ref: panel, left: 12, top: 7.5, right: 87, bottom: 43.5, nrows: 4, hgap: 1.5}
   mdb_ism_nf1:  # ISM around an acceptor mutation (NF1)
-    box: [93.5, 116, 89.5, 50]
+    box: [93.5, 114, 89.5, 50]
     source: notebooks/mdb_ism_nf1.py
     axes: *mdb_ism_axes

@@ -3,7 +3,7 @@
   "layout": "main_mutations",
   "box_mm": [
     0.0,
-    62.0,
+    61.0,
     183.0,
     50.0
   ],
@@ -17,7 +17,7 @@
     "mdb_heatmap.png"
   ],
   "source": "mdb_heatmap.py",
-  "saved": "2026-10-13T09:15:51+00:00",
+  "saved": "2026-10-16T12:03:58+00:00",
   "issues": [],
   "geometry": {
     "axes": {
@@ -25,8 +25,8 @@
         "box_edges": {
           "left": 62.0,
           "right": 166.0,
-          "top": 63.9,
-          "bottom": 67.5
+          "top": 62.9,
+          "bottom": 66.5
         },
         "spines": [
           "left",
@@ -39,8 +39,8 @@
         "box_edges": {
           "left": 4.0,
           "right": 30.0,
-          "top": 65.0,
-          "bottom": 66.2
+          "top": 64.0,
+          "bottom": 65.2
         },
         "spines": [
           "outline"
@@ -50,8 +50,8 @@
         "box_edges": {
           "left": 52.7,
           "right": 61.5,
-          "top": 68.0,
-          "bottom": 102.0
+          "top": 67.0,
+          "bottom": 101.0
         },
         "spines": [
           "left",
@@ -64,8 +64,8 @@
         "box_edges": {
           "left": 62.0,
           "right": 166.0,
-          "top": 68.0,
-          "bottom": 102.0
+          "top": 67.0,
+          "bottom": 101.0
         },
         "spines": [
           "left",
@@ -78,8 +78,8 @@
         "box_edges": {
           "left": 0.0,
           "right": 40.0,
-          "top": 71.0,
-          "bottom": 102.0
+          "top": 70.0,
+          "bottom": 101.0
         },
         "spines": [
           "left",
@@ -90,8 +90,8 @@
         "box_edges": {
           "left": 4.0,
           "right": 24.0,
-          "top": 107.0,
-          "bottom": 108.2
+          "top": 106.0,
+          "bottom": 107.2
         },
         "spines": [
           "outline"
