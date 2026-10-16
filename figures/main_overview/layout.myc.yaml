@@ -11,7 +11,7 @@ style:
 page: {paper: a4, margins: {left: 13.5, right: 13.5, top: 25, bottom: 25}, outlines: true}
 area:
   width: double  # 183 mm
-  height: 168.8
+  height: 160.0
 gutter: 4
 output_dir: output  # build files, ignored by git
 labels: auto
@@ -20,5 +20,5 @@ panels:
     box: [0, 0, 183, 83.8]
     source: notebooks/graphical_abstract.py
   profile:  # observed eCLIP, peaks and PARNET prediction along one test transcript
-    box: [0, 87.8, 183, 81]
+    box: [0, 87.8, 183, 72.2]
     source: notebooks/profile_example_MYC.py

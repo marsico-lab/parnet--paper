@@ -66,7 +66,7 @@ data.summary()
 #
 # Layout `layout.gata2.yaml` (`pixi run use-layout main_overview gata2`).
 # Rows of each RBP: eCLIP read starts (replicate 1 solid, replicate 2 dashed), narrowPeaks of
-# replicates 1 and 2, PureCLIP crosslink sites, and the PARNET 21M (λ = 5) total profile.
+# both replicates (one row, union), PureCLIP crosslink sites, and the PARNET 21M (λ = 5) total profile.
 # y axes cut at CLIP x the maximum of each eCLIP and PARNET row (taller peaks are clipped), so
 # that the lower signal stays visible; the tick on the right is the top of the row. Grey bands: exons.
 

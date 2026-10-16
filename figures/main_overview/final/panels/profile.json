@@ -5,11 +5,11 @@
     0.0,
     87.8,
     183.0,
-    98.0
+    87.0
   ],
   "size_mm": [
     183.0,
-    98.0
+    87.0
   ],
   "files": [
     "profile.pdf",
@@ -17,7 +17,7 @@
     "profile.png"
   ],
   "source": "profile_example_BHLHE40.py",
-  "saved": "2026-10-15T08:22:38+00:00",
+  "saved": "2026-10-16T04:40:27+00:00",
   "issues": [],
   "geometry": {
     "axes": {
@@ -49,7 +49,7 @@
           "left": 27.0,
           "right": 175.5,
           "top": 99.63,
-          "bottom": 106.23
+          "bottom": 104.03
         },
         "spines": []
       },
@@ -57,8 +57,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 106.53,
-          "bottom": 110.56
+          "top": 104.33,
+          "bottom": 108.36
         },
         "spines": [
           "bottom"
@@ -68,8 +68,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 112.36,
-          "bottom": 116.39
+          "top": 110.16,
+          "bottom": 114.19
         },
         "spines": [
           "bottom"
@@ -79,8 +79,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 116.69,
-          "bottom": 123.29
+          "top": 114.49,
+          "bottom": 118.89
         },
         "spines": []
       },
@@ -88,8 +88,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 123.59,
-          "bottom": 127.62
+          "top": 119.19,
+          "bottom": 123.22
         },
         "spines": [
           "bottom"
@@ -99,8 +99,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 129.42,
-          "bottom": 133.45
+          "top": 125.02,
+          "bottom": 129.05
         },
         "spines": [
           "bottom"
@@ -110,8 +110,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 133.75,
-          "bottom": 140.35
+          "top": 129.35,
+          "bottom": 133.75
         },
         "spines": []
       },
@@ -119,8 +119,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 140.65,
-          "bottom": 144.68
+          "top": 134.05,
+          "bottom": 138.08
         },
         "spines": [
           "bottom"
@@ -130,8 +130,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 146.48,
-          "bottom": 150.51
+          "top": 139.88,
+          "bottom": 143.91
         },
         "spines": [
           "bottom"
@@ -141,8 +141,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 150.81,
-          "bottom": 157.41
+          "top": 144.21,
+          "bottom": 148.61
         },
         "spines": []
       },
@@ -150,8 +150,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 157.71,
-          "bottom": 161.74
+          "top": 148.91,
+          "bottom": 152.94
         },
         "spines": [
           "bottom"
@@ -161,8 +161,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 163.54,
-          "bottom": 167.57
+          "top": 154.74,
+          "bottom": 158.77
         },
         "spines": [
           "bottom"
@@ -172,8 +172,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 167.87,
-          "bottom": 174.47
+          "top": 159.07,
+          "bottom": 163.47
         },
         "spines": []
       },
@@ -181,8 +181,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 174.77,
-          "bottom": 178.8
+          "top": 163.77,
+          "bottom": 167.8
         },
         "spines": [
           "bottom"
