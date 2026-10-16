@@ -11,14 +11,14 @@ style:
 page: {paper: a4, margins: {left: 13.5, right: 13.5, top: 25, bottom: 25}, outlines: true}
 area:
   width: double  # 183 mm
-  height: 160.0
+  height: 157.3
 gutter: 4
 output_dir: output  # build files, ignored by git
 labels: auto
 panels:
-  abstract:  # assets/parnet-pipeline-applications.pdf, 182.0 x 83.4 mm, scaled to the column width
-    box: [0, 0, 183, 83.8]
+  abstract:  # assets/parnet-pipeline-applications.pdf, 182.2 x 80.8 mm, scaled to the column width
+    box: [0, 0, 183, 81.1]
     source: notebooks/graphical_abstract.py
   profile:  # observed eCLIP, peaks and PARNET prediction along one test transcript
-    box: [0, 87.8, 183, 72.2]
+    box: [0, 85.1, 183, 72.2]
     source: notebooks/profile_example_MYC.py

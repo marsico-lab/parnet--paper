@@ -13,7 +13,7 @@
 # %% [markdown]
 # # main_overview, abstract: PARNET pipeline and applications
 #
-# Hand-made vector schematic, `assets/parnet-pipeline-applications.pdf` (182.2 x 83.4 mm).
+# Hand-made vector schematic, `assets/parnet-pipeline-applications.pdf` (182.2 x 80.8 mm).
 # It is scaled to the width of the panel box (183 mm, factor 1.005) into the build folder,
 # then placed; the asset itself is not modified.
 # Some exports nest objects deeper than MuPDF accepts ("exception stack overflow"); those are

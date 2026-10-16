@@ -3,7 +3,7 @@
   "layout": "main_overview",
   "box_mm": [
     0.0,
-    87.8,
+    85.1,
     183.0,
     87.0
   ],
@@ -17,7 +17,7 @@
     "profile.png"
   ],
   "source": "profile_example_BHLHE40.py",
-  "saved": "2026-10-16T05:38:07+00:00",
+  "saved": "2026-10-16T06:04:13+00:00",
   "issues": [],
   "geometry": {
     "axes": {
@@ -25,8 +25,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 90.8,
-          "bottom": 93.8
+          "top": 88.1,
+          "bottom": 91.1
         },
         "spines": [
           "left",
@@ -37,8 +37,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 95.3,
-          "bottom": 99.33
+          "top": 92.6,
+          "bottom": 96.63
         },
         "spines": [
           "bottom"
@@ -48,8 +48,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 99.63,
-          "bottom": 104.03
+          "top": 96.93,
+          "bottom": 101.33
         },
         "spines": []
       },
@@ -57,8 +57,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 104.33,
-          "bottom": 108.36
+          "top": 101.63,
+          "bottom": 105.66
         },
         "spines": [
           "bottom"
@@ -68,8 +68,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 110.16,
-          "bottom": 114.19
+          "top": 107.46,
+          "bottom": 111.49
         },
         "spines": [
           "bottom"
@@ -79,8 +79,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 114.49,
-          "bottom": 118.89
+          "top": 111.79,
+          "bottom": 116.19
         },
         "spines": []
       },
@@ -88,8 +88,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 119.19,
-          "bottom": 123.22
+          "top": 116.49,
+          "bottom": 120.52
         },
         "spines": [
           "bottom"
@@ -99,8 +99,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 125.02,
-          "bottom": 129.05
+          "top": 122.32,
+          "bottom": 126.35
         },
         "spines": [
           "bottom"
@@ -110,8 +110,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 129.35,
-          "bottom": 133.75
+          "top": 126.65,
+          "bottom": 131.05
         },
         "spines": []
       },
@@ -119,8 +119,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 134.05,
-          "bottom": 138.08
+          "top": 131.35,
+          "bottom": 135.38
         },
         "spines": [
           "bottom"
@@ -130,8 +130,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 139.88,
-          "bottom": 143.91
+          "top": 137.18,
+          "bottom": 141.21
         },
         "spines": [
           "bottom"
@@ -141,8 +141,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 144.21,
-          "bottom": 148.61
+          "top": 141.51,
+          "bottom": 145.91
         },
         "spines": []
       },
@@ -150,8 +150,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 148.91,
-          "bottom": 152.94
+          "top": 146.21,
+          "bottom": 150.24
         },
         "spines": [
           "bottom"
@@ -161,8 +161,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 154.74,
-          "bottom": 158.77
+          "top": 152.04,
+          "bottom": 156.07
         },
         "spines": [
           "bottom"
@@ -172,8 +172,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 159.07,
-          "bottom": 163.47
+          "top": 156.37,
+          "bottom": 160.77
         },
         "spines": []
       },
@@ -181,8 +181,8 @@
         "box_edges": {
           "left": 27.0,
           "right": 175.5,
-          "top": 163.77,
-          "bottom": 167.8
+          "top": 161.07,
+          "bottom": 165.1
         },
         "spines": [
           "bottom"
