@@ -3,7 +3,7 @@
   "layout": "main_performance",
   "box_mm": [
     86.0,
-    126.0,
+    123.0,
     97.0,
     34.0
   ],
@@ -17,7 +17,7 @@
     "tdp43_example.png"
   ],
   "source": "tdp43_example.py",
-  "saved": "2026-10-16T08:19:32+00:00",
+  "saved": "2026-10-16T08:21:26+00:00",
   "issues": [],
   "geometry": {
     "axes": {
@@ -25,8 +25,8 @@
         "box_edges": {
           "left": 88.767,
           "right": 180.233,
-          "top": 126.0,
-          "bottom": 160.0
+          "top": 123.0,
+          "bottom": 157.0
         },
         "spines": [
           "left",
