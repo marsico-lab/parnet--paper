@@ -5,11 +5,11 @@
     125.0,
     0.0,
     58.0,
-    46.0
+    42.0
   ],
   "size_mm": [
     58.0,
-    46.0
+    42.0
   ],
   "files": [
     "perf_quartiles.pdf",
@@ -17,7 +17,7 @@
     "perf_quartiles.png"
   ],
   "source": "perf_quartiles.py",
-  "saved": "2026-10-14T08:30:13+00:00",
+  "saved": "2026-10-16T08:19:25+00:00",
   "issues": [],
   "geometry": {
     "axes": {
@@ -26,7 +26,7 @@
           "left": 135.0,
           "right": 178.0,
           "top": 6.0,
-          "bottom": 38.0
+          "bottom": 34.0
         },
         "spines": [
           "left",
