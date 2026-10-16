@@ -2,8 +2,9 @@
 % placement ([t], [h!], ...), or wrap it in a starred figure* for a wide one.
 % plotplate never overwrites it; it rewrites the panels in the file included below.
 \begin{figure}[tbp]
-  \centering
-  \input{figures/main_overview/main_overview.tex}%
+  % \makebox centres the figure even when it is wider than the text block (figures are
+  % 183 mm, the Nature double column): it then extends equally into both margins.
+  \makebox[\linewidth][c]{\input{figures/main_overview/main_overview.tex}}%
   \caption{...}
   \label{fig:main_overview}
   % To reference one panel (\ref{fig:main_overviewa} prints 7a), load subcaption in the
