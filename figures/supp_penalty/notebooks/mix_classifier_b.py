@@ -11,14 +11,13 @@
 # ---
 
 # %% [markdown]
-# # supp_penalty, mix_classifier_b: mixing coefficient as a classifier of peak windows, AUPRC
+# # supp_penalty, mix_classifier_b: mixing coefficient as a classifier of peak tiles, AUPRC
 #
-# DRAFT (data of a separate analysis session, see data/README.md).
-# Per RBP: the mixing coefficient w of the RBP's task, used as a score to separate windows that hold a
-# narrowPeak (5' end +- 5 nt, either replicate) from non-peak windows within 2 kb of a peak window of the
-# same RBP; 500 nt windows of the test chromosomes. One dot per RBP, boxes per penalty λ;
-# black dots and numbers above the axes: mean over RBPs.
-# AUPRC divided by the fraction of peak windows of the RBP (1 = chance, dotted line).
+# Per RBP: the mixing coefficient w of the RBP's task, used as a score to separate 600 nt tiles that contain
+# an IDR narrowPeak of the RBP from depth-matched nearby tiles without a peak (one per peak tile);
+# test and validation chromosomes, RBPs with >= MIN_POS peak tiles (data/README.md).
+# One dot per RBP, boxes per penalty λ; black dots and numbers above the axes: mean over RBPs.
+# Dotted line: chance (0.5; the two classes are balanced).
 
 # %%
 import numpy as np
@@ -27,8 +26,9 @@ import plotplate as pp
 import seaborn as sns
 
 panel = pp.Layout.load("../layout.yaml").panel("mix_classifier_b")
-d = pd.read_csv("../data/mixcoef/mixcoef_peak_vs_nearby.csv")
-d["lift"] = d.auprc / d.prevalence
+MIN_POS = 10  # peak tiles per RBP
+d = pd.read_csv("../data/mixcoef/tileclass_per_track.csv")
+d = d[d.n_pos >= MIN_POS]
 lams = sorted(d.lam.unique())
 
 # %%
@@ -37,7 +37,7 @@ ax = panel.axes(fig, "main")
 sns.boxplot(
     data=d,
     x="lam",
-    y="lift",
+    y="auprc",
     order=lams,
     ax=ax,
     color="#757575",
@@ -48,7 +48,7 @@ sns.boxplot(
 )
 rng = np.random.default_rng(0)
 for i, lam in enumerate(lams):
-    v = d.loc[d.lam == lam, "lift"].to_numpy()
+    v = d.loc[d.lam == lam, "auprc"].to_numpy()
     ax.scatter(
         i + rng.uniform(-0.2, 0.2, len(v)),
         v,
@@ -58,15 +58,15 @@ for i, lam in enumerate(lams):
         linewidths=0,
         zorder=0,
     )
-means = [d.loc[d.lam == lam, "lift"].mean() for lam in lams]
+means = [d.loc[d.lam == lam, "auprc"].mean() for lam in lams]
 ax.plot(range(len(lams)), means, color="black", linewidth=0.6, zorder=3)
 ax.scatter(range(len(lams)), means, s=10, color="black", zorder=4, label="mean")
 for i, m in enumerate(means):
     ax.text(i, 1.01, f"{m:.2f}", transform=ax.get_xaxis_transform(), ha="center", va="bottom")
-ax.axhline(1, color="#9e9e9e", linewidth=0.5, linestyle=":", zorder=0)
+ax.axhline(0.5, color="#9e9e9e", linewidth=0.5, linestyle=":", zorder=0)
 ax.set_xlabel("λ")
-ax.set_ylabel("AUPRC / fraction of peaks")
-ax.set_title("Peak vs nearby windows", pad=9)
+ax.set_ylabel("AUPRC per RBP")
+ax.set_title("Peak vs nearby tiles", pad=9)
 for s in ("top", "right"):
     ax.spines[s].set_visible(False)
 

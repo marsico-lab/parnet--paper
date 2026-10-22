@@ -17,12 +17,13 @@ That table was made by `INTERP/notebooks/figures/panel_featimp_vs_penalty.py.ipy
 - `signal__*`: eCLIP and SMI read starts; `pred__<model>__<track>`: predicted profile; `fi_ig__<model>__<track>`: Integrated Gradients attribution, summed over nucleotides; `fi_rbpnet__*`: input x gradient.
 - Annotations: ENCODE IDR narrowPeak (`bed10_peaks_narrowpeaks/QKI_HepG2/narrowPeak.1_1-2_1.bed.gz`, score = column 8) and PureCLIP crosslink sites (`bed6_peaks_pureclip/QKI_HepG2/peaks.crosslink.bed6`) on the minus strand, as 0-based half-open region positions 5' to 3'.
 
-## mixcoef/ (draft)
+## mixcoef/
 
-`mixcoef_peak_vs_nearby.csv`: per RBP and penalty λ, how well the mixing coefficient w of the RBP's task separates peak windows from nearby background windows.
-Draft: taken from `/localscratch/l10n/mixcoef/calib_rerun.csv.gz` (ms-01-2), written by `/localscratch/l10n/mixcoef/scripts/calib_7m_ext.py` in a separate analysis session; the script is not in a repository yet and its input folder is not recorded.
+`tileclass_per_track.csv`: per RBP and penalty λ, how well the mixing coefficient w of the RBP's task separates 600 nt tiles that contain a peak from nearby tiles without one.
+Received 2026-10-22 from an analysis run on another machine (`tileclass_per_track.csv`).
 
-- Windows: the 500 nt tiles of the test chromosomes, with stored predictions of w (`predictions/<model>/predictions.mix_coeff.*.npy.gz`) for the models of panel kmer_heatmap_rbns (same λ labels; `lam`).
-- Positives: windows with >= 1 position of a narrowPeak 5' end +- 5 nt (union of replicates, `intervals.narrowpeak_union_5p-5nt`); negatives: non-peak windows within 4 windows (2 kb) of a peak window of the same task; tasks with >= 25 of each.
-- Columns: `task` (output index), `rbp_ct` and `swapped` from `parnet--meta/resources/rbp_tables/full_rbp_ct_indexed.ascii-order-corrected.tsv`, `model`, `lam`, `n_pos`, `n_neg`, `prevalence` (fraction of positives), `auroc`, `auprc`, mean w of positives and negatives.
-- To check: whether the peak masks of the 10 `swapped` tasks follow the output order of the models.
+- Tiles: the full-length 600 nt tiles of the test (chr3, chr8) and validation (chr2, chr9) chromosomes of the 600 nt training dataset (155,711 tiles); consecutive tiles overlap by 150 nt.
+- Positives: tiles containing >= 50% of the length of an IDR-thresholded ENCODE narrowPeak of the task; eligible negatives: no peak with >= 10% of its length inside the tile.
+- Negatives: per positive tile, the eligible tile within 900 nt (two tiles on each side) with the closest summed SMI read depth; positives without one are dropped, so the classes are balanced (chance 0.5 for AUROC and AUPRC).
+- Columns: `rbp_ct`, `task_index` (output index), `model`, `lam`, `n_pos`, `n_neg`, `auroc`, `auprc`, mean w of positives and negatives (`mean_w_pos`, `mean_w_neg`); 219 tasks, no minimum count. The panels keep RBPs with >= 10 positive tiles (`MIN_POS`, 205 RBPs).
+- To check: whether `auprc` is average precision, and the script and commit that produced the table.
