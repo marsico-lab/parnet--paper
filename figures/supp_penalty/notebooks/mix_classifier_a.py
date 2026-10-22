@@ -11,14 +11,13 @@
 # ---
 
 # %% [markdown]
-# # supp_penalty, mix_classifier_a: mixing coefficient as a classifier of peak windows, AUROC
+# # supp_penalty, mix_classifier_a: mixing coefficient as a classifier of peak tiles, AUROC
 #
-# DRAFT (data of a separate analysis session, see data/README.md).
-# Per RBP: the mixing coefficient w of the RBP's task, used as a score to separate windows that hold a
-# narrowPeak (5' end +- 5 nt, either replicate) from non-peak windows within 2 kb of a peak window of the
-# same RBP; 500 nt windows of the test chromosomes. One dot per RBP, boxes per penalty λ;
-# black dots and numbers above the axes: mean over RBPs.
-# Dotted line: chance (0.5).
+# Per RBP: the mixing coefficient w of the RBP's task, used as a score to separate 600 nt tiles that contain
+# an IDR narrowPeak of the RBP from depth-matched nearby tiles without a peak (one per peak tile);
+# test and validation chromosomes, RBPs with >= MIN_POS peak tiles (data/README.md).
+# One dot per RBP, boxes per penalty λ; black dots and numbers above the axes: mean over RBPs.
+# Dotted line: chance (0.5; the two classes are balanced).
 
 # %%
 import numpy as np
@@ -27,7 +26,9 @@ import plotplate as pp
 import seaborn as sns
 
 panel = pp.Layout.load("../layout.yaml").panel("mix_classifier_a")
-d = pd.read_csv("../data/mixcoef/mixcoef_peak_vs_nearby.csv")
+MIN_POS = 10  # peak tiles per RBP
+d = pd.read_csv("../data/mixcoef/tileclass_per_track.csv")
+d = d[d.n_pos >= MIN_POS]
 
 lams = sorted(d.lam.unique())
 
@@ -66,7 +67,7 @@ for i, m in enumerate(means):
 ax.axhline(0.5, color="#9e9e9e", linewidth=0.5, linestyle=":", zorder=0)
 ax.set_xlabel("λ")
 ax.set_ylabel("AUROC per RBP")
-ax.set_title("Peak vs nearby windows", pad=9)
+ax.set_title("Peak vs nearby tiles", pad=9)
 for s in ("top", "right"):
     ax.spines[s].set_visible(False)
 
