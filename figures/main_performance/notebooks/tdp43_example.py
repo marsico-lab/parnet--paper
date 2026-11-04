@@ -130,17 +130,6 @@ for i, (name, col, c, note) in enumerate(TRACKS):
             fontsize=5,
             color="#757575",
         )
-    if col == "rnaseq_siScramble":
-        ax.text(
-            0.58,
-            1.0,
-            "iPSC neurons",
-            transform=ax.transAxes,
-            ha="left",
-            va="top",
-            fontsize=5,
-            color="#757575",
-        )
     if ymax <= 0:
         ax.text(
             0.5,

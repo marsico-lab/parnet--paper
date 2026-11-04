@@ -23836,9 +23836,6 @@ L 62.362205 54.047244
    <g id="text_10">
     <text style="font-size: 5px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif; text-anchor: start; fill: #757575" x="95.924409" y="57.687381" transform="rotate(-0 95.924409 57.687381)">[0-25], max 182 clipped</text>
    </g>
-   <g id="text_11">
-    <text style="font-size: 5px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif; text-anchor: start; fill: #757575" x="184.025197" y="57.687381" transform="rotate(-0 184.025197 57.687381)">iPSC neurons</text>
-   </g>
   </g>
   <g id="axes_6">
    <g id="patch_17">
@@ -28595,10 +28592,10 @@ z
 L 62.362205 66.141732 
 " style="fill: none; stroke: #000000; stroke-width: 0.4; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
-   <g id="text_12">
+   <g id="text_11">
     <text style="font-size: 6px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif; text-anchor: end; fill: #a0522d" x="59.845039" y="72.891317" transform="rotate(-0 59.845039 72.891317)">RNA-seq TDP-43 KD</text>
    </g>
-   <g id="text_13">
+   <g id="text_12">
     <text style="font-size: 5px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif; text-anchor: start; fill: #757575" x="95.924409" y="69.781869" transform="rotate(-0 95.924409 69.781869)">[0-25], max 107 clipped</text>
    </g>
   </g>
@@ -28670,10 +28667,10 @@ z
      <use xlink:href="#md39bf278ff" x="90.571878" y="78.874016" style="fill: #a0522d; stroke: #a0522d; stroke-linejoin: miter"/>
     </g>
    </g>
-   <g id="text_14">
+   <g id="text_13">
     <text style="font-style: italic; font-size: 6px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif; text-anchor: middle" x="167.731173" y="92.761865" transform="rotate(-0 167.731173 92.761865)">STMN2</text>
    </g>
-   <g id="text_15">
+   <g id="text_14">
     <text style="font-size: 5px; font-family: 'Arial', 'Helvetica', 'Liberation Sans', sans-serif; text-anchor: start; fill: #a0522d" x="93.108597" y="92.033838" transform="rotate(-0 93.108597 92.033838)">cryptic exon 2a</text>
    </g>
   </g>
