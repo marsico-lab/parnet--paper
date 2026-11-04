@@ -15989,7 +15989,8 @@ fQakjyNMkD7aa4LCUPwPXOTmczqZ7GgAAAAASUVORK5CYII="/>
 </g>
 <path transform="matrix(1,0,0,-1,282.04728,515.90548)" stroke-width=".4" stroke-linecap="square" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M62.362207 31.937008V42.330709"/>
 <text fill="#8a8a2a" xml:space="preserve" transform="matrix(1 0 -0 1 306.54856 480.32435)" font-size="6" font-family="Arial"><tspan y="0" x="0 4.3271176 8.654235 12.654282 14.654235 17.654236 20.997073 24.339909 26.01279 31.669957">RNA-seq WT</tspan></text>
-<text fill="#757575" xml:space="preserve" transform="matrix(1 0 -0 1 377.97169 477.21537)" font-size="5" font-family="Arial"><tspan y="0" x="0 1.391465 4.171953 5.843789 8.624277 11.404766 12.796231 15.296231 16.404767 17.513302 20.29379 23.07428 25.854769 28.635258 30.026722 31.418187 32.80965 33.918188 37.24635 40.574514 44.18305 45.574514 48.355 51.135488 53.915975 55.58781 58.368299 61.148786">[0-25 clipped], iPSC neurons</tspan></text>
+<text fill="#757575" xml:space="preserve" transform="matrix(1 0 -0 1 377.97169 477.21488)" font-size="5" font-family="Arial"><tspan y="0" x="0 1.391465 4.171953 5.843789 8.624277 11.404766 12.796231 14.187696 15.579162 19.750998 22.531487 25.031487 26.42295 29.20344 31.983929 34.764417 36.15588 38.65588 39.764417 40.87295 43.65344 46.433927 49.214414">[0-25], max 182 clipped</tspan></text>
+<text fill="#757575" xml:space="preserve" transform="matrix(1 0 -0 1 466.07246 477.21537)" font-size="5" font-family="Arial"><tspan y="0" x="0 1.1085353 4.4367 7.764864 11.3734 12.764865 15.545353 18.325842 21.10633 22.778168 25.558657 28.339146">iPSC neurons</tspan></text>
 <path transform="matrix(1,0,0,-1,282.04728,515.90548)" d="M62.362207 19.84252H272.12599V30.23622H62.362207Z" fill="#ffffff"/>
 <g clip-path="url(#clip_2509)">
 <path transform="matrix(1,0,0,-1,282.04728,515.90548)" d="M90.16835 19.84252H90.9754V30.23622H90.16835Z" fill="#e0e0e0"/>
@@ -15999,7 +16000,7 @@ fQakjyNMkD7aa4LCUPwPXOTmczqZ7GgAAAAASUVORK5CYII="/>
 </g>
 <path transform="matrix(1,0,0,-1,282.04728,515.90548)" stroke-width=".4" stroke-linecap="square" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M62.362207 19.84252V30.23622"/>
 <text fill="#a0522d" xml:space="preserve" transform="matrix(1 0 -0 1 285.29856 492.41883)" font-size="6" font-family="Arial"><tspan y="0" x="0 4.3271176 8.654235 12.654282 14.654235 17.654236 20.997073 24.339909 25.903416 29.576252 33.90337 37.903417 39.90337 43.24621 46.589044 48.261926 52.26197">RNA-seq TDP-43 KD</tspan></text>
-<text fill="#757575" xml:space="preserve" transform="matrix(1 0 -0 1 377.97169 489.3094)" font-size="5" font-family="Arial"><tspan y="0" x="0 1.391465 4.171953 5.843789 8.624277 11.404766 12.796231 15.296231 16.404767 17.513302 20.29379 23.07428 25.854769 28.635258">[0-25 clipped]</tspan></text>
+<text fill="#757575" xml:space="preserve" transform="matrix(1 0 -0 1 377.97169 489.3094)" font-size="5" font-family="Arial"><tspan y="0" x="0 1.391465 4.171953 5.843789 8.624277 11.404766 12.796231 14.187696 15.579162 19.750998 22.531487 25.031487 26.42295 29.20344 31.983929 34.764417 36.15588 38.65588 39.764417 40.87295 43.65344 46.433927 49.214414">[0-25], max 107 clipped</tspan></text>
 <g clip-path="url(#clip_2511)">
 <path transform="matrix(1,0,0,-1,282.04728,515.90548)" d="M69.88526 9.826772H70.774089V14.740157H69.88526Z" fill="#212121"/>
 </g>

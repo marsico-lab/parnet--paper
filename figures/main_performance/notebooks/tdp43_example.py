@@ -21,7 +21,7 @@
 # - PARNET fine-tuned on iCLIP: `parnet.21m-0.0` fine-tuned (unfreeze2, no control), TARDBP total track.
 # - RNA-seq of iPSC-derived medium spiny neurons (Flow.bio "TDP43 KD in HTT models", 18Q line), not SH-SY5Y
 #   (no SH-SY5Y RNA-seq is on Flow.bio): siScramble (3 replicates) and siTDP-43 (2 replicates), coverage per
-#   million uniquely mapped reads, mean over replicates, one shared y range clipped at 1.2x the knockdown
+#   million uniquely mapped reads, mean over replicates, one shared y range set at 1.2x the knockdown
 #   peak on the cryptic exon (the canonical exons reach ~160 and are cut off, as with a fixed data range in
 #   a genome browser).
 # - MANE STMN2 transcript, and the cryptic exon 2a (open box, arrowhead) included upon TDP-43 knockdown.
@@ -84,7 +84,7 @@ TRACKS = [
         color,
         f", r = {stats.loc['parnet_fine_tuned', 'value']:.2f} with iCLIP",
     ),
-    ("RNA-seq WT", "rnaseq_siScramble", WT_COLOR, ", iPSC neurons"),
+    ("RNA-seq WT", "rnaseq_siScramble", WT_COLOR, ""),
     ("RNA-seq TDP-43 KD", "rnaseq_siTDP43", KD_COLOR, ""),
 ]
 cryptic_bins = (x > CRYPTIC[0]) & (x < CRYPTIC[1])
@@ -103,6 +103,7 @@ for i, (name, col, c, note) in enumerate(TRACKS):
     ax = fig.add_subplot(gs[i, 0])
     ax.set_label(name)
     y = t[col].to_numpy()
+    peak = y.max()
     rna = col.startswith("rnaseq")
     ymax = rna_max if rna else y.max()
     if rna:
@@ -118,18 +119,29 @@ for i, (name, col, c, note) in enumerate(TRACKS):
     ax.spines["left"].set_linewidth(0.4)
     ax.text(-0.012, 0.5, name, transform=ax.transAxes, ha="right", va="center", color=c)
     if ymax > 0:
-        clipped = " clipped" if rna else ""
+        clipped = f", max {peak:.0f} clipped" if rna and peak > ymax else ""
         ax.text(
             0.16,
             1.0,
-            f"[0-{fmt(ymax)}{clipped}]{note}",
+            f"[0-{fmt(ymax)}]{clipped}{note}",
             transform=ax.transAxes,
             ha="left",
             va="top",
             fontsize=5,
             color="#757575",
         )
-    else:
+    if col == "rnaseq_siScramble":
+        ax.text(
+            0.58,
+            1.0,
+            "iPSC neurons",
+            transform=ax.transAxes,
+            ha="left",
+            va="top",
+            fontsize=5,
+            color="#757575",
+        )
+    if ymax <= 0:
         ax.text(
             0.5,
             0.5,
