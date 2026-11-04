@@ -13,7 +13,7 @@ The draft this figure replaces is `reference/figure2_draft_2026-10.png`.
 | `kmer_heatmap`     | Target-vs-total 5-mer contrast with RNAcompete per penalty           | `notebooks/kmer_heatmap.py`, `data/kmer_contrast/`                                     |
 | `kmer_benefit`     | Mean change of that contrast vs λ = 0, RNAcompete and RNA Bind-n-Seq | `notebooks/kmer_benefit.py`, `data/kmer_contrast/`                                     |
 | `iclip`            | iCLIP zero-shot vs fine-tuned, two points per RBP                    | `notebooks/iclip.py`, `data/performance/` (shared)                                     |
-| `tdp43_example`    | TDP-43 / STMN2 example (collaborator image)                          | `notebooks/tdp43_example.py`, `assets/parnet_fig_perf_panel_stmn2.png`                 |
+| `tdp43_example`    | TDP-43 / STMN2: CLIP, PARNET zero-shot / fine-tuned, RNA-seq WT / KD | `notebooks/tdp43_example.py`, `data/stmn2_tracks/`                                     |
 | `rna_maps`         | RNA maps of splicing regulation (collaborator image)                 | `notebooks/rna_maps.py`, `assets/parnet_fig_perf_panel_splicing.svg` (rendered to PNG) |
 
 Models of panel `region_featimp` (experiment `parnet_21m_scratch_penalty_sweep`): λ = 0 `parnet.21m-0.0`, λ = 5 `parnet.21m-5.0`, λ = 10, 20, 80 `parnet.21m-scratch-{10,20,80}.0` (PARNET 21M, every model trained from random initialisation).

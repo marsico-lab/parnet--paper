@@ -17,15 +17,81 @@
     "tdp43_example.png"
   ],
   "source": "tdp43_example.py",
-  "saved": "2026-10-16T08:21:26+00:00",
+  "saved": "2026-11-04T14:51:18+00:00",
   "issues": [],
   "geometry": {
     "axes": {
-      "image": {
+      "eCLIP K562": {
         "box_edges": {
-          "left": 88.767,
-          "right": 180.233,
-          "top": 123.0,
+          "left": 108.0,
+          "right": 182.0,
+          "top": 125.0,
+          "bottom": 128.667
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "iCLIP SH-SY5Y": {
+        "box_edges": {
+          "left": 108.0,
+          "right": 182.0,
+          "top": 129.267,
+          "bottom": 132.933
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "PARNET zero-shot": {
+        "box_edges": {
+          "left": 108.0,
+          "right": 182.0,
+          "top": 133.533,
+          "bottom": 137.2
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "PARNET fine-tuned": {
+        "box_edges": {
+          "left": 108.0,
+          "right": 182.0,
+          "top": 137.8,
+          "bottom": 141.467
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "RNA-seq WT": {
+        "box_edges": {
+          "left": 108.0,
+          "right": 182.0,
+          "top": 142.067,
+          "bottom": 145.733
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "RNA-seq TDP-43 KD": {
+        "box_edges": {
+          "left": 108.0,
+          "right": 182.0,
+          "top": 146.333,
+          "bottom": 150.0
+        },
+        "spines": [
+          "left"
+        ]
+      },
+      "gene": {
+        "box_edges": {
+          "left": 108.0,
+          "right": 182.0,
+          "top": 150.5,
           "bottom": 157.0
         },
         "spines": [
