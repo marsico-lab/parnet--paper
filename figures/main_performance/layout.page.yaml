@@ -3,7 +3,7 @@
 # Text 6 / 5 pt, as main_mutations.
 # Panel keys are ids; the letters follow the reading order (labels: auto).
 # Box: [x, y, width, height] in mm from the figure's top-left corner.
-# tdp43_example and rna_maps show the collaborators' images from assets/.
+# rna_maps shows the collaborators' image from assets/.
 schema: 1
 name: main_performance
 journal: nature
@@ -57,9 +57,12 @@ panels:
     source: notebooks/iclip.py
     axes:
       main: {ref: panel, left: 11, top: 3, right: 80, bottom: 28}
-  tdp43_example:  # TDP-43 / STMN2 tracks (collaborator image, assets/)
+  tdp43_example:  # TDP-43 / STMN2 tracks: CLIP, PARNET, RNA-seq, gene model
     box: [86, 123, 97, 34]
     source: notebooks/tdp43_example.py
+    axes:
+      tracks: {ref: panel, left: 22, top: 2, right: 96, bottom: 27}
+      gene: {ref: panel, left: 22, top: 27.5, right: 96, bottom: 34}
   rna_maps:  # RNA maps of splicing regulation (collaborator image, assets/)
     box: [0, 160, 183, 60]
     source: notebooks/rna_maps.py

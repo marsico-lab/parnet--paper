@@ -1,0 +1,3 @@
+model	track	metric	resolution_nt	region	value
+parnet_zero_shot	total	pearson_vs_iclip_shsy5y	1	chr8:79611116-79666158	0.2680
+parnet_fine_tuned	total	pearson_vs_iclip_shsy5y	1	chr8:79611116-79666158	0.4053

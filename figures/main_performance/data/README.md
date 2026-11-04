@@ -28,3 +28,21 @@ Columns `position` and `nucleotide` were added here from hg38 (`chr3:52797948-52
 `narrowPeak_IDR` = `bed10_peaks_narrowpeaks/RBFOX2_HepG2/narrowPeak.1_1-2_1.bed.gz` (ENCODE IDR peaks, score = column 8, -log10 p);
 `PureCLIP` = `bed6_peaks_pureclip/RBFOX2_HepG2/peaks.crosslink.bed6` (+ strand, score = PureCLIP score).
 The region spans two adjacent IDR peaks (boundary at position 51); the six PureCLIP sites lie at positions 80-89.
+
+## stmn2_tracks/
+
+Copies of `PE/results/paper_exports/main_performance/stmn2_tracks/`, written by `PE/scripts/paper_exports/main_performance/export_stmn2_tracks.py` (2026-11-04) from a per-nucleotide table of the region (`stmn2_tracks.tsv.gz`, kept in PE only).
+Region chr8:79,609,000-79,668,000 (hg38, + strand = STMN2 strand).
+
+`stmn2_tracks.50nt.tsv`: one row per 50 nt bin (`bin_start`, 0-based), maximum over the bin:
+
+- `eclip_k562`: TARDBP K562 eCLIP read starts, + strand, replicates summed (`MANUAL/parnet_encore_eclip/bigwig_processed_counts/TARDBP_K562/eCLIP/{1,2}/counts.pos.bw`).
+  All zero: STMN2 is not expressed in K562 (no eCLIP or size-matched input reads over the gene, also in the ENCODE source bigWigs of both K562 experiments).
+- `iclip_shsy5y`: TDP-43 iCLIP crosslinks in SH-SY5Y, + strand, the two 2022 replicates summed (Ule lab bedgraphs `TDP43_Hs_SHSY5Y_20220202_R1`, `_R2`).
+- `parnet_zero_shot`: `parnet.21m-5.0`, total track, output column 183 (TARDBP_K562).
+- `parnet_fine_tuned`: `parnet.21m-0.0` fine-tuned on iCLIP (unfreeze2, no control), total track, output column 10 (TARDBP).
+  Both: one forward pass in eval mode over the uppercased region sequence, softmax over the region.
+- `rnaseq_siScramble`, `rnaseq_siTDP43`: RNA-seq of iPSC-derived medium spiny neurons (18Q line), Flow.bio project "TDP43 KD in HTT models" (PMID 39762660), nf-core/rnaseq gene-strand coverage bedGraphs, per million uniquely mapped reads (STAR), mean of siScramble rep1-3 and of siTDP43 rep2-3 (siTDP43 rep1 has no bedGraph on Flow).
+  The exon 1 to cryptic exon 2a junction (chr8:79,611,215-79,616,821) has 1,190 and 1,063 uniquely mapped reads in siTDP43 rep2 and rep3, against 0, 0 and 7 in siScramble rep1-3 (STAR `SJ.out.tab` on Flow; canonical exon 1-2 junction: 6,301 and 5,745 vs 11,623-12,795).
+
+`stmn2_stats.tsv`: Pearson r of each PARNET profile with the iCLIP crosslinks, per nucleotide over the STMN2 MANE transcript (ENST00000220876, chr8:79,611,116-79,666,158).
